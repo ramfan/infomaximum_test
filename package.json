@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --mode development --open --hot",
+    "api": "node API/server.js",
     "build": "webpack --mode production"
   },
   "author": "",
