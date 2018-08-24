@@ -5,13 +5,19 @@ module.exports = {
     entry: './src/index.js',
     output: {
         path: path.join(__dirname, '/dist'),
-        filename: 'index_bundle.js'
+        filename: 'index_bundle.js',
+
+    },
+    resolve: {
+        mainFields: ['browser', 'main', 'module'],
+        extensions: ['.js', '.json', '.jsx']
     },
     module: {
         rules: [
             {
                 test: /\.js$/,
-                exclude: /node_modules/,
+                exclude: "/node_modules/",
+                type: "javascript/auto",
                 use: {
                     loader: 'babel-loader'
                 }
