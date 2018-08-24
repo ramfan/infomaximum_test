@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import {  graphql } from 'react-apollo';
 import gql from 'graphql-tag';
 import Main from "./main/Main";
+import {connect} from "react-redux";
 
 
 const query = gql`{
@@ -26,7 +27,7 @@ state = {
             return <div>Loading...</div>
         }
 
-        const user = data.allUsers.map(user =>
+        const users = data.allUsers.map(user =>
           <Link to={`/user/${user.id}/`}>
                 <li key={user.id}>{user.email} </li>
            </Link>
@@ -36,9 +37,13 @@ state = {
         return(
         <div>
             <Auth/>
+            <ul>
+                {users}
+            </ul>
         </div>
         )
 
     }
 }
-export default graphql(query)(App);
+App =  graphql(query)(App);
+export default connect(state => console.log('______++++++_____',state.form.AuthForm))(App)
