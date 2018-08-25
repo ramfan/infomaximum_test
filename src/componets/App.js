@@ -7,40 +7,34 @@ import Main from "./main/Main";
 import {connect} from "react-redux";
 
 
-const query = gql`mutation {
-  register(email: "hi@jamiebarton.co.uk", password: "F4K3rqL!", expiresIn: '24h') {
-    token
-  }
-}`;
+
 class App extends Component {
-state = {
-    selected: null
-};
+
+    componentWillReceiveProps = (props) => {
+    return {
+        values: props.formData.values
+    };
+}
     render() {
-        let { data } = this.props;
-
-        if (data.loading) {
-            return <div>Loading...</div>
-        }
-
-        const users = data.allUsers.map(user =>
-          <Link to={`/user/${user.id}/`}>
-                <li key={user.id}>{user.email} </li>
-           </Link>
-
-        );
 
         return(
         <div>
-            <Auth/>
-            <ul>
-                {users}
-            </ul>
+           <Auth/>
+           <Main email={this.props.formData.values.email} password={this.props.formData.values.password}/>
         </div>
         )
 
     }
 }
-queryOption =
-App =  graphql(query)(App);
-export default connect(state => console.log('______++++++_____',state.form.AuthForm))(App)
+App.defaultProps = {
+    formData: {
+        values: {
+            email: '',
+            password: ''
+        }
+    }
+};
+
+export default connect(state => ({
+    formData: state.form.AuthForm
+}))(App)

@@ -56,6 +56,10 @@ const Auth = props => {
 
 export default reduxForm({
     form: 'AuthForm',
+    initialValues:  {
+        password: 'Password',
+        email: 'ivanov@Corp.domen',
+    },
     validate
 })(Auth)
 

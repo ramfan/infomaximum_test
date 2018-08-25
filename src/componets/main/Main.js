@@ -3,29 +3,36 @@ import PropTypes from 'prop-types';
 import {  graphql } from 'react-apollo';
 import gql from 'graphql-tag';
 
-const query = gql`
-query Main($id: ID!){
-User(id: $id){
-  firstName
-  lastName
-  email
-}
-
+const query = gql`mutation MUatation($email: String!, $password: String!){
+  register(email: $email, password: $password, expiresIn: "24h") {
+    token
+  }
 }`;
 
 class Main extends Component {
     render() {
-        const {data} = this.props;
-        console.log('DATA IN USER', this.props);
+        // console.log("MUT",this.props)
+        // .then(res => {
+        //     console.log(res)
+        // }).catch(err => {
+        //     console.log('Network error!')
+        //     setTimeout(() => {
+        //         reject(new Error("время вышло!"));
+        //     }, 1000);
+        // })
 
-        if (data.loading) {
-            return <div>Loading...</div>
-        }
+
+            this.props.mutate({
+                variables: {
+                    email: this.props.email,
+                    password: this.props.password
+                }
+            }).then(res => console.log(res)).catch(e => console.log(e))
+
+        console.log('DATA', this.props.data.token);
         return (
             <div>
-                <p>{data.User.firstName}</p>
-                <p>{data.User.lastName}</p>
-                <p>{data.User.email}</p>
+                <Link to={}>
             </div>
         );
 
@@ -33,9 +40,10 @@ class Main extends Component {
 }
 const queryOption = {
     options: props => {
-               return {
+        return {
             variables: {
-                id:  props.match.params.id,
+                password:  props.password,
+                email: props.email
             },
         }
     },

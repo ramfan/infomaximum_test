@@ -10,6 +10,7 @@ import Main from "./main/Main";
 
 const client = new ApolloClient({
     uri: 'https://fakerql.com/graphql',
+    credentials: 'same-origin'
 
 });
 class Root extends Component {
