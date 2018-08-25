@@ -4,13 +4,10 @@ import { Field, reduxForm } from 'redux-form'
 import {validate} from "./validate";
 
 const renderField = ({ input, label, type, meta: { touched, error, warning }}) => (
-    <div>
+  <div>
         <label>{label}</label>
         <div>
-            <input {...input} placeholder={label} type={type} />
-            {touched &&
-            ((error && <span>{error}</span>) ||
-                (warning && <span>{warning}</span>))}
+            <input {...input} placeholder={label} type={type} style={touched? error? {borderColor: 'red'}: {borderColor:''}: {borderColor:''}} />
         </div>
     </div>
 );

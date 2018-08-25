@@ -7,14 +7,10 @@ import Main from "./main/Main";
 import {connect} from "react-redux";
 
 
-const query = gql`{
-allUsers(count: 10){
-  id
-  firstName
-  lastName
-  email
-}
-
+const query = gql`mutation {
+  register(email: "hi@jamiebarton.co.uk", password: "F4K3rqL!", expiresIn: '24h') {
+    token
+  }
 }`;
 class App extends Component {
 state = {
@@ -45,5 +41,6 @@ state = {
 
     }
 }
+queryOption =
 App =  graphql(query)(App);
 export default connect(state => console.log('______++++++_____',state.form.AuthForm))(App)
