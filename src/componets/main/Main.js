@@ -2,6 +2,9 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {  graphql } from 'react-apollo';
 import gql from 'graphql-tag';
+import {Redirect} from "react-router-dom";
+import {auth} from "../../Action-Creators/AC";
+import {connect} from "react-redux";
 
 const query = gql`mutation MUatation($email: String!, $password: String!){
   register(email: $email, password: $password, expiresIn: "24h") {
@@ -10,31 +13,26 @@ const query = gql`mutation MUatation($email: String!, $password: String!){
 }`;
 
 class Main extends Component {
+
+
     render() {
-        // console.log("MUT",this.props)
-        // .then(res => {
-        //     console.log(res)
-        // }).catch(err => {
-        //     console.log('Network error!')
-        //     setTimeout(() => {
-        //         reject(new Error("время вышло!"));
-        //     }, 1000);
-        // })
+         this.props.mutate({
+            variables: {
+                email: this.props.email,
+                password: this.props.password
+            }
+        }).then(res =>{
+            const {auth} = this.props;
+            auth(res.data.register.token);
+        }).catch(e => {return 'Network Error'});
+        if(this.props.token.token !== null) {
+            const {token} = this.props.token
+            return (<Redirect to={`/${token}`} />)
+        }else {
+            return(<div>Loading</div>)
+        }
 
 
-            this.props.mutate({
-                variables: {
-                    email: this.props.email,
-                    password: this.props.password
-                }
-            }).then(res => console.log(res)).catch(e => console.log(e))
-
-        console.log('DATA', this.props.data.token);
-        return (
-            <div>
-                <Link to={}>
-            </div>
-        );
 
     }
 }
@@ -50,5 +48,7 @@ const queryOption = {
 };
 Main = graphql(query, queryOption)(Main);
 
-export default Main;
+export default connect(state => ({
+    token: state.auth.tokenHash === null? "Error":state.auth.tokenHash
+}), {auth})(Main);
 

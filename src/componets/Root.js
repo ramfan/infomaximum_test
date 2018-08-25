@@ -24,7 +24,7 @@ class Root extends Component {
                             <Route exact path="/" component={App} />
                             <Switch>
                                 {/*<Route exact path="/user/registration/" component={CreateView} />*/}
-                                <Route exact path="/user/:id/" component={Main} />
+                                <Route exact path="/user/" component={Main} />
                             </Switch>
                         </div>
 

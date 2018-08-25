@@ -1,26 +1,33 @@
 import React, {Component} from 'react';
 import Auth from "./Forms/Auth";
-import { Link } from 'react-router-dom';
-import {  graphql } from 'react-apollo';
-import gql from 'graphql-tag';
 import Main from "./main/Main";
 import {connect} from "react-redux";
-
-
-
 class App extends Component {
-
-    componentWillReceiveProps = (props) => {
-    return {
-        values: props.formData.values
+    constructor(props){
+        super(props);
+        this.state = {
+            email: null,
+            password: null
+        }
+    }
+    handleSubmit(ev){
+        this.setState({
+            email: ev.email,
+            password: ev.password
+        })
     };
-}
     render() {
 
         return(
         <div>
-           <Auth/>
-           <Main email={this.props.formData.values.email} password={this.props.formData.values.password}/>
+           <Auth onSubmit = {this.handleSubmit.bind(this)}/>
+            {(this.state.email !== null &&  this.state.password !== null)?
+                <Main
+                    email = {this.state.email}
+                    password = {this.state.password}
+
+                />: null }
+
         </div>
         )
 
@@ -35,6 +42,7 @@ App.defaultProps = {
     }
 };
 
-export default connect(state => ({
+export default connect(state => {
+    return{
     formData: state.form.AuthForm
-}))(App)
+}})(App)

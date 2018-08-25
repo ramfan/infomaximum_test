@@ -43,7 +43,7 @@ const Auth = props => {
 
 
             <div>
-                <button type="submit" disabled={pristine || submitting}>
+                <button type="submit" disabled={pristine || submitting} >
                     Submit
                 </button>
                 <button type="button" disabled={pristine || submitting} onClick={reset}>
@@ -57,8 +57,8 @@ const Auth = props => {
 export default reduxForm({
     form: 'AuthForm',
     initialValues:  {
-        password: 'Password',
-        email: 'ivanov@Corp.domen',
+        password: '',
+        email: '',
     },
     validate
 })(Auth)

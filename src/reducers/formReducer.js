@@ -1,17 +1,17 @@
-import {AUTH} from "../constants";
+import {FORM_SUBMITED} from "../constants";
 
 const initialState = {
     login: undefined,
-    id: undefined
+    password: undefined
 };
 export default (users = initialState, action) => {
     const {type, payload} = action;
 
     switch (type){
-        case AUTH:
+        case FORM_SUBMITED:
             return {
                 login: payload.user.login,
-                id: payload.user.id
+                password: payload.user.id
             }
     }
     return users

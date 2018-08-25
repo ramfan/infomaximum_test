@@ -1,8 +1,9 @@
-import {AUTH_SUCCESS} from "../constants";
+import {FORM_SUBMITED} from "../constants";
 
-export function auth(user) {
+export function auth(token) {
+    console.log(token);
     return {
-        type: AUTH_SUCCESS,
-        payload: {user}
+        type: FORM_SUBMITED,
+        payload: {token}
     }
 }
