@@ -1,7 +1,9 @@
 import React, {Component} from 'react';
-import Auth from "./Forms/Auth";
-import Registration from "./Registration/Registration";
 import {connect} from "react-redux";
+import AuthorizationComponent from "./Authorization/AuthorizationComponent";
+import RegistryComponent from './Registration/RegistryComponent'
+import {Link} from "react-router-dom";
+
 class App extends Component {
     constructor(props){
         super(props);
@@ -16,23 +18,27 @@ class App extends Component {
         this.setState({
             email: ev.email,
             password: ev.password
-        })
+        });
+        this.getRegistration = this.getRegistration.bind(this);
+        this.getAuthorization = this.getAuthorization.bind(this);
     };
     render() {
 
         return(
         <div>
-           <Auth onSubmit = {this.handleSubmit}/>
-            {(this.state.email !== null &&  this.state.password !== null)?
-                <Registration
-                    email = {this.state.email}
-                    password = {this.state.password}
+            <Link to={`/auth`}>
+                <button onClick={this.getAuthorization}>Sign In</button>
+            </Link>
 
-                />: null }
+            <Link to={`/registry`}>
+                <button onClick={this.getRegistration}>Sign Up</button>
+            </Link>
+
         </div>
         )
 
     }
+
 }
 App.defaultProps = {
     formData: {

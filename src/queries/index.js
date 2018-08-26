@@ -6,7 +6,7 @@ export const register = gql`mutation registration($email: String!, $password: St
   }
 }`;
 
-export const logginig = gql`mutation logginig($email: Strin!, $password: String!){
+export const logginig = gql`mutation logginig($email: String!, $password: String!){
   login(email: $email, password: $password) {
     token
   }

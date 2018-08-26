@@ -6,7 +6,8 @@ import  ApolloClient from 'apollo-boost'
 import {ApolloProvider, } from 'react-apollo'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import store from '../store/store'
-import Main from "./Registration/Registration";
+import AuthorizationComponent from "./Authorization/AuthorizationComponent";
+import RegistryComponent from "./Registration/RegistryComponent";
 
 const client = new ApolloClient({
     uri: 'https://fakerql.com/graphql',
@@ -23,8 +24,8 @@ class Root extends Component {
                         <div>
                             <Route exact path="/" component={App} />
                             <Switch>
-                                {/*<Route exact path="/user/registration/" component={CreateView} />*/}
-                                <Route exact path="/user/" component={Main} />
+                                <Route exact path="/auth/" component={AuthorizationComponent} />
+                                <Route exact path="/registry/" component={RegistryComponent} />
                             </Switch>
                         </div>
 

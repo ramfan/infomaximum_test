@@ -9,7 +9,6 @@ export default (token = initialState, action) => {
 
     switch (type){
         case FORM_SUBMITED:
-            console.log('PAYLOAD', payload);
             return {
                 tokenHash: payload,
                 isReady: true

@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
-import Auth from "./Forms/Auth";
-import Registration from "./Registration/Registration";
+import Auth from "../Forms/Auth";
+import Registration from "./Registration";
 import {connect} from "react-redux";
 class RegistryComponent extends Component {
-    constructor(props){
+    constructor(props) {
         super(props);
         this.state = {
             email: null,
@@ -11,31 +11,29 @@ class RegistryComponent extends Component {
         };
         this.handleSubmit = this.handleSubmit.bind(this)
     }
-    handleSubmit(ev){
+
+    handleSubmit(ev) {
         this.setState({
             email: ev.email,
             password: ev.password
         })
     };
+
     render() {
 
-        return(
+        return (
             <div>
-                <Auth onSubmit = {this.handleSubmit}/>
-
+                <Auth onSubmit={this.handleSubmit}/>
+                {(this.state.email !== null && this.state.password !== null) ?
+                    <Registration
+                        email={this.state.email}
+                        password={this.state.password}
+                    /> : null}
             </div>
         )
 
     }
 }
-App.defaultProps = {
-    formData: {
-        values: {
-            email: '',
-            password: ''
-        }
-    }
-};
 
 export default connect(state => {
     return{
