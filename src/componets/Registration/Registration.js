@@ -5,12 +5,7 @@ import gql from 'graphql-tag';
 import {Redirect} from "react-router-dom";
 import {auth} from "../../Action-Creators/AC";
 import {connect} from "react-redux";
-
-const query = gql`mutation MUatation($email: String!, $password: String!){
-  register(email: $email, password: $password, expiresIn: "24h") {
-    token
-  }
-}`;
+import {register as query} from "../../queries";
 
 class Registration extends Component {
 componentWillMount(){
