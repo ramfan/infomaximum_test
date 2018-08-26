@@ -6,7 +6,7 @@ import  ApolloClient from 'apollo-boost'
 import {ApolloProvider, } from 'react-apollo'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import store from '../store/store'
-import Main from "./main/Main";
+import Main from "./Registration/Registration";
 
 const client = new ApolloClient({
     uri: 'https://fakerql.com/graphql',

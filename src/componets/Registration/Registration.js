@@ -12,26 +12,24 @@ const query = gql`mutation MUatation($email: String!, $password: String!){
   }
 }`;
 
-class Main extends Component {
+class Registration extends Component {
+componentWillMount(){
+    this.props.mutate({
+        variables: {
+            email: this.props.email,
+            password: this.props.password
+        }
+    }).then(res =>{
+        const {auth} = this.props;
+        auth(res.data.register.token);
+    }).catch(e => {return 'Network Error'});
 
+}
 
     render() {
-         this.props.mutate({
-            variables: {
-                email: this.props.email,
-                password: this.props.password
-            }
-        }).then(res =>{
-            const {auth} = this.props;
-            auth(res.data.register.token);
-        }).catch(e => {return 'Network Error'});
-        if(this.props.token.token !== null) {
-            const {token} = this.props.token
-            return (<Redirect to={`/${token}`} />)
-        }else {
-            return(<div>Loading</div>)
-        }
-
+    if(this.props.isReady){
+        return (<div>{this.props.token.token !== null ? <Redirect to={`/${this.props.token.token}`} />: "Loading"}</div>)
+    }return(<div>Loading</div>)
 
 
     }
@@ -46,9 +44,12 @@ const queryOption = {
         }
     },
 };
-Main = graphql(query, queryOption)(Main);
+
+
+Registration = graphql(query, queryOption)(Registration);
 
 export default connect(state => ({
-    token: state.auth.tokenHash === null? "Error":state.auth.tokenHash
-}), {auth})(Main);
+    token: state.auth.tokenHash,
+    isReady: state.auth.isReady
+}), {auth})(Registration);
 

@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import Auth from "./Forms/Auth";
-import Main from "./main/Main";
+import Registration from "./Registration/Registration";
 import {connect} from "react-redux";
 class App extends Component {
     constructor(props){
@@ -8,26 +8,27 @@ class App extends Component {
         this.state = {
             email: null,
             password: null
-        }
+        };
+        this.handleSubmit = this.handleSubmit.bind(this)
     }
     handleSubmit(ev){
-        this.setState({
-            email: ev.email,
-            password: ev.password
-        })
+        console.log('EVENT', ev);
+        // this.setState({
+        //     email: ev.email,
+        //     password: ev.password
+        // })
     };
     render() {
 
         return(
         <div>
-           <Auth onSubmit = {this.handleSubmit.bind(this)}/>
+           <Auth onSubmit = {this.handleSubmit}/>
             {(this.state.email !== null &&  this.state.password !== null)?
-                <Main
+                <Registration
                     email = {this.state.email}
                     password = {this.state.password}
 
                 />: null }
-
         </div>
         )
 

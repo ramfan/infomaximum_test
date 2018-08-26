@@ -7,7 +7,10 @@ const renderField = ({ input, label, type, meta: { touched, error, warning }}) =
   <div>
         <label>{label}</label>
         <div>
-            <input {...input} placeholder={label} type={type} style={touched? error? {borderColor: 'red'}: {borderColor:''}: {borderColor:''}} />
+            <input {...input} placeholder={label} type={type} style={touched? error?
+                {borderColor: 'red'}:
+                {borderColor:''}:
+                {borderColor:''}} />
         </div>
     </div>
 );
@@ -43,10 +46,10 @@ const Auth = props => {
 
 
             <div>
-                <button type="submit" disabled={pristine || submitting} >
+                <button type="submit" name="Submit" disabled={pristine || submitting} >
                     Submit
                 </button>
-                <button type="button" disabled={pristine || submitting} onClick={reset}>
+                <button type="submit" name="Clear" disabled={pristine || submitting} >
                     Clear Values
                 </button>
             </div>

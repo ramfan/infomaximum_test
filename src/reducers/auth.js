@@ -1,6 +1,7 @@
 import {FORM_SUBMITED} from "../constants";
 const initialState = {
-    tokenHash: null
+    tokenHash: null,
+    isReady: false
 }
 
 export default (token = initialState, action) => {
@@ -11,6 +12,7 @@ export default (token = initialState, action) => {
             console.log('PAYLOAD', payload);
             return {
                 tokenHash: payload,
+                isReady: true
             }
     }
     return token
