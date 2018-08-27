@@ -1,7 +1,5 @@
 import React, {Component} from 'react';
-import PropTypes from 'prop-types';
 import {  graphql } from 'react-apollo';
-import gql from 'graphql-tag';
 import {Redirect} from "react-router-dom";
 import {auth} from "../../Action-Creators/AC";
 import {connect} from "react-redux";

@@ -8,6 +8,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import store from '../store/store'
 import AuthorizationComponent from "./Authorization/AuthorizationComponent";
 import RegistryComponent from "./Registration/RegistryComponent";
+import PersonalPage from "./Personal/PersonalPage";
 
 const client = new ApolloClient({
     uri: 'https://fakerql.com/graphql',
@@ -26,6 +27,7 @@ class Root extends Component {
                             <Switch>
                                 <Route exact path="/auth/" component={AuthorizationComponent} />
                                 <Route exact path="/registry/" component={RegistryComponent} />
+                                <Route exact path="/user/:token/" component={PersonalPage} />
                             </Switch>
                         </div>
 

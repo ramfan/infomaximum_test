@@ -11,3 +11,10 @@ export const logginig = gql`mutation logginig($email: String!, $password: String
     token
   }
 }`;
+export const personalData = gql`query Person($token: ID!){
+User(id: $token){
+firstName
+lastName
+avatar
+}
+}`;
