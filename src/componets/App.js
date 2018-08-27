@@ -19,19 +19,17 @@ class App extends Component {
             email: ev.email,
             password: ev.password
         });
-        this.getRegistration = this.getRegistration.bind(this);
-        this.getAuthorization = this.getAuthorization.bind(this);
     };
     render() {
 
         return(
         <div>
             <Link to={`/auth`}>
-                <button onClick={this.getAuthorization}>Sign In</button>
+                <button>Sign In</button>
             </Link>
 
             <Link to={`/registry`}>
-                <button onClick={this.getRegistration}>Sign Up</button>
+                <button>Sign Up</button>
             </Link>
 
         </div>

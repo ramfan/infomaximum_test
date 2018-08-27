@@ -49,9 +49,6 @@ const Auth = props => {
                 <button type="submit" name="Submit" disabled={pristine || submitting} >
                     Submit
                 </button>
-                <button type="submit" name="Clear" disabled={pristine || submitting} >
-                    Clear Values
-                </button>
             </div>
         </form>
     )

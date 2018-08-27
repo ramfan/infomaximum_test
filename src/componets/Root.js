@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import PropTypes from 'prop-types';
 import App from "./App";
 import {Provider} from "react-redux";
 import  ApolloClient from 'apollo-boost'
@@ -9,6 +8,7 @@ import store from '../store/store'
 import AuthorizationComponent from "./Authorization/AuthorizationComponent";
 import RegistryComponent from "./Registration/RegistryComponent";
 import PersonalPage from "./Personal/PersonalPage";
+import ProfileSettings from "./Personal/ProfileSettings";
 
 const client = new ApolloClient({
     uri: 'https://fakerql.com/graphql',
@@ -28,6 +28,7 @@ class Root extends Component {
                                 <Route exact path="/auth/" component={AuthorizationComponent} />
                                 <Route exact path="/registry/" component={RegistryComponent} />
                                 <Route exact path="/user/:token/" component={PersonalPage} />
+                                <Route exact path="/editProfile/" component={ProfileSettings} />
                             </Switch>
                         </div>
 
