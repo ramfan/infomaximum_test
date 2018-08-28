@@ -4,6 +4,7 @@ const initialState = {
     firstName: null,
     lastName: null,
     email: null,
+    token: null,
     isReady: false
 };
 
@@ -13,10 +14,12 @@ export default (state = initialState, action) => {
 
     switch (type){
         case GET_PROFILE_DATA: {
+            console.log("PAYLOAD", payload.data)
             return {
-                firstName: payload.data.firstName,
-                lastName: payload.data.lastName,
-                email: payload.data.email,
+                firstName: payload.data.data.User.firstName,
+                lastName: payload.data.data.User.lastName,
+                email: payload.data.data.User.email,
+                token: payload.data.match.params.token,
                 isReady: true
             }
         }

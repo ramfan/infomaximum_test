@@ -77,6 +77,10 @@ class EditPersonalData extends Component{
 }, )(EditPersonalData);
 export default connect(state => {
     return {
-        initialValues: state.Profile
+        initialValues: {
+            firstName: state.Profile.firstName,
+            lastName: state.Profile.lastName,
+            email: state.Profile.email
+        }
     }
 })(EditPersonalData)

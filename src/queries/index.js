@@ -12,10 +12,19 @@ export const logginig = gql`mutation logginig($email: String!, $password: String
   }
 }`;
 export const personalData = gql`query Person($token: ID!){
-User(id: $token){
-firstName
-lastName
-email
-avatar
-}
+    User(id: $token){
+        firstName
+        lastName
+        email
+        avatar
+    }
 }`;
+export const updateUserData = gql`
+    mutation updateUserData($token: String!, $firstName: String!, $lastName: String!, $email: String!){
+  updateUser(id: "wk0z1j1tzj7xc0116is3ckdrx", firstName: "Jim") {
+    id
+    firstName
+    lastName
+  }
+}
+`

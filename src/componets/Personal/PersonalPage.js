@@ -15,7 +15,8 @@ class PersonalPage extends Component {
         if (data.loading) {
             return <div>Loading...</div>
         }
-        Profile(data.User);
+        console.log('PROPS', this.props)
+        Profile(this.props);
         return (
             <div>
                 <img src={data.User.avatar}/>

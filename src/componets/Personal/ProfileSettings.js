@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import EditPersonalData from "../Forms/EditPersonalData";
+import {connect} from "react-redux";
 
 class ProfileSettings extends Component {
 constructor(props) {
@@ -9,7 +10,7 @@ constructor(props) {
         lastName: '',
         email: ''
     };
-    this.handleSubmit = this.props.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
 }
 handleSubmit(ev){
     this.setState({
@@ -28,4 +29,9 @@ handleSubmit(ev){
     }
 }
 
-export default ProfileSettings;
+export default connect(state => {
+    console.log("SETTING PROPS", state.Profile)
+    return {
+        token: state.Profile.token
+    }
+})(ProfileSettings);
