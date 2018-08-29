@@ -1,38 +1,29 @@
 import React, {Component} from 'react';
 import {connect} from "react-redux";
-import AuthorizationComponent from "./Authorization/AuthorizationComponent";
-import RegistryComponent from './Registration/RegistryComponent'
 import {Link} from "react-router-dom";
+import {Background, ButtonStyle, SpanColor} from "./RooStyle";
 
 class App extends Component {
-    constructor(props){
-        super(props);
-        this.state = {
-            email: null,
-            password: null
-        };
-        this.handleSubmit = this.handleSubmit.bind(this)
-    }
-    handleSubmit(ev){
-        console.log('EVENT', ev);
-        this.setState({
-            email: ev.email,
-            password: ev.password
-        });
-    };
+
     render() {
 
         return(
+            <Background>
         <div>
-            <Link to={`/auth`}>
-                <button>Sign In</button>
+            <Link to={`/auth`} style={{textDecoration: 'none'}}>
+                <ButtonStyle>
+                    Авторизация
+                </ButtonStyle>
             </Link>
 
-            <Link to={`/registry`}>
-                <button>Sign Up</button>
+            <Link to={`/registry`} style={{textDecoration: 'none'}}>
+                <ButtonStyle>
+                    Регистрация
+                </ButtonStyle>
             </Link>
 
         </div>
+            </Background>
         )
 
     }

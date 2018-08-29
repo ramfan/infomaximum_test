@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {connect} from "react-redux";
 import Auth from '../Forms/Auth'
 import Authorization from "./Authorization";
+import {Background} from "../RooStyle";
 
 class AuthorizationComponent extends Component {
     constructor(props){
@@ -21,14 +22,17 @@ class AuthorizationComponent extends Component {
 
     render() {
         return(
+            <Background>
             <div>
-                <Auth onSubmit = {this.handleSubmit}/>
+
+                <Auth textVal={'Авторизация'} onSubmit = {this.handleSubmit}/>
                 {(this.state.email !== null &&  this.state.password !== null)?
                     <Authorization
                         email = {this.state.email}
                         password = {this.state.password}
                     />: null }
             </div>
+            </Background>
         )
     }
 }

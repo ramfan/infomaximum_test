@@ -23,7 +23,7 @@ class RegistryComponent extends Component {
 
         return (
             <div>
-                <Auth onSubmit={this.handleSubmit}/>
+                <Auth onSubmit={this.handleSubmit} textVal={'Зарегистрироваться'}/>
                 {(this.state.email !== null && this.state.password !== null) ?
                     <Registration
                         email={this.state.email}

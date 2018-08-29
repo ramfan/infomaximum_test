@@ -2,6 +2,7 @@
 import React from 'react'
 import { Field, reduxForm } from 'redux-form'
 import {validate} from "./validate";
+import {ButtonStyle} from "../RooStyle";
 
 const renderField = ({ input, label, type, meta: { touched, error, warning }}) => (
   <div>
@@ -16,7 +17,7 @@ const renderField = ({ input, label, type, meta: { touched, error, warning }}) =
 );
 
 const Auth = props => {
-    const { handleSubmit, pristine, reset, submitting } = props;
+    const { handleSubmit, pristine, reset, submitting, textVal } = props;
 
     return (
         <form onSubmit={handleSubmit}>
@@ -46,9 +47,9 @@ const Auth = props => {
 
 
             <div>
-                <button type="submit" name="Submit" disabled={pristine || submitting} >
-                    Submit
-                </button>
+                <ButtonStyle type="submit" name="Submit" disabled={pristine || submitting} >
+                    {textVal}
+                </ButtonStyle>
             </div>
         </form>
     )
