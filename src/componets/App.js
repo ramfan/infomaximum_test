@@ -12,7 +12,7 @@ class App extends Component {
         <div>
             <Link to={`/auth`} style={{textDecoration: 'none'}}>
                 <ButtonStyle>
-                    Авторизация
+                    Вход в систему
                 </ButtonStyle>
             </Link>
 

@@ -2,18 +2,27 @@
 import React from 'react'
 import { Field, reduxForm } from 'redux-form'
 import {validate} from "./validate";
-import {ButtonStyle} from "../RooStyle";
-
+import {ButtonStyle, CustomField} from "../RooStyle";
+import {ThemeProvider} from 'react-fela'
+import CustomInput from "./CustomInput";
+const theme =  {
+        textAlign: 'center',
+        position: 'relative',
+        width: '80%',
+        height: '24px',
+        outline: 'none',
+        background: '#ffffff !important',
+        marginLeft: '10%',
+        marginRight: '10%',
+};
 const renderField = ({ input, label, type, meta: { touched, error, warning }}) => (
   <div>
-        <label>{label}</label>
-        <div>
-            <input {...input} placeholder={label} type={type} style={touched? error?
-                {borderColor: 'red'}:
-                {borderColor:''}:
-                {borderColor:''}} />
+
+            <ThemeProvider theme={theme}>
+                <CustomInput {...input} label={label} touched={touched} error={error} type={type} theme={theme} />
+            </ThemeProvider>
         </div>
-    </div>
+
 );
 
 const Auth = props => {
@@ -27,18 +36,19 @@ const Auth = props => {
                         name="email"
                         component={renderField}
                         type="email"
-                        placeholder="Email"
+                        label="ivanov@mail.domen"
 
                     />
                 </div>
             </div>
+            <div><br/></div>
             <div>
                 <div>
                     <Field
                         name="password"
                         component={renderField}
                         type="password"
-                        placeholder="Password"
+                        label="Password"
                     />
                 </div>
 

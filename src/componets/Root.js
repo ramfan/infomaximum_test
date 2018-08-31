@@ -9,18 +9,24 @@ import AuthorizationComponent from "./Authorization/AuthorizationComponent";
 import RegistryComponent from "./Registration/RegistryComponent";
 import PersonalPage from "./Personal/PersonalPage";
 import ProfileSettings from "./Personal/ProfileSettings";
+import {createRenderer} from "fela";
+import { Provider as FellaProvider } from 'react-fela';
+
 
 const client = new ApolloClient({
     uri: 'https://fakerql.com/graphql',
     credentials: 'same-origin'
 
 });
+const renderer = createRenderer();
+
 class Root extends Component {
 
     render() {
         return (
             <ApolloProvider client={client} >
                 <Provider store = {store}>
+                    <FellaProvider renderer={renderer}>
                     <Router>
                         <div>
                             <Route exact path="/" component={App} />
@@ -33,6 +39,7 @@ class Root extends Component {
                         </div>
 
                     </Router>
+                </FellaProvider>
                 </Provider>
             </ApolloProvider>
         );

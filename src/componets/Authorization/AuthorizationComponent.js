@@ -14,6 +14,7 @@ class AuthorizationComponent extends Component {
         }
     }
     handleSubmit(ev){
+        console.log('EVENTS', ev);
         this.setState({
             email: ev.email,
             password: ev.password
@@ -23,15 +24,14 @@ class AuthorizationComponent extends Component {
     render() {
         return(
             <Background>
-            <div>
-
-                <Auth textVal={'Авторизация'} onSubmit = {this.handleSubmit}/>
-                {(this.state.email !== null &&  this.state.password !== null)?
-                    <Authorization
-                        email = {this.state.email}
-                        password = {this.state.password}
-                    />: null }
-            </div>
+                <div>
+                    <Auth textVal={'Войти в систему'} onSubmit = {this.handleSubmit}/>
+                    {(this.state.email !== null &&  this.state.password !== null)?
+                        <Authorization
+                            email = {this.state.email}
+                            password = {this.state.password}
+                        />: null }
+                </div>
             </Background>
         )
     }
