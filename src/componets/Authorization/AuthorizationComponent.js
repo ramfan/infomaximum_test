@@ -24,7 +24,7 @@ class AuthorizationComponent extends Component {
     render() {
         return(
             <Background>
-                <div>
+                    <div>
                     <Auth textVal={'Войти в систему'} onSubmit = {this.handleSubmit}/>
                     {(this.state.email !== null &&  this.state.password !== null)?
                         <Authorization

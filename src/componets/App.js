@@ -8,22 +8,24 @@ class App extends Component {
     render() {
 
         return(
-            <Background>
-        <div>
-            <Link to={`/auth`} style={{textDecoration: 'none'}}>
-                <ButtonStyle>
-                    Вход в систему
-                </ButtonStyle>
-            </Link>
-
-            <Link to={`/registry`} style={{textDecoration: 'none'}}>
-                <ButtonStyle>
-                    Регистрация
-                </ButtonStyle>
-            </Link>
-
-        </div>
-            </Background>
+           <div>
+                <Background>
+                    <div>
+                        <Link to={`/auth`} style={{textDecoration: 'none'}}>
+                            <ButtonStyle>
+                                <strong>Вход в систему</strong>
+                            </ButtonStyle>
+                        </Link>
+            
+                        <Link to={`/registry`} style={{textDecoration: 'none'}}>
+                            <ButtonStyle>
+                                <strong>Регистрация</strong>
+                            </ButtonStyle>
+                        </Link>
+            
+                    </div>
+                </Background>
+           </div>
         )
 
     }

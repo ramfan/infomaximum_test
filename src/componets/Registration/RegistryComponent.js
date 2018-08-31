@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import Auth from "../Forms/Auth";
 import Registration from "./Registration";
 import {connect} from "react-redux";
+import {Background} from "../RooStyle";
 class RegistryComponent extends Component {
     constructor(props) {
         super(props);
@@ -22,14 +23,19 @@ class RegistryComponent extends Component {
     render() {
 
         return (
-            <div>
-                <Auth onSubmit={this.handleSubmit} textVal={'Зарегистрироваться'}/>
-                {(this.state.email !== null && this.state.password !== null) ?
-                    <Registration
-                        email={this.state.email}
-                        password={this.state.password}
-                    /> : null}
-            </div>
+            <Background>
+                <h3 style={{fontFamily: "OpenSans", marginLeft: '10%', marginRight: '10%'}}>
+                    <strong>Задайте электронную почту и пароль для администратора системы</strong>
+                </h3>
+                <div>
+                    <Auth onSubmit={this.handleSubmit} textVal={'Зарегистрироваться'}/>
+                    {(this.state.email !== null && this.state.password !== null) ?
+                        <Registration
+                            email={this.state.email}
+                            password={this.state.password}
+                        /> : null}
+                </div>
+            </Background>
         )
 
     }

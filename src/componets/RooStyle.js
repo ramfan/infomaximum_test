@@ -16,10 +16,10 @@ export const Background = createComponent(background, 'div');
 const spanColor = () => ({
     // position: 'relative',
     width: '80%',
-    height: '30px',
+    height: '36px',
     color: 'black',
     background: '#ffe254',
-    fontSize: '16px',
+    fontSize: '12px',
     border: 0,
     borderRadius: '7px',
     marginTop: '8%',
@@ -28,13 +28,13 @@ const spanColor = () => ({
 
 });
 export const ButtonStyle = createComponent(spanColor, 'button');
-const field = (props) => ({
-    position: props.theme.position,
-    width: props.theme.width,
-    height: props.theme.height,
-    outline: props.theme.outline
- });
-export function CustomField (props){
-    console.log(props);
-    return (field)
-};
+ const ShowHide = () => ({
+    width: '10px',
+    height: '10px',
+    float: 'right',
+    marginTop: '12px',
+    marginLeft: '86%',
+    position: 'absolute',
+    display: 'flex',
+});
+export const CustomRadio = createComponent(ShowHide, 'span');
