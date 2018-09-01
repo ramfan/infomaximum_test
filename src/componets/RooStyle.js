@@ -2,12 +2,12 @@ import { createComponent } from 'react-fela'
 import React from 'react'
 const background = () => ({
     position: "fixed",
-    top: 0+'%',
+    top: 50+'%',
     left: 50+'%',
     transform: 'translate(-50%, -50%)',
     background: '#ffffff',
     height: '100%',
-    marginTop: '30%',
+    marginTop: '10%',
     width: '30%',
     paddingTop: '2%'
 });

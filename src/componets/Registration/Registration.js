@@ -21,7 +21,7 @@ componentWillMount(){
 
     render() {
     if(this.props.isReady){
-        return (<div>{this.props.token.token !== null ? <Redirect to={`/${this.props.token.token}`} />: "Loading"}</div>)
+        return (<div>{this.props.token.token !== null ? <Redirect to={`/user/${this.props.token.token}`} />: "Loading"}</div>)
     }
 
     return(<div>Loading</div>)

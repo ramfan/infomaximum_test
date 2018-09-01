@@ -11,6 +11,8 @@ import PersonalPage from "./Personal/PersonalPage";
 import ProfileSettings from "./Personal/ProfileSettings";
 import {createRenderer} from "fela";
 import { Provider as FellaProvider } from 'react-fela';
+import {ThemeProvider} from 'react-fela'
+import {theme} from "../theme";
 
 
 const client = new ApolloClient({
@@ -27,18 +29,20 @@ class Root extends Component {
             <ApolloProvider client={client} >
                 <Provider store = {store}>
                     <FellaProvider renderer={renderer}>
-                    <Router>
-                        <div>
-                            <Route exact path="/" component={App} />
-                            <Switch>
-                                <Route exact path="/auth/" component={AuthorizationComponent} />
-                                <Route exact path="/registry/" component={RegistryComponent} />
-                                <Route exact path="/user/:token/" component={PersonalPage} />
-                                <Route exact path="/editProfile/" component={ProfileSettings} />
-                            </Switch>
-                        </div>
+                        <ThemeProvider theme={theme}>
+                            <Router>
+                                <div>
+                                    <Route exact path="/" component={App} />
+                                    <Switch>
+                                        <Route exact path="/auth/" component={AuthorizationComponent} />
+                                        <Route exact path="/registry/" component={RegistryComponent} />
+                                        <Route exact path="/user/:token/" component={PersonalPage} />
+                                        <Route exact path="/editProfile/" component={ProfileSettings} />
+                                    </Switch>
+                                </div>
 
-                    </Router>
+                            </Router>
+                        </ThemeProvider>
                 </FellaProvider>
                 </Provider>
             </ApolloProvider>

@@ -14,7 +14,6 @@ export default (state = initialState, action) => {
 
     switch (type){
         case GET_PROFILE_DATA: {
-            console.log("PAYLOAD", payload.data)
             return {
                 firstName: payload.data.data.User.firstName,
                 lastName: payload.data.data.User.lastName,

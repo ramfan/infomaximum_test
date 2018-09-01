@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import EditPersonalData from "../Forms/EditPersonalData";
 import {connect} from "react-redux";
 
+
 class ProfileSettings extends Component {
 constructor(props) {
     super(props);
@@ -20,6 +21,13 @@ handleSubmit(ev){
     });
 }
     render() {
+        console.log(this.props)
+        // const style = {
+        //     width: this.props.theme.personalPage.width,
+        //     height: this.props.theme.personalPage.height,
+        //     backgroundColor: this.props.theme.personalPage.background
+        // };
+
         return (
             <div>
                 <EditPersonalData onSubmit={this.handleSubmit}/>
@@ -30,7 +38,6 @@ handleSubmit(ev){
 }
 
 export default connect(state => {
-    console.log("SETTING PROPS", state.Profile)
     return {
         token: state.Profile.token
     }

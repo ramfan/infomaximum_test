@@ -2,34 +2,30 @@
 import React from 'react'
 import { Field, reduxForm } from 'redux-form'
 import {validate} from "./validate";
-import {asyncValidate} from './validate'
 import {ButtonStyle, CustomField} from "../RooStyle";
 import {ThemeProvider} from 'react-fela'
 import CustomInput from "./CustomInput";
+import submit from './submit'
 import Error from "./Error";
+import {theme} from "../../theme";
 
-const theme =  {
-        textAlign: 'center',
-        position: 'relative',
-        width: '80%',
-        height: '36px',
-        outline: 'none',
-        background: '#ffffff !important',
-        marginLeft: '10%',
-        marginRight: '10%',
+const errorStyle = {
+    background: '#ff1107',
+    opacity: '59',
+    width: '100%',
+    height: '96px'
 };
+
 const renderField = ({ input, label, type, meta: { touched, error, warning }}) => (
         <div>
+            <CustomInput {...input} label={label} touched={touched} error={error} type={type} theme={theme} />
 
-            <ThemeProvider theme={theme}>
-                <CustomInput {...input} label={label} touched={touched} error={error} type={type} theme={theme} />
-            </ThemeProvider>
         </div>
 
 );
 
 const Auth = props => {
-    const { handleSubmit, pristine, reset, submitting, textVal } = props;
+    const { handleSubmit, pristine, reset, submitting, textVal, error, isReg } = props;
 
     return (
         <div>
@@ -40,7 +36,7 @@ const Auth = props => {
                             name="email"
                             component={renderField}
                             type="email"
-                            label="ivanov@mail.domen"
+                            label="Электронная почта"
 
                         />
                     </div>
@@ -52,18 +48,38 @@ const Auth = props => {
                             name="password"
                             component={renderField}
                             type="password"
-                            label="Password"
+                            label="Введите пароль"
                         />
                     </div>
 
 
                 </div>
+                {
+                    isReg === true ?
+
+                        <div>
+                            <div><br/></div>
+                            <div>
+                                <Field
+                                    name="repassword"
+                                    component={renderField}
+                                    type="password"
+                                    label="Повторите пароль"
+                                />
+                            </div>
+
+
+                    </div>: null
+                }
 
 
                 <div>
                     <ButtonStyle type="submit" name="Submit" disabled={pristine || submitting} >
                         <strong> {textVal}</strong>
                     </ButtonStyle>
+                    {/*<ThemeProvider theme={errorStyle}>*/}
+                        {error && <Error/>}
+                    {/*</ThemeProvider>*/}
                 </div>
 
             </form>
@@ -78,7 +94,6 @@ export default reduxForm({
         password: '',
         email: '',
     },
-    validate,
-    asyncValidate
+    validate
 })(Auth)
 

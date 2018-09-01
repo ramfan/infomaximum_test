@@ -15,18 +15,17 @@ constructor(props){
 
 render(){
     const {theme,touched, error, type} = this.props;
-    console.log("STATE", this.state);
     const style = {
-        textAlign: theme.textAlign,
-        position: theme.position,
-        width: theme.width,
-        height: theme.height,
-        outline: theme.outline,
-        borderColor: touched ? error ? '#fc0202': '#ffffff' : '#ffffff',
+        textAlign: theme.customInput.textAlign,
+        position: theme.customInput.position,
+        width: theme.customInput.width,
+        height: theme.customInput.height,
+        outline: theme.customInput.outline,
+        borderColor: touched ? error ? '#fc0202': '#c9cff2' : '#c9cff2',
         border: '1px solid #c9cff2',
         borderRadius: '5px',
-        marginLeft: theme.marginLeft,
-        marginRight: theme.marginRight,
+        marginLeft: theme.customInput.marginLeft,
+        marginRight: theme.customInput.marginRight,
     };
     const showHide = {
         width: '10px',

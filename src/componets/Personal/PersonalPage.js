@@ -15,7 +15,6 @@ class PersonalPage extends Component {
         if (data.loading) {
             return <div>Loading...</div>
         }
-        console.log('PROPS', this.props)
         Profile(this.props);
         return (
             <div>
