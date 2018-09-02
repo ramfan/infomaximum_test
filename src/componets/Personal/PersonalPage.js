@@ -4,7 +4,8 @@ import {personalData} from "../../queries";
 import {connect} from "react-redux";
 import {Profile} from "../../Action-Creators/AC";
 import {Link} from "react-router-dom";
-
+import {ThemeProvider} from 'react-fela';
+import {} from 'react-fela'
 
 class PersonalPage extends Component {
 

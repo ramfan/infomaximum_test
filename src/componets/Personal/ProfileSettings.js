@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import EditPersonalData from "../Forms/EditPersonalData";
 import {connect} from "react-redux";
+import {withTheme} from "react-fela";
+import {theme} from "../../theme";
 
 
 class ProfileSettings extends Component {
@@ -22,21 +24,21 @@ handleSubmit(ev){
 }
     render() {
         console.log(this.props)
-        // const style = {
-        //     width: this.props.theme.personalPage.width,
-        //     height: this.props.theme.personalPage.height,
-        //     backgroundColor: this.props.theme.personalPage.background
-        // };
+        const style = {
+            width: this.props.theme.personalPage.width,
+            height: this.props.theme.personalPage.height,
+            backgroundColor: this.props.theme.personalPage.background
+        };
 
         return (
-            <div>
+            <div style={style}>
                 <EditPersonalData onSubmit={this.handleSubmit}/>
                 
             </div>
         );
     }
 }
-
+ProfileSettings = withTheme(ProfileSettings);
 export default connect(state => {
     return {
         token: state.Profile.token

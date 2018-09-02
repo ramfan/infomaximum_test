@@ -31,7 +31,7 @@ class Root extends Component {
                     <FellaProvider renderer={renderer}>
                         <ThemeProvider theme={theme}>
                             <Router>
-                                <div>
+                                <div style={{width: '100%', height: '100%' }}>
                                     <Route exact path="/" component={App} />
                                     <Switch>
                                         <Route exact path="/auth/" component={AuthorizationComponent} />

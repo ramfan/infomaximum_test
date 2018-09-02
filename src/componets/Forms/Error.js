@@ -1,4 +1,5 @@
 import React from 'react';
+import {withTheme} from "react-fela";
 
 
 function Error(props) {
@@ -8,14 +9,14 @@ function Error(props) {
         // opacity: props.theme.opacity,
         // width: props.theme.width,
         // height: props.theme.height
-        background: '#FBF0EB',
+        background: theme.invalidEmailOrPassword.background,
        // opacity: '0.3',
-        width: '95%',
-        height: '96px',
-        display: 'flex',
-        paddingLeft: '5%',
-        marginTop: '6%',
-        paddingTop: '10%',
+        width: theme.invalidEmailOrPassword.width,
+        height: theme.invalidEmailOrPassword.height,
+        display: theme.invalidEmailOrPassword.display,
+        paddingLeft: theme.invalidEmailOrPassword.paddingLeft,
+        marginTop: theme.invalidEmailOrPassword.marginTop,
+        paddingTop: theme.invalidEmailOrPassword.paddingTop,
     };
     return (
         <div style={style}>
@@ -28,4 +29,4 @@ function Error(props) {
 }
 
 
-export default Error;
+export default withTheme(Error);

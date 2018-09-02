@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import Show  from '../../assets/show-hide-password.svg'
 import {CustomRadio} from "../RooStyle";
+import {withTheme} from "react-fela";
 
 class CustomInput extends Component{
 constructor(props){
@@ -64,4 +65,4 @@ render(){
 }
 
 
-export default CustomInput;
+export default withTheme(CustomInput);
