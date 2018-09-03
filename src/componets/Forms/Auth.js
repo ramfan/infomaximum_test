@@ -1,16 +1,13 @@
-
 import React from 'react'
 import { Field, reduxForm } from 'redux-form'
 import {validate} from "./validate";
 import {ButtonStyle, CustomField} from "../RooStyle";
-import {ThemeProvider, withTheme} from 'react-fela'
 import CustomInput from "./CustomInput";
-import submit from './submit'
 import Error from "./Error";
 
 const renderField = ({ input, label, type, meta: { touched, error, warning }}) => (
         <div>
-            <CustomInput {...input} label={label} touched={touched} error={error} type={type}/>
+            <CustomInput {...input} label={label} touched={touched} error={error} type={type} isAuth={true}/>
 
         </div>
 
@@ -66,7 +63,7 @@ const Auth = props => {
 
 
                 <div>
-                    <ButtonStyle type="submit" name="Submit" disabled={pristine || submitting} >
+                    <ButtonStyle type="submit" name="Submit" disabled={pristine || submitting} width={80}>
                         <strong> {textVal}</strong>
                     </ButtonStyle>
                         {error && <Error/>}

@@ -1,21 +1,21 @@
 import { createComponent } from 'react-fela'
 import React from 'react'
-const background = () => ({
+const background = ({width, height, marginTop}) => ({
     position: "fixed",
     top: 50+'%',
     left: 50+'%',
     transform: 'translate(-50%, -50%)',
     background: '#ffffff',
-    height: '100%',
-    marginTop: '10%',
-    width: '30%',
+    height: height,
+    marginTop: marginTop,
+    width: width + '%',
     paddingTop: '2%'
 });
 
 export const Background = createComponent(background, 'div');
-const spanColor = () => ({
+const spanColor = ({width}) => ({
     // position: 'relative',
-    width: '80%',
+    width: width+'%',
     height: '36px',
     color: 'black',
     background: '#ffe254',
@@ -38,3 +38,18 @@ export const ButtonStyle = createComponent(spanColor, 'button');
     display: 'flex',
 });
 export const CustomRadio = createComponent(ShowHide, 'span');
+
+const center = ({width, height, marginTop, display}) => ({
+    position: 'relative',
+    top: 50+'%',
+    left: 50+'%',
+    transform: 'translate(-50%, -50%)',
+    height: height,
+    marginTop: marginTop,
+    width: width + '%',
+    paddingTop: '2%',
+    lineHeight:'25px',
+    display: display
+});
+
+export const InCenter = createComponent(center, 'div');

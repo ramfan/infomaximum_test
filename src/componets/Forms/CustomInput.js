@@ -39,7 +39,7 @@ render(){
     }
     return (
         <div style={{display: 'flex'}}>
-            <input {...this.props} type={this.props.type !== "email"?this.state.hide ? "password": "text":''} placeholder={this.props.label} style={style}/>
+            <input {...this.props} type={this.props.isAuth ? (this.props.type !== "email"?this.state.hide ? "password": "text":''): 'text'} placeholder={this.props.label} style={style}/>
             {
                 type === "password"?
 

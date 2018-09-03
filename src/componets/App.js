@@ -9,16 +9,16 @@ class App extends Component {
 
         return(
            <div>
-                <Background>
+                <Background width={30} height={100 + '%'} marginTop={'10%'}>
                     <div>
                         <Link to={`/auth`} style={{textDecoration: 'none'}}>
-                            <ButtonStyle>
+                            <ButtonStyle width={80}>
                                 <strong>Вход в систему</strong>
                             </ButtonStyle>
                         </Link>
             
                         <Link to={`/registry`} style={{textDecoration: 'none'}}>
-                            <ButtonStyle>
+                            <ButtonStyle width={80}>
                                 <strong>Регистрация</strong>
                             </ButtonStyle>
                         </Link>

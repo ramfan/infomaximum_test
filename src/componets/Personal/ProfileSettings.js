@@ -3,6 +3,7 @@ import EditPersonalData from "../Forms/EditPersonalData";
 import {connect} from "react-redux";
 import {withTheme} from "react-fela";
 import {theme} from "../../theme";
+import {Background} from "../RooStyle";
 
 
 class ProfileSettings extends Component {
@@ -23,7 +24,6 @@ handleSubmit(ev){
     });
 }
     render() {
-        console.log(this.props)
         const style = {
             width: this.props.theme.personalPage.width,
             height: this.props.theme.personalPage.height,
@@ -32,8 +32,7 @@ handleSubmit(ev){
 
         return (
             <div style={style}>
-                <EditPersonalData onSubmit={this.handleSubmit}/>
-                
+                <EditPersonalData onSubmit={this.handleSubmit} textVal={"Сохранить и вернуться"}/>
             </div>
         );
     }
