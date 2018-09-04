@@ -1,14 +1,14 @@
 import { createComponent } from 'react-fela'
 import React from 'react'
-const background = ({width, height, marginTop}) => ({
+const background = ({width, height, marginTop, background, top, left}) => ({
     position: "fixed",
-    top: 50+'%',
-    left: 50+'%',
+    top: top,
+    left: left,
     transform: 'translate(-50%, -50%)',
-    background: '#ffffff',
+    background: background,
     height: height,
     marginTop: marginTop,
-    width: width + '%',
+    width: width,
     paddingTop: '2%'
 });
 

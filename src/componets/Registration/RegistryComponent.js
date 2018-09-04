@@ -30,7 +30,7 @@ class RegistryComponent extends Component {
 
     render() {
         return (
-            <Background width={30} height={100+'%'} marginTop={'10%'}>
+            <Background width={'30%'} height={100+'%'} marginTop={'10%'}  background={'#ffffff'} top={'50%'} left={'50%'}>
                 <h3 style={{fontFamily: "OpenSans", marginLeft: '10%', marginRight: '10%'}}>
                     <strong>Задайте электронную почту и пароль для администратора системы</strong>
                 </h3>

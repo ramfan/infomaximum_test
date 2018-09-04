@@ -17,7 +17,7 @@ constructor(props){
 render(){
     const {theme,touched, error, type} = this.props;
     const style = {
-        textAlign: theme.customInput.textAlign,
+      //  textAlign: theme.customInput.textAlign,
         position: theme.customInput.position,
         width: theme.customInput.width,
         height: theme.customInput.height,
@@ -27,7 +27,8 @@ render(){
         borderRadius: '5px',
         marginLeft: theme.customInput.marginLeft,
         marginRight: theme.customInput.marginRight,
-        color: '#6879BB'
+        color: '#6879BB',
+        paddingLeft: '1%',
     };
     const showHide = {
         width: '10px',

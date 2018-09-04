@@ -23,7 +23,7 @@ class AuthorizationComponent extends Component {
 
     render() {
         return(
-            <Background width={30} height={100+'%'} marginTop={'10%'}>
+            <Background width={'30%'} height={100+'%'} marginTop={'10%'}  background={'#ffffff'} top={'50%'} left={'50%'}>
                     <div>
                     <Auth textVal={'Войти в систему'} onSubmit = {this.handleSubmit}/>
                     {(this.state.email !== null &&  this.state.password !== null)?

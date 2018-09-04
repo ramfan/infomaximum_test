@@ -9,7 +9,7 @@ class App extends Component {
 
         return(
            <div>
-                <Background width={30} height={100 + '%'} marginTop={'10%'}>
+                <Background width={'30%'} height={100 + '%'} marginTop={'10%'} background={'#ffffff'} top={'50%'} left={'50%'}>
                     <div>
                         <Link to={`/auth`} style={{textDecoration: 'none'}}>
                             <ButtonStyle width={'80%'}

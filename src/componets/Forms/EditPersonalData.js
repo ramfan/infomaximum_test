@@ -4,6 +4,7 @@ import {validate} from "./validate";
 import {connect} from "react-redux";
 import CustomInput from "./CustomInput";
 import {Background, ButtonStyle, InCenter} from "../RooStyle";
+import { Container, Row, Col } from 'react-grid-system';
 
 const renderField = ({ input, label, type, meta: { touched, error, warning }}) => (
     <div>
@@ -20,30 +21,37 @@ class EditPersonalData extends Component{
     render(){
         const { handleSubmit, pristine, textVal, submitting, lastName, firstName } = this.props;
         return (
-            <div style={{width: '100%', paddingTop: '2%', display: 'flex', marginLeft: '15%'}}>
-                <h1 style={{position: 'absolute', color:'#535374'}}>{firstName}&nbsp;{lastName}. Редактирование</h1>
+            <Container>
+
                 <form onSubmit={handleSubmit}>
-                    <div style={{width: '70%', display: 'inline-block'}}>
-                        <div style={{width: '20%', float: 'right', marginTop: '5px', marginLeft: '338px'}}>
+                    {/*<div style={{width: '70%', display: 'inline-block'}}>*/}
+                        {/*<div style={{width: '20%', float: 'right', marginTop: '5px', marginLeft: '0'}}>*/}
+                    <Row>
+                        {/*<div style={{width: '100%', paddingTop: '2%', display: 'flex', marginLeft: '15%'}}>*/}
+                        <Col md={8} >
+                            <h1>{firstName}&nbsp;{lastName}. Редактирование</h1>
+                        </Col>
+                   <Col md={4} >
                             <ButtonStyle
                                 type="submit"
                                 name="Submit"
                                 disabled={pristine || submitting}
-                                width={'221px'}
-                                position={'fixed'}
+                                width={'50%'}
+                                position={''}
                                 marginRight={0}
-                                marginTop={0}
-                                marginLeft={'40%'}
+                                marginTop={'2%'}
+                                marginLeft={'50%'}
                             >
                                 <strong> {textVal}</strong>
                             </ButtonStyle>
+                   </Col>
+                    </Row>
 
-                            <div><br/></div>
 
-                        </div>
-                        <Background width={70} height={348+'px'} marginTop={'-40px'}>
-                            <div>
-                                <div style={{width:'50%'}}>
+                        {/*</div>*/}
+                        {/*<Background width={"70%"} height={348+'px'} background={'#ffffff'} top={'50%'} left={'50%'}>*/}
+                            <div style={{background: '#ffffff', paddingTop: '2%', marginTop: '1%'}}>
+                                <div style={{width:'50%', margin: '2%'}}>
                                     <Field
                                         name="firstName"
                                         component={renderField}
@@ -52,11 +60,9 @@ class EditPersonalData extends Component{
                                         label={"Имя"}
                                     />
                                 </div>
-                                <div><br/></div>
 
-                            </div>
                             <div>
-                                <div style={{width:'50%'}}>
+                                <div style={{width:'50%', margin: '2%'}}>
                                     <Field
                                         name="lastName"
                                         component={renderField}
@@ -65,11 +71,12 @@ class EditPersonalData extends Component{
                                         label={"Фамилия"}
                                     />
                                 </div>
-                                <div><br/></div>
+
                                 <div style={{borderBottom: '1px solid #D6DCE9'}}>&nbsp;</div>
-                                <div><br/></div>
+
                             </div>
-                            <div style={{width:'50%'}}>
+                                <div style={{width:'50%', margin: '2%', paddingBottom: '4%'}}>
+
                                 <Field
                                     name="email"
                                     component={renderField}
@@ -79,11 +86,14 @@ class EditPersonalData extends Component{
 
                                 />
                             </div>
-                        </Background>
+                        {/*</Background>*/}
                     </div>
 
                 </form>
-            </div>
+
+            {/*</div>*/}
+
+            </Container>
         )
     }
 
