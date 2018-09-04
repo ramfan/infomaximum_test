@@ -27,6 +27,7 @@ render(){
         borderRadius: '5px',
         marginLeft: theme.customInput.marginLeft,
         marginRight: theme.customInput.marginRight,
+        color: '#6879BB'
     };
     const showHide = {
         width: '10px',

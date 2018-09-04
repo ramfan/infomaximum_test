@@ -21,7 +21,7 @@ class EditPersonalData extends Component{
         const { handleSubmit, pristine, textVal, submitting, lastName, firstName } = this.props;
         return (
             <div style={{width: '100%', paddingTop: '2%', display: 'flex', marginLeft: '15%'}}>
-                <h1 style={{position: 'absolute'}}>{firstName}&nbsp;{lastName}. Редактировать</h1>
+                <h1 style={{position: 'absolute', color:'#535374'}}>{firstName}&nbsp;{lastName}. Редактирование</h1>
                 <form onSubmit={handleSubmit}>
                     <div style={{width: '70%', display: 'inline-block'}}>
                         <div style={{width: '20%', float: 'right', marginTop: '5px', marginLeft: '338px'}}>
