@@ -13,18 +13,18 @@ const background = ({width, height, marginTop}) => ({
 });
 
 export const Background = createComponent(background, 'div');
-const spanColor = ({width}) => ({
-    // position: 'relative',
-    width: width+'%',
+const spanColor = ({width, position, marginTop, marginLeft, marginRight}) => ({
+     position: position,
+    width: width,
     height: '36px',
     color: 'black',
     background: '#ffe254',
     fontSize: '12px',
     border: 0,
     borderRadius: '7px',
-    marginTop: '8%',
-    marginLeft: '10%',
-    marginRight: '10%',
+    marginTop: marginTop,
+    marginLeft: marginLeft,
+    marginRight: marginRight,
 
 });
 export const ButtonStyle = createComponent(spanColor, 'button');

@@ -12,13 +12,21 @@ class App extends Component {
                 <Background width={30} height={100 + '%'} marginTop={'10%'}>
                     <div>
                         <Link to={`/auth`} style={{textDecoration: 'none'}}>
-                            <ButtonStyle width={80}>
+                            <ButtonStyle width={'80%'}
+                                         marginRight={'10%'}
+                                         marginTop={'8%'}
+                                         marginLeft={'10%'}
+                            >
                                 <strong>Вход в систему</strong>
                             </ButtonStyle>
                         </Link>
             
                         <Link to={`/registry`} style={{textDecoration: 'none'}}>
-                            <ButtonStyle width={80}>
+                            <ButtonStyle width={'80%'}
+                                         marginRight={'10%'}
+                                         marginTop={'8%'}
+                                         marginLeft={'10%'}
+                            >
                                 <strong>Регистрация</strong>
                             </ButtonStyle>
                         </Link>

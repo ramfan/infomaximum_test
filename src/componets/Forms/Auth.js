@@ -63,7 +63,15 @@ const Auth = props => {
 
 
                 <div>
-                    <ButtonStyle type="submit" name="Submit" disabled={pristine || submitting} width={80}>
+                    <ButtonStyle
+                        type="submit"
+                        name="Submit"
+                        disabled={pristine || submitting}
+                        width={'80%'}
+                        marginRight={'10%'}
+                        marginTop={'8%'}
+                        marginLeft={'10%'}
+                    >
                         <strong> {textVal}</strong>
                     </ButtonStyle>
                         {error && <Error/>}
