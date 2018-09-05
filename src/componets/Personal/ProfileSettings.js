@@ -6,6 +6,7 @@ import {theme} from "../../theme";
 import {Background} from "../RooStyle";
 
 
+
 class ProfileSettings extends Component {
 constructor(props) {
     super(props);
@@ -32,6 +33,7 @@ handleSubmit(ev){
         console.log('PROOOPS', this.props)
         return (
             <div style={style}>
+
                 <EditPersonalData onSubmit={this.handleSubmit} textVal={"Сохранить и вернуться"}/>
             </div>
         );

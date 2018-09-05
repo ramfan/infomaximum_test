@@ -12,7 +12,9 @@ export const theme = {
     personalPage: {
         width: '100%',
         height: '100%',
-        background: '#EBF2FB'
+        background: '#EBF2FB',
+        margin: '0',
+        padding: '0'
 
     },
     invalidEmailOrPassword: {
