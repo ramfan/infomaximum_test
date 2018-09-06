@@ -5,6 +5,7 @@ import {auth} from "../../Action-Creators/AC";
 import {connect} from "react-redux";
 import {Redirect} from "react-router-dom";
 import { SubmissionError } from 'redux-form';
+import Error from "../Forms/Error";
 
 class Authorization extends Component {
     constructor(props){
@@ -21,10 +22,8 @@ class Authorization extends Component {
             const {auth} = this.props;
             auth(res.data.login.token);
         }).catch(e => {
-            throw new SubmissionError({
-                username: 'User does not exist',
-                _error: 'Login failed!'
-            })
+            return <Error e = {e}/>;
+           // console.log('ERROR', e)
         });
 
 

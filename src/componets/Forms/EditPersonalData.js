@@ -27,10 +27,10 @@ class EditPersonalData extends Component{
                         <Col  md={12}>
                             <form onSubmit={handleSubmit}>
                                 <Row>
-                                    <Col md={8}  style={{marginTop: '5%'}}>
+                                    <Col md={8}  style={{marginTop: '8%'}}>
                                         <h1>{firstName}&nbsp;{lastName}. Редактирование</h1>
                                     </Col>
-                               <Col md={4} style={{marginTop: '5%'}}>
+                               <Col md={4} style={{marginTop: '6%'}}>
                                         <ButtonStyle
                                             type="submit"
                                             name="Submit"
@@ -38,7 +38,7 @@ class EditPersonalData extends Component{
                                             width={'50%'}
                                             position={''}
                                             marginRight={0}
-                                            marginTop={'2%'}
+                                            marginTop={'6.59%'}
                                             marginLeft={'50%'}
                                         >
                                             <strong> {textVal}</strong>

@@ -14,7 +14,17 @@ export const theme = {
         height: '100%',
         background: '#EBF2FB',
         margin: '0',
-        padding: '0'
+        padding: '0',
+        toggleHide: {
+            paddingLeft: 0,
+            display: 'block'
+        },
+        hovered: {
+            ':hover': {
+                display: 'none'
+            }
+        }
+
 
     },
     invalidEmailOrPassword: {
