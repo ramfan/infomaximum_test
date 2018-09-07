@@ -5,15 +5,9 @@ import {ButtonStyle, CustomField} from "../RooStyle";
 import CustomInput from "./CustomInput";
 import Error from "./Error";
 import {connect} from "react-redux";
+import {renderField} from "./renderField";
 
-const renderField = ({ input, label, type, meta: { touched, error, warning }}) => {
-    console.log('ERROR', error);
-   return (
-        <div>
-            <CustomInput {...input} label={label} touched={touched} error={error} type={type} isAuth={true}/>
-        </div>
-    )
-}
+
 
 
 
@@ -22,6 +16,7 @@ class  Auth extends PureComponent {
     render(){
         const { handleSubmit, pristine, reset, submitting, textVal, errorReport, isReg } = this.props;
         console.log('AUTHERR', this.props.errorReport)
+        //const renderField = <renderField/>;
         return (
             <div>
                 <div style={{margin: '2%'}}>

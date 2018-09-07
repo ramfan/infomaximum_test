@@ -5,18 +5,8 @@ import {connect} from "react-redux";
 import CustomInput from "./CustomInput";
 import {Background, ButtonStyle, InCenter} from "../RooStyle";
 import { Container, Row, Col } from 'react-grid-system';
+import {renderEditField as renderField} from "./renderField";
 
-const renderField = ({ input, label, type, meta: { touched, error, warning }}) => (
-    <div>
-        <div style={{position: 'absolute'}}>
-            <label style={{fontSize: '14px',color: '#999999', display: 'inline', marginTop: '1%'}}>&nbsp;&nbsp;&nbsp;{label}</label>
-
-        </div>
-        <InCenter  width={70} height={34+'px'} marginTop={'-10px'} display={'inline'}>
-            <CustomInput  {...input} label={label} touched={touched} error={error} type={type} />
-        </InCenter>
-    </div>
-);
 class EditPersonalData extends Component{
     render(){
         const { handleSubmit, pristine, textVal, submitting, lastName, firstName } = this.props;
