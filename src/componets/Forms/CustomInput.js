@@ -3,6 +3,8 @@ import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import Show  from '../../assets/show-hide-password.svg'
 import {CustomRadio} from "../RooStyle";
 import {withTheme} from "react-fela";
+import {connect} from "react-redux";
+import {errorReport} from "../../Action-Creators/AC";
 
 class CustomInput extends Component{
 constructor(props){
@@ -15,7 +17,8 @@ constructor(props){
 
 
 render(){
-    const {theme,touched, error, type} = this.props;
+    const {theme,touched, error, type, errorReport} = this.props;
+        touched && error ? errorReport(error) : errorReport(null);
     const style = {
       //  textAlign: theme.customInput.textAlign,
         position: theme.customInput.position,
@@ -38,7 +41,8 @@ render(){
         marginLeft: '86%',
         position: 'absolute',
         display: 'flex',
-    }
+        cursor: type === 'password'? 'pointer':''
+    };
     return (
         <div style={{display: 'flex'}}>
             <input {...this.props} type={this.props.isAuth ? (this.props.type !== "email"?this.state.hide ? "password": "text":''): 'text'} placeholder={this.props.label} style={style}/>
@@ -65,6 +69,6 @@ render(){
         });
     }
 }
-
+CustomInput = connect(null, {errorReport})(CustomInput)
 
 export default withTheme(CustomInput);

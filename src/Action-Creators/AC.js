@@ -1,4 +1,4 @@
-import {FORM_SUBMITED, GET_PROFILE_DATA, SHOW_MENU} from "../constants";
+import {ERROR_REPORT, FORM_SUBMITED, GET_PROFILE_DATA, SHOW_MENU} from "../constants";
 
 export function auth(token) {
 
@@ -22,4 +22,10 @@ console.log('STATE', state)
         payload: state
     }
 
+}
+export function errorReport(error) {
+    return{
+        type: ERROR_REPORT,
+        payload: {error}
+    }
 }

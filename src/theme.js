@@ -30,10 +30,10 @@ export const theme = {
     invalidEmailOrPassword: {
         background: '#FBF0EB',
         width: '95%',
-        height: '96px',
+        height: '56px',
         display: 'flex',
         paddingLeft: '5%',
         marginTop: '6%',
-        paddingTop: '10%',
+        paddingTop: '4%',
     }
 };
