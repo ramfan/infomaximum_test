@@ -7,6 +7,7 @@ class App extends Component {
 
     render() {
 
+
         return(
            <div>
                 <Background width={'30%'} height={100 + '%'} marginTop={'10%'} background={'#ffffff'} top={'50%'} left={'50%'}>
@@ -50,5 +51,5 @@ App.defaultProps = {
 
 export default connect(state => {
     return{
-    formData: state.form.AuthForm
+   // formData: state.form.AuthForm
 }})(App)

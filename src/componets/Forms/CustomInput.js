@@ -4,7 +4,7 @@ import Show  from '../../assets/show-hide-password.svg'
 import {CustomRadio} from "../RooStyle";
 import {withTheme} from "react-fela";
 import {connect} from "react-redux";
-import {errorReport} from "../../Action-Creators/AC";
+import {actionCreators} from "../../store/duckStore";
 
 class CustomInput extends Component{
 constructor(props){
@@ -18,6 +18,7 @@ constructor(props){
 
 render(){
     const {theme,touched, error, type, errorReport} = this.props;
+    console.log("PROOOOOPS", actionCreators)
         touched && error ? errorReport(error) : errorReport(null);
     const style = {
       //  textAlign: theme.customInput.textAlign,
@@ -69,6 +70,7 @@ render(){
         });
     }
 }
+const {errorReport} = actionCreators
 CustomInput = connect(null, {errorReport})(CustomInput)
 
 export default withTheme(CustomInput);

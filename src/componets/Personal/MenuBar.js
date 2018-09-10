@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {connect} from "react-redux";
-import {show} from "../../Action-Creators/AC";
+import {actionCreators} from "../../store/duckStore";
 import {Link} from "react-router-dom";
 
 class MenuBar extends Component {
@@ -86,7 +86,7 @@ toggleShow(){
         );
     }
 }
-
+const {show} = actionCreators
 export default connect(state => ({
     toggle: state.menuOption.flag
 }), {show})(MenuBar);

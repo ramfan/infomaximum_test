@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {graphql} from 'react-apollo'
 import {logginig} from "../../queries";
-import {auth} from "../../Action-Creators/AC";
+import {actionCreators} from "../../store/duckStore";
 import {connect} from "react-redux";
 import {Redirect} from "react-router-dom";
 import { SubmissionError } from 'redux-form';
@@ -20,7 +20,7 @@ class Authorization extends Component {
             }
         }).then(res =>{
             const {auth} = this.props;
-            auth(res.data.login.token);
+             auth(res.data.login.token);
         }).catch(e => {
             return <Error e = {e}/>;
            // console.log('ERROR', e)
@@ -50,7 +50,7 @@ const queryOptions  = {
 };
 
 Authorization = graphql(logginig, queryOptions)(Authorization);
-
+const {auth} = actionCreators
 export default connect(state => ({
     token: state.auth.tokenHash,
     isReady: state.auth.isReady

@@ -1,9 +1,9 @@
 import {combineReducers} from 'redux'
 import formReducer from "./formReducer";
 import {reducer} from 'redux-form'
-import auth from "./auth";
-import Profile from "./Profile";
-import menuOption from "./menuOption";
+import {auth} from "../store/duckStore";
+import {Profile} from "../store/duckStore";
+import {menuOption} from "../store/duckStore";
 
 
 export default combineReducers({

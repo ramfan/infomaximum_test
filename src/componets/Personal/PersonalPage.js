@@ -2,7 +2,7 @@ import React, {PureComponent} from 'react';
 import {  graphql } from 'react-apollo';
 import {personalData} from "../../queries";
 import {connect} from "react-redux";
-import {Profile, show} from "../../Action-Creators/AC";
+import {actionCreators} from "../../store/duckStore";
 import {Link} from "react-router-dom";
 import {ThemeProvider} from 'react-fela';
 import {} from 'react-fela'
@@ -102,6 +102,7 @@ const queryOptions  = {
         }
     }
 };
+const {Profile, show} = actionCreators
 PersonalPage = withTheme(PersonalPage);
 PersonalPage = graphql(personalData, queryOptions)(PersonalPage);
 export default connect(state => ({

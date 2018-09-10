@@ -1,4 +1,4 @@
-import {ERROR_REPORT, FORM_SUBMITED, GET_PROFILE_DATA} from "../constants";
+// import {ERROR_REPORT, FORM_SUBMITED, GET_PROFILE_DATA, SHOW_MENU} from "../constants";
 
 const actionTypes = {
     FORM_SUBMITED: "FORM_SUBMITED",
@@ -7,7 +7,7 @@ const actionTypes = {
     ERROR_REPORT: "ERROR_REPORT"
 };
 
-const actionCreators = {
+export const actionCreators = {
     auth: (token) => ({
         type: actionTypes.FORM_SUBMITED,
         payload: {token}
@@ -44,16 +44,16 @@ const initialProfileState = {
     token: null,
     isReady: false
 };
-const auth = (token = initialAuthState, action) => {
+export const auth = (token = initialAuthState, action) => {
     const {type, payload} = action;
 
     switch (type){
-        case FORM_SUBMITED:
+        case actionTypes.FORM_SUBMITED:
             return {
                 tokenHash: payload,
                 isReady: true
             }
-        case ERROR_REPORT: {
+        case actionTypes.ERROR_REPORT: {
             return {
                 reportError: payload
             }
@@ -62,11 +62,11 @@ const auth = (token = initialAuthState, action) => {
     return token
 };
 
-const formReducer = (users = initialFormReducerState, action) => {
+export const formReducer = (users = initialFormReducerState, action) => {
     const {type, payload} = action;
 
     switch (type){
-        case FORM_SUBMITED:
+        case actionTypes.FORM_SUBMITED:
             return {
                 login: payload.user.login,
                 password: payload.user.id
@@ -75,9 +75,9 @@ const formReducer = (users = initialFormReducerState, action) => {
     return users
 };
 
-const menuOption = (state = initialMenuState, action) => {
+export const menuOption = (state = initialMenuState, action) => {
     switch (action.type){
-        case SHOW_MENU: {
+        case actionTypes.SHOW_MENU: {
             console.log("REDUCER", action.payload);
             return {
                 flag: !action.payload
@@ -88,12 +88,12 @@ const menuOption = (state = initialMenuState, action) => {
 
 };
 
-const Profile = (state = initialProfileState, action) => {
+export const Profile = (state = initialProfileState, action) => {
 
     const {type, payload} = action;
 
     switch (type){
-        case GET_PROFILE_DATA: {
+        case actionTypes.GET_PROFILE_DATA: {
             return {
                 firstName: payload.data.data.User.firstName,
                 lastName: payload.data.data.User.lastName,
@@ -105,5 +105,15 @@ const Profile = (state = initialProfileState, action) => {
     }
     return state;
 
+};
+export const makeDuckStore = () => {
+    return {
+        actionTypes,
+        actionCreators,
+        auth,
+        formReducer,
+        menuOption,
+        Profile,
+    }
 }
 

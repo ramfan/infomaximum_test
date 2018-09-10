@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {  graphql } from 'react-apollo';
 import {Redirect} from "react-router-dom";
-import {auth} from "../../Action-Creators/AC";
+import {actionCreators} from "../../store/duckStore";
 import {connect} from "react-redux";
 import {register as query} from "../../queries";
 
@@ -42,7 +42,7 @@ const queryOption = {
 
 
 Registration = graphql(query, queryOption)(Registration);
-
+const {auth} = actionCreators;
 export default connect(state => ({
     token: state.auth.tokenHash,
     isReady: state.auth.isReady

@@ -21,7 +21,7 @@ const client = new ApolloClient({
 
 });
 const renderer = createRenderer();
-
+console.log(store);
 class Root extends Component {
 
     render() {
