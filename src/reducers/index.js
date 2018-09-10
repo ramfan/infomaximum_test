@@ -1,5 +1,4 @@
 import {combineReducers} from 'redux'
-import formReducer from "./formReducer";
 import {reducer} from 'redux-form'
 import {auth} from "../store/duckStore";
 import {Profile} from "../store/duckStore";
