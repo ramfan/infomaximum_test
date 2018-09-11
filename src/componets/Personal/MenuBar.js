@@ -17,6 +17,7 @@ toggleShow(){
 
         const {toggle} = this.props;
         console.log('X', document.documentElement.clientHeight, 'TOP',screenTop, );
+        console.log("MENU_STATE", this.props)
         const showMenu = {
             background: '#404064',
             height: '100%',
@@ -71,9 +72,10 @@ toggleShow(){
                                 </svg>
                             </div>
                             <div style={{padding: '3%', marginLeft: '16%'}}>
-                                <Link to={`/`} style={{textDecoration: 'none'}}>
+
+                                <Link to={`/processet/`} style={{textDecoration: 'none'}}>
                                     <strong style={{color: '#ffffff', fontSize: '12px'}}>Общие данные</strong>
-                                </Link>
+                                //</Link>
                             </div>
 
                         </div>
@@ -87,6 +89,10 @@ toggleShow(){
     }
 }
 const {show} = actionCreators
-export default connect(state => ({
-    toggle: state.menuOption.flag
-}), {show})(MenuBar);
+export default connect(state => {
+
+    return {
+    toggle: state.menuOption.flag,
+    token: state.auth.tokenHash,
+    isReady: state.auth.isReady
+}}, {show})(MenuBar);

@@ -13,6 +13,7 @@ import {createRenderer} from "fela";
 import { Provider as FellaProvider } from 'react-fela';
 import {ThemeProvider} from 'react-fela'
 import {theme} from "../theme";
+import ProcessetPage from "../Processet/ProcessetPage";
 
 
 const client = new ApolloClient({
@@ -38,6 +39,7 @@ class Root extends Component {
                                         <Route exact path="/registry/" component={RegistryComponent} />
                                         <Route exact path="/user/:token/" component={PersonalPage} />
                                         <Route exact path="/editProfile/" component={ProfileSettings} />
+                                        <Route exact path="/processet/" component={ProcessetPage} />
                                     </Switch>
                                 </div>
 

@@ -1,10 +1,11 @@
-// import {ERROR_REPORT, FORM_SUBMITED, GET_PROFILE_DATA, SHOW_MENU} from "../constants";
+import {proceset as initialProcessetState} from "../assets/processet";
 
 const actionTypes = {
     FORM_SUBMITED: "FORM_SUBMITED",
     GET_PROFILE_DATA: "GET_PROFILE_DATA",
     SHOW_MENU: 'SHOW_MENU',
-    ERROR_REPORT: "ERROR_REPORT"
+    ERROR_REPORT: "ERROR_REPORT",
+    LOAD_PROCESSET: " LOAD_PROCESSET"
 };
 
 export const actionCreators = {
@@ -23,7 +24,10 @@ export const actionCreators = {
     errorReport: (error) => ({
         type: actionTypes.ERROR_REPORT,
         payload: {error}
-    })
+    }),
+    processet: () => {
+        type: actionTypes.LOAD_PROCESSET
+    }
 };
 const initialAuthState = {
     tokenHash: null,
@@ -105,6 +109,19 @@ export const Profile = (state = initialProfileState, action) => {
     }
     return state;
 
+};
+
+export const getProcesset = (state = initialProcessetState, action) => {
+  const {type, payload} = action;
+  switch (type){
+      case actionTypes.LOAD_PROCESSET:
+      {
+          return {
+              processet: state
+          }
+      }
+  }
+  return state
 };
 export const makeDuckStore = () => {
     return {
