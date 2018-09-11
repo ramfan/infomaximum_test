@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import {Field, reduxForm} from "redux-form";
 import {validate} from "./validate";
 import {connect} from "react-redux";
-import CustomInput from "./CustomInput";
 import {Background, ButtonStyle, InCenter} from "../RooStyle";
 import { Container, Row, Col } from 'react-grid-system';
 import {renderEditField as renderField} from "./renderField";
