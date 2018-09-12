@@ -14,9 +14,9 @@ export const actionCreators = {
         type: actionTypes.FORM_SUBMITED,
         payload: {token}
     }),
-    Profile: (data) => ({
+    Profile: (data, params) => ({
         type: actionTypes.GET_PROFILE_DATA,
-        payload: {data}
+        payload: {data , params}
     }),
     show: (state) => ({
         type: actionTypes.SHOW_MENU,
@@ -68,10 +68,10 @@ export const actionCreators = {
          case actionTypes.GET_PROFILE_DATA: {
              return {
                  ...state,
-                 firstName: payload.data.data.User.firstName,
-                 lastName: payload.data.data.User.lastName,
-                 email: payload.data.data.User.email,
-                 token: payload.data.match.params.token,
+                 firstName: payload.data.firstName,
+                 lastName: payload.data.lastName,
+                 email: payload.data.email,
+                 token: payload.params.match.params.token,
                  isReadyProfile: true
              }
          }

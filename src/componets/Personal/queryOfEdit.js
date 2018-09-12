@@ -2,6 +2,9 @@ import React, {Component} from 'react';
 import Error from "../Forms/Error";
 import {graphql} from "react-apollo/index";
 import {personalData, updateUserData} from "../../queries";
+import {actionCreators} from "../../store/duckStore";
+import {connect} from "react-redux";
+
 
 class Edit extends Component {
     constructor(props){
@@ -23,7 +26,7 @@ class Edit extends Component {
 
                     }, refetchQueries: [{query: personalData, variables:{id: this.props.id}}]
                 }).then(res => {
-                    console.log(res)
+                    this.props.Profile(res.data.updateUser, this.props)
                     this.abort(res);
                 }).catch(e => {return e}) : null
 
@@ -37,5 +40,6 @@ class Edit extends Component {
         });
     }
 }
+const {Profile} = actionCreators
 Edit = graphql(updateUserData)(Edit);
-export default Edit;
+export default connect(null, {Profile})(Edit);

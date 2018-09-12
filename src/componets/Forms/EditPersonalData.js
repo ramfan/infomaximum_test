@@ -84,12 +84,14 @@ class EditPersonalData extends Component{
 
   EditPersonalData = reduxForm({
     form: 'EditPersonalData',
-
+      enableReinitialize: true,
     validate
 }, )(EditPersonalData);
 export default connect(state => {
+    console.log('INIT',state.getReducer)
     return {
         initialValues: {
+
             firstName: state.getReducer.firstName,
             lastName: state.getReducer.lastName,
             email: state.getReducer.email

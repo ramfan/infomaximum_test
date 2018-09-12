@@ -51,7 +51,7 @@ class PersonalPage extends PureComponent {
         if (data.loading) {
             return <div>Loading...</div>
         }
-        Profile(this.props);
+        Profile(this.props.data.User, this.props);
         const toggleHide = {
             display: this.props.theme.personalPage.toggleHide.display,
             paddingLeft: this.props.theme.personalPage.toggleHide.paddingLeft
