@@ -13,6 +13,7 @@ class Authorization extends Component {
     }
 
     render() {
+        console.log('PROPS',this.props)
         this.props.mutate({
             variables: {
                 email: this.props.email,
@@ -52,6 +53,6 @@ const queryOptions  = {
 Authorization = graphql(logginig, queryOptions)(Authorization);
 const {auth} = actionCreators
 export default connect(state => ({
-    token: state.auth.tokenHash,
-    isReady: state.auth.isReady
+    token: state.getReducer.tokenHash,
+    isReady: state.getReducer.isReady
 }), {auth})(Authorization);

@@ -90,9 +90,9 @@ class EditPersonalData extends Component{
 export default connect(state => {
     return {
         initialValues: {
-            firstName: state.Profile.firstName,
-            lastName: state.Profile.lastName,
-            email: state.Profile.email
+            firstName: state.getReducer.firstName,
+            lastName: state.getReducer.lastName,
+            email: state.getReducer.email
         }
     }
 })(EditPersonalData)

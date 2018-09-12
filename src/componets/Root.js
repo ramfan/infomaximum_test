@@ -36,8 +36,6 @@ import {createHttpLink} from 'apollo-link-http'
 //     cache: new InMemoryCache()
 // });
 
-console.log(localStorage)
-
 const client = new ApolloClient({
     uri: 'https://fakerql.com/graphql',
     credentials: 'same-origin',

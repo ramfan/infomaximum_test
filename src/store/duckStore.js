@@ -1,4 +1,5 @@
 import {proceset as initialProcessetState} from "../assets/processet";
+import jwt_decode from 'jwt-decode';
 
 const actionTypes = {
     FORM_SUBMITED: "FORM_SUBMITED",
@@ -29,107 +30,60 @@ export const actionCreators = {
         type: actionTypes.LOAD_PROCESSET
     }
 };
-const initialAuthState = {
-    tokenHash: null,
-    reportError: null,
-    isReady: false
-};
-const initialFormReducerState = {
-    login: undefined,
-    password: undefined
-};
-const initialMenuState = {
-    flag: false
-};
-const initialProfileState = {
-    firstName: null,
-    lastName: null,
-    email: null,
-    token: null,
-    isReady: false
-};
-export const auth = (token = initialAuthState, action) => {
-    const {type, payload} = action;
+ const initialState = {
+     tokenHash: null,
+     reportError: null,
+     isReady: false,
+     flag: false,
+     firstName: null,
+     lastName: null,
+     email: null,
+     token: null,
+     isReadyProfile: false,
+     processet: initialProcessetState,
+ }
+ export const getReducer = (state = initialState, action) =>  {
+     const {type, payload} = action;
 
-    switch (type){
-        case actionTypes.FORM_SUBMITED:
-            return {
-                tokenHash: payload,
-                isReady: true
-            }
-        case actionTypes.ERROR_REPORT: {
-            return {
-                reportError: payload
-            }
-        }
-    }
-    return token
-};
-
-export const formReducer = (users = initialFormReducerState, action) => {
-    const {type, payload} = action;
-
-    switch (type){
-        case actionTypes.FORM_SUBMITED:
-            return {
-                login: payload.user.login,
-                password: payload.user.id
-            }
-    }
-    return users
-};
-
-export const menuOption = (state = initialMenuState, action) => {
-    switch (action.type){
-        case actionTypes.SHOW_MENU: {
-            console.log("REDUCER", action.payload);
-            return {
-                flag: !action.payload
-            }
-        }
-    }
-    return state
-
+     switch (type){
+         case actionTypes.FORM_SUBMITED:
+             localStorage.setItem('token', payload.token)
+             return {
+                 ...state,
+                 tokenHash: jwt_decode(payload.token).userId,
+                 isReady: true
+             };
+         case actionTypes.ERROR_REPORT: {
+             return {
+                 ...state,
+                 reportError: payload
+             }
+         }
+         case actionTypes.SHOW_MENU: {
+             return {
+                 ...state,
+                 flag: !action.payload
+             }
+         }
+         case actionTypes.GET_PROFILE_DATA: {
+             return {
+                 ...state,
+                 firstName: payload.data.data.User.firstName,
+                 lastName: payload.data.data.User.lastName,
+                 email: payload.data.data.User.email,
+                 token: payload.data.match.params.token,
+                 isReadyProfile: true
+             }
+         }
+         case actionTypes.LOAD_PROCESSET:
+         {
+             return {
+                 ...state,
+                 processet: state.processet
+             }
+         }
+     }
+     return state
 };
 
-export const Profile = (state = initialProfileState, action) => {
 
-    const {type, payload} = action;
-
-    switch (type){
-        case actionTypes.GET_PROFILE_DATA: {
-            return {
-                firstName: payload.data.data.User.firstName,
-                lastName: payload.data.data.User.lastName,
-                email: payload.data.data.User.email,
-                token: payload.data.match.params.token,
-                isReady: true
-            }
-        }
-    }
-    return state;
-
-};
-
-export const getProcesset = (state = initialProcessetState, action) => {
-    const {type, payload} = action;
-    switch (type){
-        case actionTypes.LOAD_PROCESSET:
-        {
-            return {
-                processet: state
-            }
-        }
-    }
-    return state
-};
-export const makeDuckStore = () => {
-    return {
-        actionTypes,
-        actionCreators,
-        auth,
-        formReducer,
-        menuOption,
-        Profile,
-    }
-}

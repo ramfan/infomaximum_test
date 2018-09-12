@@ -31,6 +31,7 @@ class ProcessetPage extends Component {
 }
 ProcessetPage = withTheme(ProcessetPage);
 export default connect(state => {
+    console.log("STATE_PROCESS", state)
     return {
-    processet: state.getProcesset
+    processet: state.getReducer.processet
 }})(ProcessetPage);

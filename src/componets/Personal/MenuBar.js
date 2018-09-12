@@ -90,9 +90,9 @@ toggleShow(){
 }
 const {show} = actionCreators
 export default connect(state => {
-
+    console.log("MEnu", state)
     return {
-    toggle: state.menuOption.flag,
-    token: state.auth.tokenHash,
-    isReady: state.auth.isReady
+    toggle: state.getReducer.flag,
+    token: state.getReducer.tokenHash,
+    isReady: state.getReducer.isReady
 }}, {show})(MenuBar);

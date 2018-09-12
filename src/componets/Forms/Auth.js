@@ -90,7 +90,7 @@ class  Auth extends PureComponent {
 Auth = connect(state => {
    // console.log('STATE_ERROR', state)
     return{
-         errorReport: state.auth.reportError
+         errorReport: state.getReducer.reportError
 }}, )(Auth);
 export default reduxForm({
     form: 'AuthForm',

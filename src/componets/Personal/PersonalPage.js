@@ -41,7 +41,6 @@ class PersonalPage extends PureComponent {
         this.props.show(this.props.toggle);
     };
     render() {
-        console.log('LOCAL_STOREGE', localStorage);
         const style = {
             width: this.props.theme.personalPage.width,
             height: this.props.theme.personalPage.height,
@@ -130,5 +129,5 @@ const {Profile, show} = actionCreators
 PersonalPage = withTheme(PersonalPage);
 PersonalPage = graphql(personalData, queryOptions)(PersonalPage);
 export default connect(state => ({
-    toggle: state.menuOption.flag
+    toggle: state.getReducer.flag
 }), {Profile, show})(PersonalPage);
