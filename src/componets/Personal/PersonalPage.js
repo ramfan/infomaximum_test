@@ -108,6 +108,7 @@ class PersonalPage extends PureComponent {
                             lastName={this.state.lastName}
                             email={this.state.email}
                             id={this.props.match.params.token}
+                            flag={true}
                         />:null
                 }
 
@@ -120,7 +121,7 @@ const queryOptions  = {
     options: props =>{
             return {
                 variables: {
-                    token: props.match.params.token
+                    id: props.match.params.token
                 }
         }
     }

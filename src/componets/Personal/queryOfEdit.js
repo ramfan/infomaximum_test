@@ -4,23 +4,37 @@ import {graphql} from "react-apollo/index";
 import {personalData, updateUserData} from "../../queries";
 
 class Edit extends Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            flag: this.props.flag
+        };
+        this.abort = this.abort.bind(this)
+    }
     render() {
+        {
+            this.state.flag ?
 
-       // const { firstName, lastName, email, id} = this.props
+                this.props.mutate({
+                    variables: {
+                        id: this.props.id,
+                        firstName: this.props.firstName,
+                        lastName: this.props.lastName
 
-        this.props.mutate({
-            variables: {
-                id: this.props.id,
-                firstName: this.props.firstName,
+                    }, refetchQueries: [{query: personalData, variables:{id: this.props.id}}]
+                }).then(res => {
+                    console.log(res)
+                    this.abort(res);
+                }).catch(e => {return e}) : null
 
-            }
-        }).then(res =>{
-            console.log("SUCCSES", res);
-            return res
-        }).finally(e => {
-            return e
-        });
+        }
         return <div></div>
+    }
+
+    abort(res) {
+        this.setState({
+            flag: false
+        });
     }
 }
 Edit = graphql(updateUserData)(Edit);

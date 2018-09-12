@@ -11,8 +11,8 @@ export const logginig = gql`mutation logginig($email: String!, $password: String
     token
   }
 }`;
-export const personalData = gql`query Person($token: ID!){
-    User(id: $token){
+export const personalData = gql`query Person($id: ID!){
+    User(id: $id){
         firstName
         lastName
         email
@@ -20,8 +20,8 @@ export const personalData = gql`query Person($token: ID!){
     }
 }`;
 export const updateUserData = gql`
-    mutation updateUserData($id: ID!, $firstName: String!){
-  updateUser(id: $id, firstName: $firstName) {
+    mutation updateUserData($id: ID!, $firstName: String!, $lastName: String!){
+  updateUser(id: $id, firstName: $firstName, lastName: $lastName) {
     id
     firstName
     lastName
