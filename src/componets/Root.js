@@ -1,10 +1,8 @@
 import React, {Component} from 'react';
 import App from "./App";
-import {Provider} from "react-redux";
-import  ApolloClient from 'apollo-boost'
-import {ApolloProvider, } from 'react-apollo'
+import ApolloClient, {HttpLink, InMemoryCache} from 'apollo-boost'
+import {ApolloProvider } from 'react-apollo'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import store from '../store/store'
 import AuthorizationComponent from "./Authorization/AuthorizationComponent";
 import RegistryComponent from "./Registration/RegistryComponent";
 import PersonalPage from "./Personal/PersonalPage";
@@ -13,22 +11,48 @@ import {createRenderer} from "fela";
 import { Provider as FellaProvider } from 'react-fela';
 import {ThemeProvider} from 'react-fela'
 import {theme} from "../theme";
-import ProcessetPage from "../Processet/ProcessetPage";
+import ProcessetPage from "./Processet/ProcessetPage";
+import {setContext} from 'apollo-link-context';
+import {createHttpLink} from 'apollo-link-http'
 
+// const httpLink = createHttpLink({
+//     uri: 'https://fakerql.com/graphql',
+// });
+//
+// const authLink = setContext((_, { headers }) => {
+//     // get the authentication token from local storage if it exists
+//     const token = localStorage.getItem('token');
+//     // return the headers to the context so httpLink can read them
+//     return {
+//         headers: {
+//             ...headers,
+//             authorization: token ? `Bearer ${token}` : "",
+//         }
+//     }
+// });
+//
+// const client = new ApolloClient({
+//     link: authLink.concat(httpLink),
+//     cache: new InMemoryCache()
+// });
+
+console.log(localStorage)
 
 const client = new ApolloClient({
     uri: 'https://fakerql.com/graphql',
-    credentials: 'same-origin'
-
+    credentials: 'same-origin',
+    cache: new InMemoryCache(),
+    headers: {
+        Authorization: `Bearer ${localStorage.getItem('token')}`
+    }
 });
 const renderer = createRenderer();
-console.log(store);
+//console.log(store);
 class Root extends Component {
 
     render() {
         return (
             <ApolloProvider client={client} >
-                <Provider store = {store}>
                     <FellaProvider renderer={renderer}>
                         <ThemeProvider theme={theme}>
                             <Router>
@@ -46,7 +70,6 @@ class Root extends Component {
                             </Router>
                         </ThemeProvider>
                 </FellaProvider>
-                </Provider>
             </ApolloProvider>
         );
     }

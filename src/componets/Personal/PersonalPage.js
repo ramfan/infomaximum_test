@@ -11,6 +11,7 @@ import {withTheme} from "react-fela/";
 import {Col, Container, Row} from "react-grid-system";
 import SideBar from "./MenuBar";
 import LeftBar from "./LeftBar";
+import Edit from "./queryOfEdit";
 
 
 
@@ -19,15 +20,28 @@ class PersonalPage extends PureComponent {
     constructor(props){
         super(props);
         this.state = {
-            showMenu: false
+            showMenu: false,
+            lastName: null,
+            firstName: null,
+            email: null,
+            isSubmit: false
         };
         this.toggleMenu = this.toggleMenu.bind(this);
-
+        this.handleSubmit = this.handleSubmit.bind(this);
+    }
+    handleSubmit(ev){
+        this.setState({
+            firstName: ev.firstName,
+            lastName: ev.lastName,
+            email: ev.email,
+            isSubmit: true
+        });
     }
     toggleMenu(){
         this.props.show(this.props.toggle);
     };
     render() {
+        console.log('LOCAL_STOREGE', localStorage);
         const style = {
             width: this.props.theme.personalPage.width,
             height: this.props.theme.personalPage.height,
@@ -46,7 +60,7 @@ class PersonalPage extends PureComponent {
         const sideBar = {paddingLeft: 0,paddingTop: '3%', marginTop: '7.4%'};
         const menuBar = {paddingLeft: 0, height: '100%'};
         const selectStyle = !this.props.toggle? sideBar: menuBar;
-        console.log('REDUX', this.props)
+        //console.log('REDUX', this.props)
         return (
             <div style={style} >
                 <Container fluid style={{width: '100%'}} >
@@ -82,11 +96,21 @@ class PersonalPage extends PureComponent {
                                              textVal = {"Сохранить и вернуться"}
                                              firstName = {data.User.firstName}
                                              lastName = {data.User.lastName}
+
                            />
                        </Col>
 
                     </Row>
                 </Container>
+                {
+                    this.state.isSubmit ?
+                        <Edit
+                            firstName={this.state.firstName}
+                            lastName={this.state.lastName}
+                            email={this.state.email}
+                            id={this.props.match.params.token}
+                        />:null
+                }
 
             </div>
         );

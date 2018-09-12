@@ -3,7 +3,7 @@ import CustomInput from "./CustomInput";
 import React from "react";
 
 export const renderField = ({ input, label, type, meta: { touched, error, warning }}) => {
-    console.log('ERROR', error);
+    //console.log('ERROR', error);
     return (
         <div>
             <CustomInput {...input} label={label} touched={touched} error={error} type={type} isAuth={true}/>

@@ -21,7 +21,7 @@ class RegistryComponent extends Component {
     }
 
     handleSubmit(ev) {
-        console.log('AUTH',ev)
+     //   console.log('AUTH',ev)
         this.setState({
             email: ev.email,
             password: ev.password,

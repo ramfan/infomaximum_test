@@ -112,16 +112,16 @@ export const Profile = (state = initialProfileState, action) => {
 };
 
 export const getProcesset = (state = initialProcessetState, action) => {
-  const {type, payload} = action;
-  switch (type){
-      case actionTypes.LOAD_PROCESSET:
-      {
-          return {
-              processet: state
-          }
-      }
-  }
-  return state
+    const {type, payload} = action;
+    switch (type){
+        case actionTypes.LOAD_PROCESSET:
+        {
+            return {
+                processet: state
+            }
+        }
+    }
+    return state
 };
 export const makeDuckStore = () => {
     return {
@@ -133,4 +133,3 @@ export const makeDuckStore = () => {
         Profile,
     }
 }
-

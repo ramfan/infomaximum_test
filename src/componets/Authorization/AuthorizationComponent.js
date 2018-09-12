@@ -14,7 +14,7 @@ class AuthorizationComponent extends Component {
         }
     }
     handleSubmit(ev){
-        console.log('EVENTS', ev);
+       // console.log('EVENTS', ev);
         this.setState({
             email: ev.email,
             password: ev.password

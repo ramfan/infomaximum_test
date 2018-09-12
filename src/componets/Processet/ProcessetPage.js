@@ -13,7 +13,7 @@ class ProcessetPage extends Component {
             backgroundColor: this.props.theme.personalPage.background,
 
         };
-        console.log("PROCESSE", this.props);
+       // console.log("PROCESSE", this.props);
         let elements = this.props.processet.map(element => <div key={element.id}><ProcessCard data={element}/></div>)
         return (
             <div style={style}>

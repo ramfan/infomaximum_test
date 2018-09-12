@@ -30,8 +30,8 @@ handleSubmit(ev){
             height: this.props.theme.personalPage.height,
             backgroundColor: this.props.theme.personalPage.background
         };
-        console.log('PROOOPS', this.props)
-        return (
+        // console.log('PROOOPS', this.props)
+         return (
             <div style={style}>
 
                 <EditPersonalData onSubmit={this.handleSubmit} textVal={"Сохранить и вернуться"}/>

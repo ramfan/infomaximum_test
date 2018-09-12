@@ -9,7 +9,8 @@ const background = ({width, height, marginTop, background, top, left}) => ({
     height: height,
     marginTop: marginTop,
     width: width,
-    paddingTop: '2%'
+    paddingTop: '2%',
+    minWidth: '400px'
 });
 
 export const Background = createComponent(background, 'div');

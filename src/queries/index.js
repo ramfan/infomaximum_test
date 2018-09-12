@@ -20,8 +20,8 @@ export const personalData = gql`query Person($token: ID!){
     }
 }`;
 export const updateUserData = gql`
-    mutation updateUserData($token: String!, $firstName: String!, $lastName: String!, $email: String!){
-  updateUser(id: "wk0z1j1tzj7xc0116is3ckdrx", firstName: "Jim") {
+    mutation updateUserData($id: ID!, $firstName: String!){
+  updateUser(id: $id, firstName: $firstName) {
     id
     firstName
     lastName

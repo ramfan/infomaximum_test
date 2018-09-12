@@ -18,7 +18,7 @@ constructor(props){
 
 render(){
     const {theme,touched, error, type, errorReport} = this.props;
-    console.log("PROOOOOPS", actionCreators)
+   // console.log("PROOOOOPS", actionCreators)
         touched && error ? errorReport(error) : errorReport(null);
     const style = {
       //  textAlign: theme.customInput.textAlign,

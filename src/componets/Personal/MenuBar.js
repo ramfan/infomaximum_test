@@ -10,14 +10,14 @@ constructor(props){
     this.toggleShow = this.toggleShow.bind(this)
 }
 toggleShow(){
-    console.log('update')
+    //console.log('update')
     this.props.show(this.props.toggle)
 }
     render() {
 
         const {toggle} = this.props;
-        console.log('X', document.documentElement.clientHeight, 'TOP',screenTop, );
-        console.log("MENU_STATE", this.props)
+       // console.log('X', document.documentElement.clientHeight, 'TOP',screenTop, );
+       // console.log("MENU_STATE", this.props)
         const showMenu = {
             background: '#404064',
             height: '100%',

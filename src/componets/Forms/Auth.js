@@ -10,7 +10,7 @@ import {renderField} from "./renderField";
 class  Auth extends PureComponent {
     render(){
         const { handleSubmit, pristine, reset, submitting, textVal, errorReport, isReg } = this.props;
-        console.log('AUTHERR', this.props.errorReport)
+        //console.log('AUTHERR', this.props.errorReport)
         //const renderField = <renderField/>;
         return (
             <div>
@@ -88,7 +88,7 @@ class  Auth extends PureComponent {
 };
 //Auth = withTheme(Auth)
 Auth = connect(state => {
-    console.log('STATE_ERROR', state)
+   // console.log('STATE_ERROR', state)
     return{
          errorReport: state.auth.reportError
 }}, )(Auth);
