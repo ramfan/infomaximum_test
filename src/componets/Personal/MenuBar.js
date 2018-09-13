@@ -4,11 +4,21 @@ import {connect} from "react-redux";
 import {actionCreators} from "../../store/duckStore";
 import {Link} from "react-router-dom";
 
+const rootStyle = {
+    height: '100vh',
+    zIndex: 100,
+    marginLeft: '-15px',
+    position: 'fixed',
+    width: '16%'
+}
+
 class MenuBar extends Component {
+
 constructor(props){
     super(props);
     this.toggleShow = this.toggleShow.bind(this)
 }
+
 toggleShow(){
     //console.log('update')
     this.props.show(this.props.toggle)
@@ -30,7 +40,7 @@ toggleShow(){
         };
         const style = !toggle ? showMenu : hide;
         return (
-            <div style={{height: '100vh'}}>
+            <div style={rootStyle}>
                 {
                     this.props.toggle? <div style={showMenu} onClick={this.toggleShow} >
                        <div style={{background: '#535374', height: '33px', padding: '8%'}}>

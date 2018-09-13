@@ -76,8 +76,8 @@ class ProcessCard extends Component {
 
                                     </Col>
                                     <Col>
-                                        <h4 style={{color: '#535374'}}>{data.associate}</h4>
-                                        <p style={{color: '#999999', fontSize: '12px'}}> сотрудников</p>
+                                        <h4 style={{color: '#535374'}}>{data.associate} сотрудников</h4>
+                                        <p style={{color: '#999999', fontSize: '12px'}}> учавствует в процессе</p>
                                     </Col>
                                 </Row>
                                 <Row >
@@ -91,8 +91,8 @@ class ProcessCard extends Component {
 
                                     </Col>
                                     <Col>
-                                        <h4 style={{color: '#535374'}}>{data.scenario}</h4>
-                                        <p style={{color: '#999999', fontSize: '12px'}}> сценариев</p>
+                                        <h4 style={{color: '#535374'}}>{data.scenario} сценариев</h4>
+                                        <p style={{color: '#999999', fontSize: '12px'}}>в процессе </p>
                                     </Col>
                                 </Row>
                             </Row>

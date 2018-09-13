@@ -15,6 +15,7 @@ export const theme = {
         background: '#EBF2FB',
         margin: '0',
         padding: '0',
+        minHeight: '100vh',
         toggleHide: {
             paddingLeft: 0,
             display: 'block'
