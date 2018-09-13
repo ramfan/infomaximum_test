@@ -21,7 +21,7 @@ class LayoutComponent extends Component {
                    {this.props.top}
                </Row>
                <Row>
-                   <Col md={3}>
+                   <Col md={2}>
                        {this.props.left}
                    </Col>
                    <Col md={9}>

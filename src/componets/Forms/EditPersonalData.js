@@ -14,7 +14,7 @@ class EditPersonalData extends Component{
                 <Container fluid style={{marginLeft: 0, maxWidth: 'content', }}>
                     <Row >
                         <Col  md={12}>
-                            <form onSubmit={handleSubmit}>
+                            <form onSubmit={handleSubmit} style={{width: '112%'}}>
                                 <Row>
                                     <Col md={8}  style={{marginTop: '8%'}}>
                                         <h1>{firstName}&nbsp;{lastName}. Редактирование</h1>

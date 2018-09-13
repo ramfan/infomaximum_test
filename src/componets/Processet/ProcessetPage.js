@@ -3,6 +3,10 @@ import PropTypes from 'prop-types';
 import {connect} from "react-redux";
 import {withTheme} from "react-fela";
 import ProcessCard from "./ProcessCard";
+import TopBar from "./TopBar";
+import LayoutComponent from "../LayoutComponent";
+import LeftBar from "./LeftBar";
+import MenuBar from "../Personal/MenuBar";
 
 class ProcessetPage extends Component {
 
@@ -17,15 +21,14 @@ class ProcessetPage extends Component {
             <ProcessCard data={element}/>
         </div>)
         return (
-            <div style={style}>
-                <div style={{padding: '5%'}}>
-                    {
-
-                        elements
-                    }
-                </div>
+            <div>
+                <LayoutComponent
+                    top={<TopBar/>}
+                    left={!this.props.toggle ?  <LeftBar/> :<MenuBar/>}
+                    content={ elements}/>
 
             </div>
+
         );
 
     }
@@ -34,5 +37,7 @@ ProcessetPage = withTheme(ProcessetPage);
 export default connect(state => {
     console.log("STATE_PROCESS", state)
     return {
-    processet: state.getReducer.processet
+    processet: state.getReducer.processet,
+    toggle: state.getReducer.flag
+
 }})(ProcessetPage);

@@ -8,13 +8,13 @@ class ProcessCard extends Component {
        // console.log("CARD", this.props.data);
         const{data} = this.props
         return (
-            <Container fluid style={{width: '80%', margin: '5%',height:'252px', background: '#ffffff'}}>
+            <Container fluid style={{width: '100%', marginTop: '10%',marginRight: '0px',height:'252px', background: '#ffffff'}}>
                     <Row style={{borderBottom: ' 1px solid #D6DCE9', padding: '1% 3% 1% 3%', marginBottom: '2%'}}>
                         <h1 style={{color: '#6879BB'}}>{data.title}</h1>
                     </Row>
                     <Row align="center" justify="between" style={{padding: '1% 3% 1% 3%',}}>
-                        <Row>
-                            <Col md={1} style={{paddingTop: '8%',marginRight: '6%'}}>
+                        <Row align="center">
+                            <Col md={1} style={{paddingBottom: '14%',marginRight: '6%'}}>
                                 <svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M11 2.99994L6.5 5.59802V4.18896C3.91211 4.85504 2 7.20416 2 9.99994C2 12.2527 3.24146 14.2154 5.07751 15.2413L3.13513 16.3513C1.229 14.8891 0 12.588 0 9.99994C0 6.09436 2.79858 2.84241 6.5 2.14032V0.401855L11 2.99994ZM10.9225 4.75854C12.7585 5.78448 14 7.74719 14 9.99994C14 12.7957 12.0879 15.1448 9.5 15.8109V14.4019L5 16.9999L9.5 19.598V17.8596C13.2014 17.1575 16 13.9055 16 9.99994C16 7.41187 14.771 5.11078 12.8649 3.64856L10.9225 4.75854Z" fill="#535374"/>
                                 </svg>
@@ -26,9 +26,9 @@ class ProcessCard extends Component {
                             </Col>
                         </Row>
                         <Col md={3} style={{marginRight: '0%', paddingLeft: '10%'}}>
-                            <Row  justify="between">
-                                <Row>
-                                     <Col md={1}>
+                            <Row  justify="between" align="center">
+                                <Row align="center" style={{marginBottom: '15%'}}>
+                                     <Col md={1} >
                                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                              <g opacity="0.5">
                                                  <rect width="24" height="24" fill="white" fill-opacity="0.01"/>
@@ -37,15 +37,15 @@ class ProcessCard extends Component {
                                          </svg>
 
                                      </Col>
-                                     <Col>
+                                     <Col >
                                         <h4 style={{color: '#535374'}}>{data.mid_execute_time}</h4>
                                         <p style={{color: '#999999', fontSize: '12px'}}>  среднее время выполнения</p>
                                      </Col>
 
                                 </Row>
 
-                                <Row>
-                                    <Col md={1}>
+                                <Row align="center" style={{marginBottom: '15%'}}>
+                                    <Col md={1} >
                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <g opacity="0.5">
                                                 <rect width="24" height="24" fill="white" fill-opacity="0.01"/>
@@ -55,7 +55,7 @@ class ProcessCard extends Component {
                                         </svg>
 
                                     </Col>
-                                    <Col>
+                                    <Col >
                                         <h4 style={{color: '#535374'}}>{data.active_time} ({data.completed})</h4>
                                         <p style={{color: '#999999', fontSize: '12px'}}>  активное время </p>
                                     </Col>
@@ -64,8 +64,8 @@ class ProcessCard extends Component {
                             </Row>
                         </Col>
                         <Col md={3} style={{marginRight: '1.5%', marginLeft: '1.5%', paddingLeft: '10%'}}>
-                            <Row>
-                                <Row>
+                            <Row align="center">
+                                <Row align="center" style={{marginBottom: '15%'}}>
                                     <Col md={1}>
                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <g opacity="0.5">
@@ -80,7 +80,7 @@ class ProcessCard extends Component {
                                         <p style={{color: '#999999', fontSize: '12px'}}> учавствует в процессе</p>
                                     </Col>
                                 </Row>
-                                <Row >
+                                <Row align="center" style={{marginBottom: '15%'}}>
                                     <Col md={1}>
                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <g opacity="0.5">
@@ -98,15 +98,15 @@ class ProcessCard extends Component {
                             </Row>
                         </Col>
                         <Col md={3}>
-                            <Row style={{marginBottom: '5%'}}>
+                            <Row align="center" style={{marginBottom: '15%'}} >
                                 <Col md={4}><p style={{color: '#999999', fontSize: '12px'}}>Начало </p></Col>
                                 <Col md={8}><p style={{fontSize: '12px'}}>{data.begin}</p></Col>
                             </Row>
-                            <Row style={{marginBottom: '5%'}}>
+                            <Row align="center" style={{marginBottom: '15%'}}>
                                 <Col md={4}><p style={{color: '#999999', fontSize: '12px'}}>Окончание </p></Col>
                                 <Col md={8}><p style={{fontSize: '12px'}}>{data.end}</p></Col>
                             </Row>
-                            <Row>
+                            <Row align="center">
                                 <Col md={4}><p style={{color: '#999999', fontSize: '12px'}}>Загружено </p></Col>
                                 <Col md={8}><p style={{fontSize: '12px'}}>{data.data_of_load}</p></Col>
                             </Row>

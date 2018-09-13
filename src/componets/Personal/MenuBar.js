@@ -43,7 +43,7 @@ toggleShow(){
             <div style={rootStyle}>
                 {
                     this.props.toggle? <div style={showMenu} onClick={this.toggleShow} >
-                       <div style={{background: '#535374', height: '33px', padding: '8%'}}>
+                       <div style={{background: '#535374', height: '33px', padding: '8%', cursor: 'pointer'}}>
                            <div style={{padding: '5%', display: 'inline-block'}}>
                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H4V4H0V0ZM6 6H10V10H6V6ZM10 0H6V4H10V0ZM12 0H16V4H12V0ZM4 6H0V10H4V6ZM12 6H16V10H12V6ZM4 12H0V16H4V12ZM6 12H10V16H6V12ZM16 12H12V16H16V12Z" fill="white"/>
@@ -72,7 +72,9 @@ toggleShow(){
                                 </svg>
                             </div>
                             <div style={{padding: '3%', marginLeft: '16%'}}>
-                                <strong style={{color: '#ffffff' , fontSize: '12px'}}>Username</strong>
+                                <Link to={`/user/${this.props.token}/`} style={{textDecoration: 'none'}}>
+                                    <strong style={{color: '#ffffff', fontSize: '12px'}}>Username</strong>
+                                </Link>
                             </div>
                         </div>
                         <div style={{padding: '5%'}}>

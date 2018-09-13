@@ -26,6 +26,7 @@ const spanColor = ({width, position, marginTop, marginLeft, marginRight}) => ({
     marginTop: marginTop,
     marginLeft: marginLeft,
     marginRight: marginRight,
+    cursor: 'pointer'
 
 });
 export const ButtonStyle = createComponent(spanColor, 'button');
