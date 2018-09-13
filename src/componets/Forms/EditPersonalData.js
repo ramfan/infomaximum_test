@@ -88,7 +88,6 @@ class EditPersonalData extends Component{
     validate
 }, )(EditPersonalData);
 export default connect(state => {
-    console.log('INIT',state.getReducer)
     return {
         initialValues: {
 

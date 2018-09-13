@@ -13,7 +13,9 @@ class ProcessetPage extends Component {
 
         };
        // console.log("PROCESSE", this.props);
-        let elements = this.props.processet.map(element => <div key={element.id}><ProcessCard data={element}/></div>)
+        let elements = this.props.processet.map(element => <div key={element._id}>
+            <ProcessCard data={element}/>
+        </div>)
         return (
             <div style={style}>
                 <div style={{padding: '5%'}}>
