@@ -98,11 +98,11 @@ class ProcessCard extends Component {
                             </Row>
                         </Col>
                         <Col md={3}>
-                            <Row>
+                            <Row style={{marginBottom: '5%'}}>
                                 <Col md={4}><p style={{color: '#999999', fontSize: '12px'}}>Начало </p></Col>
                                 <Col md={8}><p style={{fontSize: '12px'}}>{data.begin}</p></Col>
                             </Row>
-                            <Row>
+                            <Row style={{marginBottom: '5%'}}>
                                 <Col md={4}><p style={{color: '#999999', fontSize: '12px'}}>Окончание </p></Col>
                                 <Col md={8}><p style={{fontSize: '12px'}}>{data.end}</p></Col>
                             </Row>
