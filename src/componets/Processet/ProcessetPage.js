@@ -9,7 +9,6 @@ class ProcessetPage extends Component {
     render() {
         const style = {
             width: this.props.theme.personalPage.width,
-            height: this.props.theme.personalPage.height,
             backgroundColor: this.props.theme.personalPage.background,
 
         };

@@ -75,7 +75,7 @@ toggleShow(){
 
                                 <Link to={`/processet/`} style={{textDecoration: 'none'}}>
                                     <strong style={{color: '#ffffff', fontSize: '12px'}}>Общие данные</strong>
-                                //</Link>
+                                </Link>
                             </div>
 
                         </div>
