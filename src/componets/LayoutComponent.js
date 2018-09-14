@@ -4,9 +4,6 @@ import {withTheme} from "react-fela";
 
 
 class LayoutComponent extends Component {
-    // shouldComponentUpdate(){
-    //     return false
-    // }
 
     render() {
         const style = {
@@ -17,7 +14,7 @@ class LayoutComponent extends Component {
         };
         return (
            <Container fluid={true} style={style}>
-               <Row>
+               <Row >
                    {this.props.top}
                </Row>
                <Row>

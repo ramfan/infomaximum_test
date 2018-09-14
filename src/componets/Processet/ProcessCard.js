@@ -8,7 +8,7 @@ class ProcessCard extends Component {
        // console.log("CARD", this.props.data);
         const{data} = this.props
         return (
-            <Container fluid style={{width: '100%', marginTop: '10%',marginRight: '0px',height:'252px', background: '#ffffff'}}>
+            <Container fluid style={{width: '100%', marginTop: '10%',marginBottom: '5%',marginRight: '0px',height:'252px', background: '#ffffff'}}>
                     <Row style={{borderBottom: ' 1px solid #D6DCE9', padding: '1% 3% 1% 3%', marginBottom: '2%'}}>
                         <h1 style={{color: '#6879BB'}}>{data.title}</h1>
                     </Row>
