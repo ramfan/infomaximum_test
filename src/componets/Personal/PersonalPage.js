@@ -13,7 +13,7 @@ import SideBar from "./MenuBar";
 import LeftBar from "./LeftBar";
 import Edit from "./queryOfEdit";
 import LayoutComponent from "../LayoutComponent";
-import TopBar from "./TopBar";
+import TopBar from "../Processet/TopBar";
 
 
 
@@ -50,7 +50,7 @@ class PersonalPage extends PureComponent {
         return (
             <div>
                 <LayoutComponent
-                    top={<TopBar/>}
+                    top={<TopBar visible={false} search={false}/>}
                     left={!this.props.toggle ?  <LeftBar/> :<SideBar/>}
                     content={<EditPersonalData onSubmit = {this.handleSubmit}
                                                textVal = {"Сохранить и вернуться"}

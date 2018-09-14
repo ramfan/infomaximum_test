@@ -28,11 +28,12 @@ const searchStyle = {
         paddingLeft: '15px',
         paddingRight: '15px',
         width: '100%',
-        marginLeft: '19%',
+        marginLeft: '17%',
         flex: '0 0 33.3333%',
         maxWidth: '33.3333%',
         right: 'auto',
         left: 'auto',
+
 }
 
 class TopBar extends Component {
@@ -61,33 +62,42 @@ class TopBar extends Component {
                 <Col md={2} style={ColStyle} >
                     <div style={DivStyle} onClick={this.toggleMenu}><strong>Меню</strong></div>
                 </Col>
+                {
+                    this.props.visible?
+                        <Row >
+                            <div style={SvgStyle}>
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g filter="url(#filter0_d)">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M11 7L15 4L11 1V3H7V12L8 11L9 12V5H11V7ZM7 21V17H5L8 13L11 17H9V19H15L14 20L15 21H7ZM21 21V23L17 20L21 17V19H23V12L24 13L25 12V21H21ZM16 3H25V7H27L24 11L21 7H23V5H16L17 4L16 3ZM20 10V9H12V10H20ZM20 12V13H12V12H20ZM20 16V15H12V16H20Z" fill="#6879BB"/>
+                                    </g>
+                                    <defs>
+                                        <filter id="filter0_d" x="0" y="0" width="32" height="32" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+                                            <feOffset dy="4"/>
+                                            <feGaussianBlur stdDeviation="2"/>
+                                            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                                            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+                                            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+                                        </filter>
+                                    </defs>
+                                </svg>
 
-                        <div style={SvgStyle}>
-                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g filter="url(#filter0_d)">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M11 7L15 4L11 1V3H7V12L8 11L9 12V5H11V7ZM7 21V17H5L8 13L11 17H9V19H15L14 20L15 21H7ZM21 21V23L17 20L21 17V19H23V12L24 13L25 12V21H21ZM16 3H25V7H27L24 11L21 7H23V5H16L17 4L16 3ZM20 10V9H12V10H20ZM20 12V13H12V12H20ZM20 16V15H12V16H20Z" fill="#6879BB"/>
-                                </g>
-                                <defs>
-                                    <filter id="filter0_d" x="0" y="0" width="32" height="32" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                                        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-                                        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
-                                        <feOffset dy="4"/>
-                                        <feGaussianBlur stdDeviation="2"/>
-                                        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
-                                        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
-                                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
-                                    </filter>
-                                </defs>
-                            </svg>
+                            </div>
 
-                        </div>
+                            <Col  md={9}>
+                                <strong style={{color: '#6879BB', fontSize: '12px'}}>Список процессов</strong>
+                            </Col>
+                        </Row>: null
 
-                        <Col  md={3}>
-                           <strong style={{color: '#6879BB', fontSize: '12px'}}>Список процессов</strong>
-                        </Col>
+                    }
+                {
+                    this.props.search?
                         <div  style={searchStyle}>
                             <Search/>
-                        </div>
+                        </div>: null
+                }
+
 
 
             </Row>

@@ -28,7 +28,8 @@ const SvgStyle = {
 const containerStyle = {
     borderRight: '1px solid #D6DCE9',
     borderLeft: '1px solid #D6DCE9',
-    width: '50%'
+    width: '50%',
+    marginLeft: '100%'
 }
 
 class Search extends Component {

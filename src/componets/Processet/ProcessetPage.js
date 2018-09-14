@@ -23,8 +23,8 @@ class ProcessetPage extends Component {
         return (
             <div>
                 <LayoutComponent
-                    top={<TopBar/>}
-                    left={!this.props.toggle ?  <LeftBar/> :<MenuBar/>}
+                    top={<TopBar visible={true} search={true}/>}
+                    left={!this.props.toggle ?  <LeftBar/> :<MenuBar />}
                     content={ elements}/>
 
             </div>
