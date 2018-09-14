@@ -9,7 +9,7 @@ const style = {
     height: '54px',
     paddingTop: '1%',
     maxHeight: '54px',
-    marginTop: '9%',
+    marginTop: '10.2%',
     width: '10%',
     marginLeft: '-15px',
 }

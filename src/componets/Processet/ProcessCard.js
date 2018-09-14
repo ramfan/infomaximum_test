@@ -22,7 +22,7 @@ class ProcessCard extends Component {
                             </Col>
                             <Col md={3}>
                                 <h1 style={{color: '#535374'}}>{data.repeats}</h1>
-                                <p style={{color: '#999999', fontSize: '12px'}}> выполнено раз</p>
+                                <p style={{color: '#999999', fontSize: '11px'}}> выполнено раз</p>
                             </Col>
                         </Row>
                         <Col md={3} style={{marginRight: '0%', paddingLeft: '10%'}}>
