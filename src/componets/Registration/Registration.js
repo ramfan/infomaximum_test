@@ -14,6 +14,7 @@ componentWillMount(){
         }
     }).then(res =>{
         const {auth} = this.props;
+        console.log('STTTATE', res)
         auth(res.data.register.token);
     }).catch(e => {return 'Network Error'});
 
@@ -21,7 +22,7 @@ componentWillMount(){
 
     render() {
     if(this.props.isReady){
-        return (<div>{this.props.token.token !== null ? <Redirect to={`/`} />: "Loading"}</div>)
+        return (<div>{this.props.token.token !== null && his.props.token.token !== 'undefined' ? <Redirect to={`/`} />: "Loading"}</div>)
     }
 
     return(<div>Loading</div>)
@@ -43,8 +44,10 @@ const queryOption = {
 
 Registration = graphql(query, queryOption)(Registration);
 const {auth} = actionCreators;
-export default connect(state => ({
+export default connect(state => {
+    console.log('STTTATE', state)
+    return{
     token: state.auth.tokenHash,
     isReady: state.auth.isReady
-}), {auth})(Registration);
+}}, {auth})(Registration);
 

@@ -17,7 +17,6 @@ import ProcessetPage from "./Processet/ProcessetPage";
 const client = new ApolloClient({
     uri: 'https://fakerql.com/graphql',
     credentials: 'same-origin',
-    cache: new InMemoryCache(),
     headers: {
         Authorization: `Bearer ${localStorage.getItem('token')}`
     }
