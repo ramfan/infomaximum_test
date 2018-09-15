@@ -18,7 +18,8 @@ const client = new ApolloClient({
     uri: 'https://fakerql.com/graphql',
     credentials: 'same-origin',
     headers: {
-        Authorization: `Bearer ${localStorage.getItem('token')}`
+        Authorization: `Bearer ${localStorage.getItem('token')}`,
+        "Access-Control-Allow-Origin": "*"
     }
 });
 const renderer = createRenderer();
