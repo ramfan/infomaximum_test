@@ -15,7 +15,11 @@ componentWillMount(){
     }).then(res =>{
         const {auth} = this.props;
         auth(res.data.register.token);
-    }).catch(e => {return 'Network Error'});
+    }).catch(e => {
+            this.props.errorReport('Ошибка сервера')
+
+            return 'Network Error'}
+        );
 
 }
 
@@ -42,9 +46,9 @@ const queryOption = {
 
 
 Registration = graphql(query, queryOption)(Registration);
-const {auth} = actionCreators;
+const {auth, errorReport} = actionCreators;
 export default connect(state => ({
-    token: state.auth.tokenHash,
-    isReady: state.auth.isReady
-}), {auth})(Registration);
+    token: state.getReducer.tokenHash,
+    isReady: state.getReducer.isReady
+}), {auth, errorReport})(Registration);
 
