@@ -14,7 +14,7 @@ componentWillMount(){
         }
     }).then(res =>{
         const {auth} = this.props;
-        console.log('STTTATE', res)
+        console.log('ST222TE', res)
         auth(res.data.register.token);
     }).catch(e => {return 'Network Error'});
 
@@ -22,7 +22,7 @@ componentWillMount(){
 
     render() {
     if(this.props.isReady){
-        return (<div>{this.props.token.token !== null && his.props.token.token !== 'undefined' ? <Redirect to={`/`} />: "Loading"}</div>)
+        return (<div>{this.props.token.token !== null && this.props.token.token !== 'undefined' ? <Redirect to={`/`} />: "Loading"}</div>)
     }
 
     return(<div>Loading</div>)
@@ -47,7 +47,7 @@ const {auth} = actionCreators;
 export default connect(state => {
     console.log('STTTATE', state)
     return{
-    token: state.auth.tokenHash,
-    isReady: state.auth.isReady
+        token: state.getReducer.tokenHash,
+        isReady:  state.getReducer.isReady
 }}, {auth})(Registration);
 

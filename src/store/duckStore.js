@@ -10,10 +10,12 @@ const actionTypes = {
 };
 
 export const actionCreators = {
-    auth: (token) => ({
+    auth: (token) => {
+        console.log(token)
+        return{
         type: actionTypes.FORM_SUBMITED,
         payload: {token}
-    }),
+    }},
     Profile: (data, params) => ({
         type: actionTypes.GET_PROFILE_DATA,
         payload: {data , params}
