@@ -23,7 +23,8 @@ class Authorization extends Component {
             const {auth} = this.props;
              auth(res.data.login.token);
         }).catch(e => {
-            return <Error e = {e}/>;
+            this.props.errorReport('Ошибка сервера')
+            return 'Network error';
            // console.log('ERROR', e)
         });
 
@@ -51,8 +52,8 @@ const queryOptions  = {
 };
 
 Authorization = graphql(logginig, queryOptions)(Authorization);
-const {auth} = actionCreators
+const {auth, errorReport} = actionCreators
 export default connect(state => ({
     token: state.getReducer.tokenHash,
     isReady: state.getReducer.isReady
-}), {auth})(Authorization);
+}), {auth, errorReport})(Authorization);

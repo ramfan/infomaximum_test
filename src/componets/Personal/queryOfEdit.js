@@ -28,7 +28,10 @@ class Edit extends Component {
                 }).then(res => {
                     this.props.Profile(res.data.updateUser, this.props)
                     this.abort(res);
-                }).catch(e => {return e}) : null
+                }).catch(e => {
+                    this.props.errorReport('Ошибка сервера')
+                    this.abort(e);
+                }) : null
 
         }
         return <div></div>
@@ -40,6 +43,6 @@ class Edit extends Component {
         });
     }
 }
-const {Profile} = actionCreators
+const {Profile, errorReport} = actionCreators
 Edit = graphql(updateUserData)(Edit);
-export default connect(null, {Profile})(Edit);
+export default connect(null, {Profile, errorReport})(Edit);

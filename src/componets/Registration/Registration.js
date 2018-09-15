@@ -16,7 +16,9 @@ componentWillMount(){
         const {auth} = this.props;
         console.log('ST222TE', res)
         auth(res.data.register.token);
-    }).catch(e => {return 'Network Error'});
+    }).catch(e => {
+        this.props.errorReport('Ошибка сервера')
+        return 'Network Error'});
 
 }
 
@@ -43,11 +45,11 @@ const queryOption = {
 
 
 Registration = graphql(query, queryOption)(Registration);
-const {auth} = actionCreators;
+const {auth, errorReport} = actionCreators;
 export default connect(state => {
     console.log('STTTATE', state)
     return{
         token: state.getReducer.tokenHash,
         isReady:  state.getReducer.isReady
-}}, {auth})(Registration);
+}}, {auth, errorReport})(Registration);
 

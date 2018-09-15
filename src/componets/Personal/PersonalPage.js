@@ -14,6 +14,7 @@ import LeftBar from "./LeftBar";
 import Edit from "./queryOfEdit";
 import LayoutComponent from "../LayoutComponent";
 import TopBar from "../Processet/TopBar";
+import Error from "../Forms/Error";
 
 
 
@@ -47,6 +48,7 @@ class PersonalPage extends PureComponent {
         Profile(this.props.data.User, this.props);
         const sideBar = {paddingLeft: 0,paddingTop: '3%', marginTop: '7.4%'};
         const menuBar = {paddingLeft: 0, height: '100%'};
+        console.log('PROOOPS', this.props.errorReport)
         return (
             <div>
                 <LayoutComponent
@@ -67,6 +69,7 @@ class PersonalPage extends PureComponent {
                                 flag={true}
                             />:null
                     }
+
             </div>
 
 
@@ -88,5 +91,6 @@ const {Profile, show} = actionCreators
 PersonalPage = withTheme(PersonalPage);
 PersonalPage = graphql(personalData, queryOptions)(PersonalPage);
 export default connect(state => ({
-    toggle: state.getReducer.flag
+    toggle: state.getReducer.flag,
+    errorReport: state.getReducer.reportError
 }), {Profile, show})(PersonalPage);
