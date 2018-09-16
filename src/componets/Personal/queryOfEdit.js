@@ -10,7 +10,7 @@ class Edit extends Component {
     constructor(props){
         super(props);
         this.state = {
-            flag: this.props.flag
+            flag: true
         };
         this.abort = this.abort.bind(this)
     }
@@ -26,8 +26,9 @@ class Edit extends Component {
 
                     }, refetchQueries: [{query: personalData, variables:{id: this.props.id}}]
                 }).then(res => {
+
                     this.props.Profile(res.data.updateUser, this.props)
-                    this.abort(res);
+
                 }).catch(e => {
                     this.props.errorReport('Ошибка сервера')
                     this.abort(e);

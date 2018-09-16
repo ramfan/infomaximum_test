@@ -49,7 +49,7 @@ export const actionCreators = {
 
      switch (type){
          case actionTypes.FORM_SUBMITED:
-             localStorage.setItem('token', payload.token)
+             localStorage.setItem('token', payload.token);
              return {
                  ...state,
                  tokenHash: jwt_decode(payload.token).userId,
