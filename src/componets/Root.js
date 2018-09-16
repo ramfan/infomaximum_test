@@ -27,7 +27,7 @@ const client = new ApolloClient({
         'Content-Length': 53,
         'Keep-Alive': 60,
         'X-Xss-Protection': 1,
-        Authorization: localStorage.getItem('token') !== null && localStorage.getItem('token') !== 'undefined'? `Bearer ${localStorage.getItem('token')}`: ''
+        Authorization: sessionStorage.getItem('token') !== null? `Bearer ${sessionStorage.getItem('token')}`: ''
 
     }
 });

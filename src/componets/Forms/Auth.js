@@ -19,7 +19,7 @@ class  Auth extends PureComponent {
             <div>
                 <div style={errorPostStyle}>
                     {
-                        errorReport && errorReport.error !== null  ? <Error textVal={errorReport.error }/> : null
+                        errorReport && errorReport.error !== null  ? <Error textVal={errorReport}/> : null
                     }
                 </div>
                 <form onSubmit={handleSubmit}>

@@ -25,9 +25,10 @@ class Edit extends Component {
 
             }, refetchQueries: [{query: personalData, variables:{id: this.props.id}}]
         }).then(res => {
+            this.props.errorReport(null, false);
             this.props.Profile(res.data.updateUser, this.props)
         }).catch(e => {
-            this.props.errorReport('Ошибка сервера')
+            this.props.errorReport('Ошибка сервера. Обновите страницу и повторите еще раз', true)
         })
     }
     render() {

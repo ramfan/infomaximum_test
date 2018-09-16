@@ -14,10 +14,10 @@ componentDidMount(){
         }
     }).then(res =>{
         const {auth} = this.props;
-        console.log('ST222TE', res)
+
         auth(res.data.register.token);
     }).catch(e => {
-        this.props.errorReport('Ошибка сервера')
+        this.props.errorReport('Ошибка сервера', true)
         return 'Network Error'});
 
 }
