@@ -21,7 +21,7 @@ const client = new ApolloClient({
     credentials: 'same-origin',
     headers: {
         "Access-Control-Allow-Origin": "*",
-        Authorization: localStorage.getItem('token') !== null && localStorage.getItem('token') !== 'undefined'? `Bearer ${localStorage.getItem('token')}`: ''
+        Authorization: sessionStorage.getItem('token') !== null? `Bearer ${sessionStorage.getItem('token')}`: ''
 
     }
 });
