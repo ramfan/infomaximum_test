@@ -9,7 +9,7 @@ class ProcessCard extends Component {
         const{data} = this.props
         return (
             <Container fluid style={{width: '100%', marginTop: '10%',marginBottom: '5%',marginRight: '0px',height:'252px', background: '#ffffff'}}>
-                    <Row style={{borderBottom: ' 1px solid #D6DCE9', padding: '1% 3% 1% 3%', marginBottom: '2%'}}>
+                    <Row style={{borderBottom: ' 1px solid #D6DCE9', padding: '1% 3% 1% 3%'}}>
                         <h1 style={{color: '#6879BB'}}>{data.title}</h1>
                     </Row>
                     <Row align="center" justify="between" style={{padding: '1% 3% 1% 3%',}}>
@@ -25,7 +25,7 @@ class ProcessCard extends Component {
                                 <p style={{color: '#999999', fontSize: '11px'}}> выполнено раз</p>
                             </Col>
                         </Row>
-                        <Col md={3} style={{marginRight: '0%', paddingLeft: '10%'}}>
+                        <Col md={3} style={{marginRight: '0%', paddingLeft: '10%' ,marginTop: '1%'}}>
                             <Row  justify="between" align="center">
                                 <Row align="center" style={{marginBottom: '15%'}}>
                                      <Col md={1} >
@@ -63,7 +63,7 @@ class ProcessCard extends Component {
 
                             </Row>
                         </Col>
-                        <Col md={3} style={{marginRight: '1.5%', marginLeft: '1.5%', paddingLeft: '10%'}}>
+                        <Col md={3} style={{marginRight: '1.5%', marginLeft: '1.5%', paddingLeft: '10%' ,marginTop: '1%'}}>
                             <Row align="center">
                                 <Row align="center" style={{marginBottom: '15%'}}>
                                     <Col md={1}>
@@ -97,16 +97,16 @@ class ProcessCard extends Component {
                                 </Row>
                             </Row>
                         </Col>
-                        <Col md={3}>
-                            <Row align="center" style={{marginBottom: '15%'}} >
+                        <Col md={3} style={{marginTop: '1.5%'}}>
+                            <Row align="center" style={{marginBottom: '10%'}} >
                                 <Col md={4}><p style={{color: '#999999', fontSize: '12px'}}>Начало </p></Col>
                                 <Col md={8}><p style={{fontSize: '12px'}}>{data.begin}</p></Col>
                             </Row>
-                            <Row align="center" style={{marginBottom: '15%'}}>
+                            <Row align="center" style={{marginBottom: '10%'}}>
                                 <Col md={4}><p style={{color: '#999999', fontSize: '12px'}}>Окончание </p></Col>
                                 <Col md={8}><p style={{fontSize: '12px'}}>{data.end}</p></Col>
                             </Row>
-                            <Row align="center" style={{marginBottom: '15%'}}>
+                            <Row align="center" style={{marginBottom: '10%'}}>
                                 <Col md={4}><p style={{color: '#999999', fontSize: '12px'}}>Загружено </p></Col>
                                 <Col md={8}><p style={{fontSize: '12px'}}>{data.data_of_load}</p></Col>
                             </Row>
