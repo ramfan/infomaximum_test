@@ -32,6 +32,7 @@ class PersonalPage extends PureComponent {
         this.handleSubmit = this.handleSubmit.bind(this);
     }
     handleSubmit(ev){
+        console.log('SEND')
         this.setState({
             firstName: ev.firstName,
             lastName: ev.lastName,

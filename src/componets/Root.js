@@ -12,9 +12,9 @@ import { Provider as FellaProvider } from 'react-fela';
 import {ThemeProvider} from 'react-fela'
 import {theme} from "../theme";
 import ProcessetPage from "./Processet/ProcessetPage";
+import store from "../store/store";
+import {Provider} from "react-redux";
 
-
-const token = localStorage.getItem('token') !== null && localStorage.getItem('token') !== 'undefined'? `Bearer ${localStorage.getItem('token')}`: ''
 
 const client = new ApolloClient({
     uri: 'https://fakerql.com/graphql',
@@ -27,7 +27,7 @@ const client = new ApolloClient({
         'Content-Length': 53,
         'Keep-Alive': 60,
         'X-Xss-Protection': 1,
-        Authorization: token
+        Authorization: localStorage.getItem('token') !== null && localStorage.getItem('token') !== 'undefined'? `Bearer ${localStorage.getItem('token')}`: ''
 
     }
 });
@@ -38,6 +38,7 @@ class Root extends Component {
     render() {
         return (
             <ApolloProvider client={client} >
+                <Provider store={store}>
                     <FellaProvider renderer={renderer}>
                         <ThemeProvider theme={theme}>
                             <Router>
@@ -55,6 +56,7 @@ class Root extends Component {
                             </Router>
                         </ThemeProvider>
                 </FellaProvider>
+                </Provider>
             </ApolloProvider>
         );
     }

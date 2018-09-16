@@ -9,12 +9,14 @@ import {connect} from "react-redux";
 class Edit extends Component {
     constructor(props){
         super(props);
+        console.log(localStorage)
         this.state = {
-            flag: true
+            flag: this.props.flag
         };
         this.abort = this.abort.bind(this)
     }
     render() {
+
         {
             this.state.flag ?
 
