@@ -7,6 +7,9 @@ import Error from "./Error";
 import {connect} from "react-redux";
 import {renderField} from "./renderField";
 
+const errorPostStyle = {
+  marginBottom: '2%'
+};
 class  Auth extends PureComponent {
     render(){
         const { handleSubmit, pristine, reset, submitting, textVal, errorReport, isReg } = this.props;
@@ -14,7 +17,7 @@ class  Auth extends PureComponent {
         //const renderField = <renderField/>;
         return (
             <div>
-                <div style={{margin: '2%'}}>
+                <div style={errorPostStyle}>
                     {
                         errorReport && errorReport.error !== null  ? <Error textVal={errorReport.error }/> : null
                     }

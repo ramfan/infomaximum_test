@@ -18,6 +18,7 @@ const buttonStyle = {
     height: '36px',
     width: '100%'
 };
+const labelStyle = {marginBottom: '20%'};
 
 class Filters extends Component {
 
@@ -25,7 +26,7 @@ class Filters extends Component {
     render() {
         return (
             <div style={style}>
-                <div style={{marginBottom: '20%'}}>
+                <div style={labelStyle}>
                     <strong style={{color: '#535374'}}>Фильтры</strong>
                 </div>
 

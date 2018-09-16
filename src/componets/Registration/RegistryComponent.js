@@ -7,7 +7,7 @@ import CustomInput from '../Forms/CustomInput'
 import {ThemeProvider} from "react-fela";
 import {theme} from "../../theme";
 
-
+const titleStyle = {fontFamily: "OpenSans", marginLeft: '10%', marginRight: '10%'}
 
 
 class RegistryComponent extends Component {
@@ -31,7 +31,7 @@ class RegistryComponent extends Component {
     render() {
         return (
             <Background width={'30%'} height={100+'%'} marginTop={'10%'}  background={'#ffffff'} top={'50%'} left={'50%'}>
-                <h3 style={{fontFamily: "OpenSans", marginLeft: '10%', marginRight: '10%'}}>
+                <h3 style={titleStyle}>
                     <strong>Задайте электронную почту и пароль для администратора системы</strong>
                 </h3>
                 <div>
