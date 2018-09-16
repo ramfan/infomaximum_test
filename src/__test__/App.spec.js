@@ -6,6 +6,8 @@ import {renderEditField} from '../componets/Forms/renderField'
 import Search from "../componets/Forms/Search";
 import LeftBar from "../componets/Personal/LeftBar";
 import Filters   from "../componets/Processet/Filters"
+import {proceset} from "../assets/processet";
+import ProcessCard from "../componets/Processet/ProcessCard";
 
 describe('App component tests', () => {
     it('component will be render', function () {
