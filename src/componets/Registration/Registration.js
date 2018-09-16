@@ -54,5 +54,4 @@ export default connect(state => {
         token: state.getReducer.tokenHash,
         isReady:  state.getReducer.isReady
 }}, {auth, errorReport})(Registration);
->>>>>>> tests
 
