@@ -15,28 +15,23 @@ class Edit extends Component {
         };
         this.abort = this.abort.bind(this)
     }
+
+    componentDidMount(){
+        this.props.mutate({
+            variables: {
+                id: this.props.id,
+                firstName: this.props.firstName,
+                lastName: this.props.lastName
+
+            }, refetchQueries: [{query: personalData, variables:{id: this.props.id}}]
+        }).then(res => {
+            this.props.Profile(res.data.updateUser, this.props)
+        }).catch(e => {
+            this.props.errorReport('Ошибка сервера')
+        })
+    }
     render() {
 
-        {
-            this.state.flag ?
-
-                this.props.mutate({
-                    variables: {
-                        id: this.props.id,
-                        firstName: this.props.firstName,
-                        lastName: this.props.lastName
-
-                    }, refetchQueries: [{query: personalData, variables:{id: this.props.id}}]
-                }).then(res => {
-
-                    this.props.Profile(res.data.updateUser, this.props)
-
-                }).catch(e => {
-                    this.props.errorReport('Ошибка сервера')
-                    this.abort(e);
-                }) : null
-
-        }
         return <div></div>
     }
 

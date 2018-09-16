@@ -6,7 +6,7 @@ import {connect} from "react-redux";
 import {register as query} from "../../queries";
 
 class Registration extends Component {
-componentWillMount(){
+componentDidMount(){
     this.props.mutate({
         variables: {
             email: this.props.email,
@@ -47,7 +47,7 @@ const queryOption = {
 Registration = graphql(query, queryOption)(Registration);
 const {auth, errorReport} = actionCreators;
 export default connect(state => {
-    console.log('STTTATE', state)
+    console.log('STTTATE', state);
     return{
         token: state.getReducer.tokenHash,
         isReady:  state.getReducer.isReady

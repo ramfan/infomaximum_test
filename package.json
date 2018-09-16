@@ -120,6 +120,7 @@
     "jest": "^23.6.0",
     "react-test-renderer": "^16.5.1",
     "react-transform-hmr": "^1.0.4",
+    "redux-devtools-extension": "^2.13.5",
     "svg-inline-loader": "^0.8.0",
     "webpack": "^4.17.0",
     "webpack-cli": "^3.1.0",
