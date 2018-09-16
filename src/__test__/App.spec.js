@@ -8,16 +8,17 @@ import Search from "../componets/Forms/Search";
 describe('App component tests', () => {
     it('component will be render', function () {
         const app = shallow(<App />)
-        expect(app.find('Link')).toHaveLength(2);
+        expect(app).toMatchSnapshot();
     });
 });
 
-describe('Custom input component tests', () => {
+describe('Search component tests', () => {
 
     it('component will be render', function () {
         const app = shallow(<Search />)
-        console.log(app.debug)
-        expect(app.find('div')).toHaveLength(1);
+        expect(app).toMatchSnapshot();
 
     });
 });
+
+

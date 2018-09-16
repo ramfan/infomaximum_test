@@ -106,7 +106,7 @@ class ProcessCard extends Component {
                                 <Col md={4}><p style={{color: '#999999', fontSize: '12px'}}>Окончание </p></Col>
                                 <Col md={8}><p style={{fontSize: '12px'}}>{data.end}</p></Col>
                             </Row>
-                            <Row align="center">
+                            <Row align="center" style={{marginBottom: '15%'}}>
                                 <Col md={4}><p style={{color: '#999999', fontSize: '12px'}}>Загружено </p></Col>
                                 <Col md={8}><p style={{fontSize: '12px'}}>{data.data_of_load}</p></Col>
                             </Row>

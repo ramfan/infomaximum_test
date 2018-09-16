@@ -1,0 +1,1577 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App component tests component will be render 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <App />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": <background
+        background="#ffffff"
+        height="100%"
+        left="50%"
+        marginTop="10%"
+        top="50%"
+        width="30%"
+>
+        <div>
+                <Link
+                        replace={false}
+                        style={
+                                Object {
+                                        "textDecoration": "none",
+                                      }
+                        }
+                        to="/auth"
+                >
+                        <spanColor
+                                marginLeft="10%"
+                                marginRight="10%"
+                                marginTop="8%"
+                                width="80%"
+                        >
+                                <strong>
+                                        Вход в систему
+                                </strong>
+                        </spanColor>
+                </Link>
+                <Link
+                        replace={false}
+                        style={
+                                Object {
+                                        "textDecoration": "none",
+                                      }
+                        }
+                        to="/registry"
+                >
+                        <spanColor
+                                marginLeft="10%"
+                                marginRight="10%"
+                                marginTop="8%"
+                                width="80%"
+                        >
+                                <strong>
+                                        Регистрация
+                                </strong>
+                        </spanColor>
+                </Link>
+        </div>
+</background>,
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "background": "#ffffff",
+        "children": <div>
+          <Link
+                    replace={false}
+                    style={
+                              Object {
+                                        "textDecoration": "none",
+                                      }
+                    }
+                    to="/auth"
+          >
+                    <spanColor
+                              marginLeft="10%"
+                              marginRight="10%"
+                              marginTop="8%"
+                              width="80%"
+                    >
+                              <strong>
+                                        Вход в систему
+                              </strong>
+                    </spanColor>
+          </Link>
+          <Link
+                    replace={false}
+                    style={
+                              Object {
+                                        "textDecoration": "none",
+                                      }
+                    }
+                    to="/registry"
+          >
+                    <spanColor
+                              marginLeft="10%"
+                              marginRight="10%"
+                              marginTop="8%"
+                              width="80%"
+                    >
+                              <strong>
+                                        Регистрация
+                              </strong>
+                    </spanColor>
+          </Link>
+</div>,
+        "height": "100%",
+        "left": "50%",
+        "marginTop": "10%",
+        "top": "50%",
+        "width": "30%",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <Link
+              replace={false}
+              style={
+                            Object {
+                                          "textDecoration": "none",
+                                        }
+              }
+              to="/auth"
+>
+              <spanColor
+                            marginLeft="10%"
+                            marginRight="10%"
+                            marginTop="8%"
+                            width="80%"
+              >
+                            <strong>
+                                          Вход в систему
+                            </strong>
+              </spanColor>
+</Link>,
+            <Link
+              replace={false}
+              style={
+                            Object {
+                                          "textDecoration": "none",
+                                        }
+              }
+              to="/registry"
+>
+              <spanColor
+                            marginLeft="10%"
+                            marginRight="10%"
+                            marginTop="8%"
+                            width="80%"
+              >
+                            <strong>
+                                          Регистрация
+                            </strong>
+              </spanColor>
+</Link>,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": <spanColor
+                marginLeft="10%"
+                marginRight="10%"
+                marginTop="8%"
+                width="80%"
+>
+                <strong>
+                                Вход в систему
+                </strong>
+</spanColor>,
+              "replace": false,
+              "style": Object {
+                "textDecoration": "none",
+              },
+              "to": "/auth",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": <strong>
+                  Вход в систему
+</strong>,
+                "marginLeft": "10%",
+                "marginRight": "10%",
+                "marginTop": "8%",
+                "width": "80%",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Вход в систему",
+                },
+                "ref": null,
+                "rendered": "Вход в систему",
+                "type": "strong",
+              },
+              "type": [Function],
+            },
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": <spanColor
+                marginLeft="10%"
+                marginRight="10%"
+                marginTop="8%"
+                width="80%"
+>
+                <strong>
+                                Регистрация
+                </strong>
+</spanColor>,
+              "replace": false,
+              "style": Object {
+                "textDecoration": "none",
+              },
+              "to": "/registry",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": <strong>
+                  Регистрация
+</strong>,
+                "marginLeft": "10%",
+                "marginRight": "10%",
+                "marginTop": "8%",
+                "width": "80%",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Регистрация",
+                },
+                "ref": null,
+                "rendered": "Регистрация",
+                "type": "strong",
+              },
+              "type": [Function],
+            },
+            "type": [Function],
+          },
+        ],
+        "type": "div",
+      },
+      "type": [Function],
+    },
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <background
+          background="#ffffff"
+          height="100%"
+          left="50%"
+          marginTop="10%"
+          top="50%"
+          width="30%"
+>
+          <div>
+                    <Link
+                              replace={false}
+                              style={
+                                        Object {
+                                                  "textDecoration": "none",
+                                                }
+                              }
+                              to="/auth"
+                    >
+                              <spanColor
+                                        marginLeft="10%"
+                                        marginRight="10%"
+                                        marginTop="8%"
+                                        width="80%"
+                              >
+                                        <strong>
+                                                  Вход в систему
+                                        </strong>
+                              </spanColor>
+                    </Link>
+                    <Link
+                              replace={false}
+                              style={
+                                        Object {
+                                                  "textDecoration": "none",
+                                                }
+                              }
+                              to="/registry"
+                    >
+                              <spanColor
+                                        marginLeft="10%"
+                                        marginRight="10%"
+                                        marginTop="8%"
+                                        width="80%"
+                              >
+                                        <strong>
+                                                  Регистрация
+                                        </strong>
+                              </spanColor>
+                    </Link>
+          </div>
+</background>,
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "background": "#ffffff",
+          "children": <div>
+            <Link
+                        replace={false}
+                        style={
+                                    Object {
+                                                "textDecoration": "none",
+                                              }
+                        }
+                        to="/auth"
+            >
+                        <spanColor
+                                    marginLeft="10%"
+                                    marginRight="10%"
+                                    marginTop="8%"
+                                    width="80%"
+                        >
+                                    <strong>
+                                                Вход в систему
+                                    </strong>
+                        </spanColor>
+            </Link>
+            <Link
+                        replace={false}
+                        style={
+                                    Object {
+                                                "textDecoration": "none",
+                                              }
+                        }
+                        to="/registry"
+            >
+                        <spanColor
+                                    marginLeft="10%"
+                                    marginRight="10%"
+                                    marginTop="8%"
+                                    width="80%"
+                        >
+                                    <strong>
+                                                Регистрация
+                                    </strong>
+                        </spanColor>
+            </Link>
+</div>,
+          "height": "100%",
+          "left": "50%",
+          "marginTop": "10%",
+          "top": "50%",
+          "width": "30%",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <Link
+                replace={false}
+                style={
+                                Object {
+                                                "textDecoration": "none",
+                                              }
+                }
+                to="/auth"
+>
+                <spanColor
+                                marginLeft="10%"
+                                marginRight="10%"
+                                marginTop="8%"
+                                width="80%"
+                >
+                                <strong>
+                                                Вход в систему
+                                </strong>
+                </spanColor>
+</Link>,
+              <Link
+                replace={false}
+                style={
+                                Object {
+                                                "textDecoration": "none",
+                                              }
+                }
+                to="/registry"
+>
+                <spanColor
+                                marginLeft="10%"
+                                marginRight="10%"
+                                marginTop="8%"
+                                width="80%"
+                >
+                                <strong>
+                                                Регистрация
+                                </strong>
+                </spanColor>
+</Link>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": <spanColor
+                  marginLeft="10%"
+                  marginRight="10%"
+                  marginTop="8%"
+                  width="80%"
+>
+                  <strong>
+                                    Вход в систему
+                  </strong>
+</spanColor>,
+                "replace": false,
+                "style": Object {
+                  "textDecoration": "none",
+                },
+                "to": "/auth",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": <strong>
+                    Вход в систему
+</strong>,
+                  "marginLeft": "10%",
+                  "marginRight": "10%",
+                  "marginTop": "8%",
+                  "width": "80%",
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Вход в систему",
+                  },
+                  "ref": null,
+                  "rendered": "Вход в систему",
+                  "type": "strong",
+                },
+                "type": [Function],
+              },
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": <spanColor
+                  marginLeft="10%"
+                  marginRight="10%"
+                  marginTop="8%"
+                  width="80%"
+>
+                  <strong>
+                                    Регистрация
+                  </strong>
+</spanColor>,
+                "replace": false,
+                "style": Object {
+                  "textDecoration": "none",
+                },
+                "to": "/registry",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": <strong>
+                    Регистрация
+</strong>,
+                  "marginLeft": "10%",
+                  "marginRight": "10%",
+                  "marginTop": "8%",
+                  "width": "80%",
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Регистрация",
+                  },
+                  "ref": null,
+                  "rendered": "Регистрация",
+                  "type": "strong",
+                },
+                "type": [Function],
+              },
+              "type": [Function],
+            },
+          ],
+          "type": "div",
+        },
+        "type": [Function],
+      },
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+    "attachTo": undefined,
+    "hydrateIn": undefined,
+  },
+}
+`;
+
+exports[`Search component tests component will be render 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Search />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "children": <Row
+        align="normal"
+        component="div"
+        debug={false}
+        justify="start"
+        nogutter={false}
+        style={Object {}}
+>
+        <Col
+                component="div"
+                debug={false}
+                lg={null}
+                md={1}
+                offset={Object {}}
+                pull={Object {}}
+                push={Object {}}
+                sm={null}
+                style={Object {}}
+                xl={null}
+                xs={null}
+        >
+                <div
+                        style={
+                                Object {
+                                        "boxSizing": "border-box",
+                                        "flex": "1 0 0px",
+                                        "left": "auto",
+                                        "marginLeft": "0%",
+                                        "marginRight": "3%",
+                                        "maxWidth": "3%",
+                                        "minHeight": "1px",
+                                        "paddingRight": "15px",
+                                        "paddingTop": "22%",
+                                        "position": "absolute",
+                                        "right": "auto",
+                                        "width": "3%",
+                                        "zIndex": "11",
+                                      }
+                        }
+                >
+                        <svg
+                                fill="none"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                width="24"
+                                xmlns="http://www.w3.org/2000/svg"
+                        >
+                                <g
+                                        opacity="0.5"
+                                >
+                                        <rect
+                                                fill="white"
+                                                fill-opacity="0.01"
+                                                height="24"
+                                                width="24"
+                                        />
+                                        <path
+                                                clip-rule="evenodd"
+                                                d="M14.951 15.7352C13.7917 16.7166 12.2921 17.3083 10.6542 17.3083C6.97919 17.3083 4 14.3292 4 10.6542C4 6.97919 6.97919 4 10.6542 4C14.3291 4 17.3083 6.97919 17.3083 10.6542C17.3083 12.2921 16.7166 13.7917 15.7352 14.951L16.3405 15.5562C16.6887 15.4396 17.0884 15.52 17.3658 15.7974L19.6752 18.1068C20.1083 18.5399 20.1083 19.2421 19.6752 19.6752C19.2421 20.1083 18.5399 20.1083 18.1068 19.6752L15.7974 17.3657C15.52 17.0884 15.4396 16.6887 15.5562 16.3404L14.951 15.7352ZM15.0903 10.6542C15.0903 13.1042 13.1042 15.0903 10.6542 15.0903C8.20416 15.0903 6.21808 13.1042 6.21808 10.6542C6.21808 8.20416 8.20416 6.21808 10.6542 6.21808C13.1042 6.21808 15.0903 8.20416 15.0903 10.6542Z"
+                                                fill="#6879BB"
+                                                fill-rule="evenodd"
+                                        />
+                                </g>
+                        </svg>
+                </div>
+        </Col>
+        <Col
+                component="div"
+                debug={false}
+                lg={null}
+                md={10}
+                offset={Object {}}
+                pull={Object {}}
+                push={Object {}}
+                sm={null}
+                style={Object {}}
+                xl={null}
+                xs={null}
+        >
+                <input
+                        placeholder="Поиск по разделу"
+                        style={
+                                Object {
+                                        "background": "#ffffff !important",
+                                        "border": "1px",
+                                        "color": "#999999",
+                                        "height": "36px",
+                                        "marginRight": "-15px",
+                                        "minWidth": "100%",
+                                        "outline": "none",
+                                        "position": "relative",
+                                      }
+                        }
+                        type="text"
+                />
+        </Col>
+</Row>,
+      "component": "div",
+      "fluid": true,
+      "lg": false,
+      "md": false,
+      "sm": false,
+      "style": Object {
+        "borderLeft": "1px solid #D6DCE9",
+        "borderRight": "1px solid #D6DCE9",
+        "marginLeft": "100%",
+        "width": "50%",
+      },
+      "xl": false,
+      "xs": false,
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "align": "normal",
+        "children": Array [
+          <Col
+            component="div"
+            debug={false}
+            lg={null}
+            md={1}
+            offset={Object {}}
+            pull={Object {}}
+            push={Object {}}
+            sm={null}
+            style={Object {}}
+            xl={null}
+            xs={null}
+>
+            <div
+                        style={
+                                    Object {
+                                                "boxSizing": "border-box",
+                                                "flex": "1 0 0px",
+                                                "left": "auto",
+                                                "marginLeft": "0%",
+                                                "marginRight": "3%",
+                                                "maxWidth": "3%",
+                                                "minHeight": "1px",
+                                                "paddingRight": "15px",
+                                                "paddingTop": "22%",
+                                                "position": "absolute",
+                                                "right": "auto",
+                                                "width": "3%",
+                                                "zIndex": "11",
+                                              }
+                        }
+            >
+                        <svg
+                                    fill="none"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    width="24"
+                                    xmlns="http://www.w3.org/2000/svg"
+                        >
+                                    <g
+                                                opacity="0.5"
+                                    >
+                                                <rect
+                                                            fill="white"
+                                                            fill-opacity="0.01"
+                                                            height="24"
+                                                            width="24"
+                                                />
+                                                <path
+                                                            clip-rule="evenodd"
+                                                            d="M14.951 15.7352C13.7917 16.7166 12.2921 17.3083 10.6542 17.3083C6.97919 17.3083 4 14.3292 4 10.6542C4 6.97919 6.97919 4 10.6542 4C14.3291 4 17.3083 6.97919 17.3083 10.6542C17.3083 12.2921 16.7166 13.7917 15.7352 14.951L16.3405 15.5562C16.6887 15.4396 17.0884 15.52 17.3658 15.7974L19.6752 18.1068C20.1083 18.5399 20.1083 19.2421 19.6752 19.6752C19.2421 20.1083 18.5399 20.1083 18.1068 19.6752L15.7974 17.3657C15.52 17.0884 15.4396 16.6887 15.5562 16.3404L14.951 15.7352ZM15.0903 10.6542C15.0903 13.1042 13.1042 15.0903 10.6542 15.0903C8.20416 15.0903 6.21808 13.1042 6.21808 10.6542C6.21808 8.20416 8.20416 6.21808 10.6542 6.21808C13.1042 6.21808 15.0903 8.20416 15.0903 10.6542Z"
+                                                            fill="#6879BB"
+                                                            fill-rule="evenodd"
+                                                />
+                                    </g>
+                        </svg>
+            </div>
+</Col>,
+          <Col
+            component="div"
+            debug={false}
+            lg={null}
+            md={10}
+            offset={Object {}}
+            pull={Object {}}
+            push={Object {}}
+            sm={null}
+            style={Object {}}
+            xl={null}
+            xs={null}
+>
+            <input
+                        placeholder="Поиск по разделу"
+                        style={
+                                    Object {
+                                                "background": "#ffffff !important",
+                                                "border": "1px",
+                                                "color": "#999999",
+                                                "height": "36px",
+                                                "marginRight": "-15px",
+                                                "minWidth": "100%",
+                                                "outline": "none",
+                                                "position": "relative",
+                                              }
+                        }
+                        type="text"
+            />
+</Col>,
+        ],
+        "component": "div",
+        "debug": false,
+        "justify": "start",
+        "nogutter": false,
+        "style": Object {},
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": <div
+              style={
+                            Object {
+                                          "boxSizing": "border-box",
+                                          "flex": "1 0 0px",
+                                          "left": "auto",
+                                          "marginLeft": "0%",
+                                          "marginRight": "3%",
+                                          "maxWidth": "3%",
+                                          "minHeight": "1px",
+                                          "paddingRight": "15px",
+                                          "paddingTop": "22%",
+                                          "position": "absolute",
+                                          "right": "auto",
+                                          "width": "3%",
+                                          "zIndex": "11",
+                                        }
+              }
+>
+              <svg
+                            fill="none"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            width="24"
+                            xmlns="http://www.w3.org/2000/svg"
+              >
+                            <g
+                                          opacity="0.5"
+                            >
+                                          <rect
+                                                        fill="white"
+                                                        fill-opacity="0.01"
+                                                        height="24"
+                                                        width="24"
+                                          />
+                                          <path
+                                                        clip-rule="evenodd"
+                                                        d="M14.951 15.7352C13.7917 16.7166 12.2921 17.3083 10.6542 17.3083C6.97919 17.3083 4 14.3292 4 10.6542C4 6.97919 6.97919 4 10.6542 4C14.3291 4 17.3083 6.97919 17.3083 10.6542C17.3083 12.2921 16.7166 13.7917 15.7352 14.951L16.3405 15.5562C16.6887 15.4396 17.0884 15.52 17.3658 15.7974L19.6752 18.1068C20.1083 18.5399 20.1083 19.2421 19.6752 19.6752C19.2421 20.1083 18.5399 20.1083 18.1068 19.6752L15.7974 17.3657C15.52 17.0884 15.4396 16.6887 15.5562 16.3404L14.951 15.7352ZM15.0903 10.6542C15.0903 13.1042 13.1042 15.0903 10.6542 15.0903C8.20416 15.0903 6.21808 13.1042 6.21808 10.6542C6.21808 8.20416 8.20416 6.21808 10.6542 6.21808C13.1042 6.21808 15.0903 8.20416 15.0903 10.6542Z"
+                                                        fill="#6879BB"
+                                                        fill-rule="evenodd"
+                                          />
+                            </g>
+              </svg>
+</div>,
+            "component": "div",
+            "debug": false,
+            "lg": null,
+            "md": 1,
+            "offset": Object {},
+            "pull": Object {},
+            "push": Object {},
+            "sm": null,
+            "style": Object {},
+            "xl": null,
+            "xs": null,
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <svg
+                fill="none"
+                height="24"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+>
+                <g
+                                opacity="0.5"
+                >
+                                <rect
+                                                fill="white"
+                                                fill-opacity="0.01"
+                                                height="24"
+                                                width="24"
+                                />
+                                <path
+                                                clip-rule="evenodd"
+                                                d="M14.951 15.7352C13.7917 16.7166 12.2921 17.3083 10.6542 17.3083C6.97919 17.3083 4 14.3292 4 10.6542C4 6.97919 6.97919 4 10.6542 4C14.3291 4 17.3083 6.97919 17.3083 10.6542C17.3083 12.2921 16.7166 13.7917 15.7352 14.951L16.3405 15.5562C16.6887 15.4396 17.0884 15.52 17.3658 15.7974L19.6752 18.1068C20.1083 18.5399 20.1083 19.2421 19.6752 19.6752C19.2421 20.1083 18.5399 20.1083 18.1068 19.6752L15.7974 17.3657C15.52 17.0884 15.4396 16.6887 15.5562 16.3404L14.951 15.7352ZM15.0903 10.6542C15.0903 13.1042 13.1042 15.0903 10.6542 15.0903C8.20416 15.0903 6.21808 13.1042 6.21808 10.6542C6.21808 8.20416 8.20416 6.21808 10.6542 6.21808C13.1042 6.21808 15.0903 8.20416 15.0903 10.6542Z"
+                                                fill="#6879BB"
+                                                fill-rule="evenodd"
+                                />
+                </g>
+</svg>,
+              "style": Object {
+                "boxSizing": "border-box",
+                "flex": "1 0 0px",
+                "left": "auto",
+                "marginLeft": "0%",
+                "marginRight": "3%",
+                "maxWidth": "3%",
+                "minHeight": "1px",
+                "paddingRight": "15px",
+                "paddingTop": "22%",
+                "position": "absolute",
+                "right": "auto",
+                "width": "3%",
+                "zIndex": "11",
+              },
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <g
+                  opacity="0.5"
+>
+                  <rect
+                                    fill="white"
+                                    fill-opacity="0.01"
+                                    height="24"
+                                    width="24"
+                  />
+                  <path
+                                    clip-rule="evenodd"
+                                    d="M14.951 15.7352C13.7917 16.7166 12.2921 17.3083 10.6542 17.3083C6.97919 17.3083 4 14.3292 4 10.6542C4 6.97919 6.97919 4 10.6542 4C14.3291 4 17.3083 6.97919 17.3083 10.6542C17.3083 12.2921 16.7166 13.7917 15.7352 14.951L16.3405 15.5562C16.6887 15.4396 17.0884 15.52 17.3658 15.7974L19.6752 18.1068C20.1083 18.5399 20.1083 19.2421 19.6752 19.6752C19.2421 20.1083 18.5399 20.1083 18.1068 19.6752L15.7974 17.3657C15.52 17.0884 15.4396 16.6887 15.5562 16.3404L14.951 15.7352ZM15.0903 10.6542C15.0903 13.1042 13.1042 15.0903 10.6542 15.0903C8.20416 15.0903 6.21808 13.1042 6.21808 10.6542C6.21808 8.20416 8.20416 6.21808 10.6542 6.21808C13.1042 6.21808 15.0903 8.20416 15.0903 10.6542Z"
+                                    fill="#6879BB"
+                                    fill-rule="evenodd"
+                  />
+</g>,
+                "fill": "none",
+                "height": "24",
+                "viewBox": "0 0 24 24",
+                "width": "24",
+                "xmlns": "http://www.w3.org/2000/svg",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <rect
+                      fill="white"
+                      fill-opacity="0.01"
+                      height="24"
+                      width="24"
+/>,
+                    <path
+                      clip-rule="evenodd"
+                      d="M14.951 15.7352C13.7917 16.7166 12.2921 17.3083 10.6542 17.3083C6.97919 17.3083 4 14.3292 4 10.6542C4 6.97919 6.97919 4 10.6542 4C14.3291 4 17.3083 6.97919 17.3083 10.6542C17.3083 12.2921 16.7166 13.7917 15.7352 14.951L16.3405 15.5562C16.6887 15.4396 17.0884 15.52 17.3658 15.7974L19.6752 18.1068C20.1083 18.5399 20.1083 19.2421 19.6752 19.6752C19.2421 20.1083 18.5399 20.1083 18.1068 19.6752L15.7974 17.3657C15.52 17.0884 15.4396 16.6887 15.5562 16.3404L14.951 15.7352ZM15.0903 10.6542C15.0903 13.1042 13.1042 15.0903 10.6542 15.0903C8.20416 15.0903 6.21808 13.1042 6.21808 10.6542C6.21808 8.20416 8.20416 6.21808 10.6542 6.21808C13.1042 6.21808 15.0903 8.20416 15.0903 10.6542Z"
+                      fill="#6879BB"
+                      fill-rule="evenodd"
+/>,
+                  ],
+                  "opacity": "0.5",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "fill": "white",
+                      "fill-opacity": "0.01",
+                      "height": "24",
+                      "width": "24",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "rect",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "clip-rule": "evenodd",
+                      "d": "M14.951 15.7352C13.7917 16.7166 12.2921 17.3083 10.6542 17.3083C6.97919 17.3083 4 14.3292 4 10.6542C4 6.97919 6.97919 4 10.6542 4C14.3291 4 17.3083 6.97919 17.3083 10.6542C17.3083 12.2921 16.7166 13.7917 15.7352 14.951L16.3405 15.5562C16.6887 15.4396 17.0884 15.52 17.3658 15.7974L19.6752 18.1068C20.1083 18.5399 20.1083 19.2421 19.6752 19.6752C19.2421 20.1083 18.5399 20.1083 18.1068 19.6752L15.7974 17.3657C15.52 17.0884 15.4396 16.6887 15.5562 16.3404L14.951 15.7352ZM15.0903 10.6542C15.0903 13.1042 13.1042 15.0903 10.6542 15.0903C8.20416 15.0903 6.21808 13.1042 6.21808 10.6542C6.21808 8.20416 8.20416 6.21808 10.6542 6.21808C13.1042 6.21808 15.0903 8.20416 15.0903 10.6542Z",
+                      "fill": "#6879BB",
+                      "fill-rule": "evenodd",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "path",
+                  },
+                ],
+                "type": "g",
+              },
+              "type": "svg",
+            },
+            "type": "div",
+          },
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": <input
+              placeholder="Поиск по разделу"
+              style={
+                            Object {
+                                          "background": "#ffffff !important",
+                                          "border": "1px",
+                                          "color": "#999999",
+                                          "height": "36px",
+                                          "marginRight": "-15px",
+                                          "minWidth": "100%",
+                                          "outline": "none",
+                                          "position": "relative",
+                                        }
+              }
+              type="text"
+/>,
+            "component": "div",
+            "debug": false,
+            "lg": null,
+            "md": 10,
+            "offset": Object {},
+            "pull": Object {},
+            "push": Object {},
+            "sm": null,
+            "style": Object {},
+            "xl": null,
+            "xs": null,
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "placeholder": "Поиск по разделу",
+              "style": Object {
+                "background": "#ffffff !important",
+                "border": "1px",
+                "color": "#999999",
+                "height": "36px",
+                "marginRight": "-15px",
+                "minWidth": "100%",
+                "outline": "none",
+                "position": "relative",
+              },
+              "type": "text",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "input",
+          },
+          "type": [Function],
+        },
+      ],
+      "type": [Function],
+    },
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "children": <Row
+          align="normal"
+          component="div"
+          debug={false}
+          justify="start"
+          nogutter={false}
+          style={Object {}}
+>
+          <Col
+                    component="div"
+                    debug={false}
+                    lg={null}
+                    md={1}
+                    offset={Object {}}
+                    pull={Object {}}
+                    push={Object {}}
+                    sm={null}
+                    style={Object {}}
+                    xl={null}
+                    xs={null}
+          >
+                    <div
+                              style={
+                                        Object {
+                                                  "boxSizing": "border-box",
+                                                  "flex": "1 0 0px",
+                                                  "left": "auto",
+                                                  "marginLeft": "0%",
+                                                  "marginRight": "3%",
+                                                  "maxWidth": "3%",
+                                                  "minHeight": "1px",
+                                                  "paddingRight": "15px",
+                                                  "paddingTop": "22%",
+                                                  "position": "absolute",
+                                                  "right": "auto",
+                                                  "width": "3%",
+                                                  "zIndex": "11",
+                                                }
+                              }
+                    >
+                              <svg
+                                        fill="none"
+                                        height="24"
+                                        viewBox="0 0 24 24"
+                                        width="24"
+                                        xmlns="http://www.w3.org/2000/svg"
+                              >
+                                        <g
+                                                  opacity="0.5"
+                                        >
+                                                  <rect
+                                                            fill="white"
+                                                            fill-opacity="0.01"
+                                                            height="24"
+                                                            width="24"
+                                                  />
+                                                  <path
+                                                            clip-rule="evenodd"
+                                                            d="M14.951 15.7352C13.7917 16.7166 12.2921 17.3083 10.6542 17.3083C6.97919 17.3083 4 14.3292 4 10.6542C4 6.97919 6.97919 4 10.6542 4C14.3291 4 17.3083 6.97919 17.3083 10.6542C17.3083 12.2921 16.7166 13.7917 15.7352 14.951L16.3405 15.5562C16.6887 15.4396 17.0884 15.52 17.3658 15.7974L19.6752 18.1068C20.1083 18.5399 20.1083 19.2421 19.6752 19.6752C19.2421 20.1083 18.5399 20.1083 18.1068 19.6752L15.7974 17.3657C15.52 17.0884 15.4396 16.6887 15.5562 16.3404L14.951 15.7352ZM15.0903 10.6542C15.0903 13.1042 13.1042 15.0903 10.6542 15.0903C8.20416 15.0903 6.21808 13.1042 6.21808 10.6542C6.21808 8.20416 8.20416 6.21808 10.6542 6.21808C13.1042 6.21808 15.0903 8.20416 15.0903 10.6542Z"
+                                                            fill="#6879BB"
+                                                            fill-rule="evenodd"
+                                                  />
+                                        </g>
+                              </svg>
+                    </div>
+          </Col>
+          <Col
+                    component="div"
+                    debug={false}
+                    lg={null}
+                    md={10}
+                    offset={Object {}}
+                    pull={Object {}}
+                    push={Object {}}
+                    sm={null}
+                    style={Object {}}
+                    xl={null}
+                    xs={null}
+          >
+                    <input
+                              placeholder="Поиск по разделу"
+                              style={
+                                        Object {
+                                                  "background": "#ffffff !important",
+                                                  "border": "1px",
+                                                  "color": "#999999",
+                                                  "height": "36px",
+                                                  "marginRight": "-15px",
+                                                  "minWidth": "100%",
+                                                  "outline": "none",
+                                                  "position": "relative",
+                                                }
+                              }
+                              type="text"
+                    />
+          </Col>
+</Row>,
+        "component": "div",
+        "fluid": true,
+        "lg": false,
+        "md": false,
+        "sm": false,
+        "style": Object {
+          "borderLeft": "1px solid #D6DCE9",
+          "borderRight": "1px solid #D6DCE9",
+          "marginLeft": "100%",
+          "width": "50%",
+        },
+        "xl": false,
+        "xs": false,
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "align": "normal",
+          "children": Array [
+            <Col
+              component="div"
+              debug={false}
+              lg={null}
+              md={1}
+              offset={Object {}}
+              pull={Object {}}
+              push={Object {}}
+              sm={null}
+              style={Object {}}
+              xl={null}
+              xs={null}
+>
+              <div
+                            style={
+                                          Object {
+                                                        "boxSizing": "border-box",
+                                                        "flex": "1 0 0px",
+                                                        "left": "auto",
+                                                        "marginLeft": "0%",
+                                                        "marginRight": "3%",
+                                                        "maxWidth": "3%",
+                                                        "minHeight": "1px",
+                                                        "paddingRight": "15px",
+                                                        "paddingTop": "22%",
+                                                        "position": "absolute",
+                                                        "right": "auto",
+                                                        "width": "3%",
+                                                        "zIndex": "11",
+                                                      }
+                            }
+              >
+                            <svg
+                                          fill="none"
+                                          height="24"
+                                          viewBox="0 0 24 24"
+                                          width="24"
+                                          xmlns="http://www.w3.org/2000/svg"
+                            >
+                                          <g
+                                                        opacity="0.5"
+                                          >
+                                                        <rect
+                                                                      fill="white"
+                                                                      fill-opacity="0.01"
+                                                                      height="24"
+                                                                      width="24"
+                                                        />
+                                                        <path
+                                                                      clip-rule="evenodd"
+                                                                      d="M14.951 15.7352C13.7917 16.7166 12.2921 17.3083 10.6542 17.3083C6.97919 17.3083 4 14.3292 4 10.6542C4 6.97919 6.97919 4 10.6542 4C14.3291 4 17.3083 6.97919 17.3083 10.6542C17.3083 12.2921 16.7166 13.7917 15.7352 14.951L16.3405 15.5562C16.6887 15.4396 17.0884 15.52 17.3658 15.7974L19.6752 18.1068C20.1083 18.5399 20.1083 19.2421 19.6752 19.6752C19.2421 20.1083 18.5399 20.1083 18.1068 19.6752L15.7974 17.3657C15.52 17.0884 15.4396 16.6887 15.5562 16.3404L14.951 15.7352ZM15.0903 10.6542C15.0903 13.1042 13.1042 15.0903 10.6542 15.0903C8.20416 15.0903 6.21808 13.1042 6.21808 10.6542C6.21808 8.20416 8.20416 6.21808 10.6542 6.21808C13.1042 6.21808 15.0903 8.20416 15.0903 10.6542Z"
+                                                                      fill="#6879BB"
+                                                                      fill-rule="evenodd"
+                                                        />
+                                          </g>
+                            </svg>
+              </div>
+</Col>,
+            <Col
+              component="div"
+              debug={false}
+              lg={null}
+              md={10}
+              offset={Object {}}
+              pull={Object {}}
+              push={Object {}}
+              sm={null}
+              style={Object {}}
+              xl={null}
+              xs={null}
+>
+              <input
+                            placeholder="Поиск по разделу"
+                            style={
+                                          Object {
+                                                        "background": "#ffffff !important",
+                                                        "border": "1px",
+                                                        "color": "#999999",
+                                                        "height": "36px",
+                                                        "marginRight": "-15px",
+                                                        "minWidth": "100%",
+                                                        "outline": "none",
+                                                        "position": "relative",
+                                                      }
+                            }
+                            type="text"
+              />
+</Col>,
+          ],
+          "component": "div",
+          "debug": false,
+          "justify": "start",
+          "nogutter": false,
+          "style": Object {},
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": <div
+                style={
+                                Object {
+                                                "boxSizing": "border-box",
+                                                "flex": "1 0 0px",
+                                                "left": "auto",
+                                                "marginLeft": "0%",
+                                                "marginRight": "3%",
+                                                "maxWidth": "3%",
+                                                "minHeight": "1px",
+                                                "paddingRight": "15px",
+                                                "paddingTop": "22%",
+                                                "position": "absolute",
+                                                "right": "auto",
+                                                "width": "3%",
+                                                "zIndex": "11",
+                                              }
+                }
+>
+                <svg
+                                fill="none"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                width="24"
+                                xmlns="http://www.w3.org/2000/svg"
+                >
+                                <g
+                                                opacity="0.5"
+                                >
+                                                <rect
+                                                                fill="white"
+                                                                fill-opacity="0.01"
+                                                                height="24"
+                                                                width="24"
+                                                />
+                                                <path
+                                                                clip-rule="evenodd"
+                                                                d="M14.951 15.7352C13.7917 16.7166 12.2921 17.3083 10.6542 17.3083C6.97919 17.3083 4 14.3292 4 10.6542C4 6.97919 6.97919 4 10.6542 4C14.3291 4 17.3083 6.97919 17.3083 10.6542C17.3083 12.2921 16.7166 13.7917 15.7352 14.951L16.3405 15.5562C16.6887 15.4396 17.0884 15.52 17.3658 15.7974L19.6752 18.1068C20.1083 18.5399 20.1083 19.2421 19.6752 19.6752C19.2421 20.1083 18.5399 20.1083 18.1068 19.6752L15.7974 17.3657C15.52 17.0884 15.4396 16.6887 15.5562 16.3404L14.951 15.7352ZM15.0903 10.6542C15.0903 13.1042 13.1042 15.0903 10.6542 15.0903C8.20416 15.0903 6.21808 13.1042 6.21808 10.6542C6.21808 8.20416 8.20416 6.21808 10.6542 6.21808C13.1042 6.21808 15.0903 8.20416 15.0903 10.6542Z"
+                                                                fill="#6879BB"
+                                                                fill-rule="evenodd"
+                                                />
+                                </g>
+                </svg>
+</div>,
+              "component": "div",
+              "debug": false,
+              "lg": null,
+              "md": 1,
+              "offset": Object {},
+              "pull": Object {},
+              "push": Object {},
+              "sm": null,
+              "style": Object {},
+              "xl": null,
+              "xs": null,
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <svg
+                  fill="none"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+>
+                  <g
+                                    opacity="0.5"
+                  >
+                                    <rect
+                                                      fill="white"
+                                                      fill-opacity="0.01"
+                                                      height="24"
+                                                      width="24"
+                                    />
+                                    <path
+                                                      clip-rule="evenodd"
+                                                      d="M14.951 15.7352C13.7917 16.7166 12.2921 17.3083 10.6542 17.3083C6.97919 17.3083 4 14.3292 4 10.6542C4 6.97919 6.97919 4 10.6542 4C14.3291 4 17.3083 6.97919 17.3083 10.6542C17.3083 12.2921 16.7166 13.7917 15.7352 14.951L16.3405 15.5562C16.6887 15.4396 17.0884 15.52 17.3658 15.7974L19.6752 18.1068C20.1083 18.5399 20.1083 19.2421 19.6752 19.6752C19.2421 20.1083 18.5399 20.1083 18.1068 19.6752L15.7974 17.3657C15.52 17.0884 15.4396 16.6887 15.5562 16.3404L14.951 15.7352ZM15.0903 10.6542C15.0903 13.1042 13.1042 15.0903 10.6542 15.0903C8.20416 15.0903 6.21808 13.1042 6.21808 10.6542C6.21808 8.20416 8.20416 6.21808 10.6542 6.21808C13.1042 6.21808 15.0903 8.20416 15.0903 10.6542Z"
+                                                      fill="#6879BB"
+                                                      fill-rule="evenodd"
+                                    />
+                  </g>
+</svg>,
+                "style": Object {
+                  "boxSizing": "border-box",
+                  "flex": "1 0 0px",
+                  "left": "auto",
+                  "marginLeft": "0%",
+                  "marginRight": "3%",
+                  "maxWidth": "3%",
+                  "minHeight": "1px",
+                  "paddingRight": "15px",
+                  "paddingTop": "22%",
+                  "position": "absolute",
+                  "right": "auto",
+                  "width": "3%",
+                  "zIndex": "11",
+                },
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <g
+                    opacity="0.5"
+>
+                    <rect
+                                        fill="white"
+                                        fill-opacity="0.01"
+                                        height="24"
+                                        width="24"
+                    />
+                    <path
+                                        clip-rule="evenodd"
+                                        d="M14.951 15.7352C13.7917 16.7166 12.2921 17.3083 10.6542 17.3083C6.97919 17.3083 4 14.3292 4 10.6542C4 6.97919 6.97919 4 10.6542 4C14.3291 4 17.3083 6.97919 17.3083 10.6542C17.3083 12.2921 16.7166 13.7917 15.7352 14.951L16.3405 15.5562C16.6887 15.4396 17.0884 15.52 17.3658 15.7974L19.6752 18.1068C20.1083 18.5399 20.1083 19.2421 19.6752 19.6752C19.2421 20.1083 18.5399 20.1083 18.1068 19.6752L15.7974 17.3657C15.52 17.0884 15.4396 16.6887 15.5562 16.3404L14.951 15.7352ZM15.0903 10.6542C15.0903 13.1042 13.1042 15.0903 10.6542 15.0903C8.20416 15.0903 6.21808 13.1042 6.21808 10.6542C6.21808 8.20416 8.20416 6.21808 10.6542 6.21808C13.1042 6.21808 15.0903 8.20416 15.0903 10.6542Z"
+                                        fill="#6879BB"
+                                        fill-rule="evenodd"
+                    />
+</g>,
+                  "fill": "none",
+                  "height": "24",
+                  "viewBox": "0 0 24 24",
+                  "width": "24",
+                  "xmlns": "http://www.w3.org/2000/svg",
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <rect
+                        fill="white"
+                        fill-opacity="0.01"
+                        height="24"
+                        width="24"
+/>,
+                      <path
+                        clip-rule="evenodd"
+                        d="M14.951 15.7352C13.7917 16.7166 12.2921 17.3083 10.6542 17.3083C6.97919 17.3083 4 14.3292 4 10.6542C4 6.97919 6.97919 4 10.6542 4C14.3291 4 17.3083 6.97919 17.3083 10.6542C17.3083 12.2921 16.7166 13.7917 15.7352 14.951L16.3405 15.5562C16.6887 15.4396 17.0884 15.52 17.3658 15.7974L19.6752 18.1068C20.1083 18.5399 20.1083 19.2421 19.6752 19.6752C19.2421 20.1083 18.5399 20.1083 18.1068 19.6752L15.7974 17.3657C15.52 17.0884 15.4396 16.6887 15.5562 16.3404L14.951 15.7352ZM15.0903 10.6542C15.0903 13.1042 13.1042 15.0903 10.6542 15.0903C8.20416 15.0903 6.21808 13.1042 6.21808 10.6542C6.21808 8.20416 8.20416 6.21808 10.6542 6.21808C13.1042 6.21808 15.0903 8.20416 15.0903 10.6542Z"
+                        fill="#6879BB"
+                        fill-rule="evenodd"
+/>,
+                    ],
+                    "opacity": "0.5",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "fill": "white",
+                        "fill-opacity": "0.01",
+                        "height": "24",
+                        "width": "24",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "rect",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "clip-rule": "evenodd",
+                        "d": "M14.951 15.7352C13.7917 16.7166 12.2921 17.3083 10.6542 17.3083C6.97919 17.3083 4 14.3292 4 10.6542C4 6.97919 6.97919 4 10.6542 4C14.3291 4 17.3083 6.97919 17.3083 10.6542C17.3083 12.2921 16.7166 13.7917 15.7352 14.951L16.3405 15.5562C16.6887 15.4396 17.0884 15.52 17.3658 15.7974L19.6752 18.1068C20.1083 18.5399 20.1083 19.2421 19.6752 19.6752C19.2421 20.1083 18.5399 20.1083 18.1068 19.6752L15.7974 17.3657C15.52 17.0884 15.4396 16.6887 15.5562 16.3404L14.951 15.7352ZM15.0903 10.6542C15.0903 13.1042 13.1042 15.0903 10.6542 15.0903C8.20416 15.0903 6.21808 13.1042 6.21808 10.6542C6.21808 8.20416 8.20416 6.21808 10.6542 6.21808C13.1042 6.21808 15.0903 8.20416 15.0903 10.6542Z",
+                        "fill": "#6879BB",
+                        "fill-rule": "evenodd",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "path",
+                    },
+                  ],
+                  "type": "g",
+                },
+                "type": "svg",
+              },
+              "type": "div",
+            },
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": <input
+                placeholder="Поиск по разделу"
+                style={
+                                Object {
+                                                "background": "#ffffff !important",
+                                                "border": "1px",
+                                                "color": "#999999",
+                                                "height": "36px",
+                                                "marginRight": "-15px",
+                                                "minWidth": "100%",
+                                                "outline": "none",
+                                                "position": "relative",
+                                              }
+                }
+                type="text"
+/>,
+              "component": "div",
+              "debug": false,
+              "lg": null,
+              "md": 10,
+              "offset": Object {},
+              "pull": Object {},
+              "push": Object {},
+              "sm": null,
+              "style": Object {},
+              "xl": null,
+              "xs": null,
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "placeholder": "Поиск по разделу",
+                "style": Object {
+                  "background": "#ffffff !important",
+                  "border": "1px",
+                  "color": "#999999",
+                  "height": "36px",
+                  "marginRight": "-15px",
+                  "minWidth": "100%",
+                  "outline": "none",
+                  "position": "relative",
+                },
+                "type": "text",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "input",
+            },
+            "type": [Function],
+          },
+        ],
+        "type": [Function],
+      },
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+    "attachTo": undefined,
+    "hydrateIn": undefined,
+  },
+}
+`;

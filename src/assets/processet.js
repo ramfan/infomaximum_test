@@ -1,5 +1,5 @@
 import moment from 'moment'
-
+import 'moment/locale/ru'
 const start_timestamp = 1514764800;
 function time_generator () {
     return new Date(Math.floor(start_timestamp + (2629743 * (Math.random() * (11 - 1) + 1)))*1000);
@@ -17,10 +17,10 @@ export const proceset = [
         "scenario": "32",
         "mid_execute_time":  moment(time_generator().toString()).locale('ru').format("h [ч] m [мин]"),
         "active_time":  moment(time_generator().toString()).locale('ru').format('h [ч] m [мин]'),
-        "begin": moment(time_generator().toString()).locale('ru').format('LL'),
         "end": moment(time_generator().toString()).locale('ru').format('LL'),
         "data_of_load": moment(time_generator().toString()).locale('ru').format('LL'),
-        "completed": getProcent().toFixed(1) + '%'
+        "completed": getProcent().toFixed(1) + '%',
+        "begin": moment(time_generator().toString()).locale('ru').format('LL'),
     },
     {
       "_id": "b5b96fcae37f9124709a0e862",
