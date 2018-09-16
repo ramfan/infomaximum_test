@@ -4,6 +4,8 @@ import App from '../componets/App'
 import {Background, ButtonStyle, SpanColor} from "../componets/RooStyle";
 import {renderEditField} from '../componets/Forms/renderField'
 import Search from "../componets/Forms/Search";
+import LeftBar from "../componets/Personal/LeftBar";
+import Filters   from "../componets/Processet/Filters"
 
 describe('App component tests', () => {
     it('component will be render', function () {
@@ -21,4 +23,19 @@ describe('Search component tests', () => {
     });
 });
 
+describe('Left bar component testing on user component', () => {
 
+    it('component will be render', function () {
+        const bar = shallow(<LeftBar />)
+        expect(bar).toMatchSnapshot();
+
+    });
+});
+describe('Left bar component testing on Process page', () => {
+
+    it('component will be render', function () {
+        const bar = shallow(<Filters />)
+        expect(bar).toMatchSnapshot();
+
+    });
+});

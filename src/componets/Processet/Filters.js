@@ -17,9 +17,9 @@ const buttonStyle = {
     color: '#6879BB',
     height: '36px',
     width: '100%'
-}
+};
 
-class LeftBar extends Component {
+class Filters extends Component {
 
 
     render() {
@@ -35,4 +35,4 @@ class LeftBar extends Component {
     }
 }
 
-export default LeftBar;
+export default Filters;

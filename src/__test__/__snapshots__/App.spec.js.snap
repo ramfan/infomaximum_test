@@ -580,6 +580,388 @@ ShallowWrapper {
 }
 `;
 
+exports[`Left bar component testing on Process page component will be render 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Filters />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <div
+          style={
+                    Object {
+                              "marginBottom": "20%",
+                            }
+          }
+>
+          <strong
+                    style={
+                              Object {
+                                        "color": "#535374",
+                                      }
+                    }
+          >
+                    Фильтры
+          </strong>
+</div>,
+        <button
+          disabled={true}
+          style={
+                    Object {
+                              "background": "0",
+                              "border": "1px solid #6879BB",
+                              "borderRadius": "5px",
+                              "color": "#6879BB",
+                              "height": "36px",
+                              "width": "100%",
+                            }
+          }
+>
+          Добавить фильтр
+</button>,
+      ],
+      "style": Object {
+        "boxSizing": "border-box",
+        "height": "100vh",
+        "marginTop": "6%",
+        "maxHeight": "100vh",
+        "paddingTop": "1%",
+        "position": "fixed",
+        "width": "10%",
+      },
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <strong
+            style={
+                        Object {
+                                    "color": "#535374",
+                                  }
+            }
+>
+            Фильтры
+</strong>,
+          "style": Object {
+            "marginBottom": "20%",
+          },
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Фильтры",
+            "style": Object {
+              "color": "#535374",
+            },
+          },
+          "ref": null,
+          "rendered": "Фильтры",
+          "type": "strong",
+        },
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Добавить фильтр",
+          "disabled": true,
+          "style": Object {
+            "background": "0",
+            "border": "1px solid #6879BB",
+            "borderRadius": "5px",
+            "color": "#6879BB",
+            "height": "36px",
+            "width": "100%",
+          },
+        },
+        "ref": null,
+        "rendered": "Добавить фильтр",
+        "type": "button",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            style={
+                        Object {
+                                    "marginBottom": "20%",
+                                  }
+            }
+>
+            <strong
+                        style={
+                                    Object {
+                                                "color": "#535374",
+                                              }
+                        }
+            >
+                        Фильтры
+            </strong>
+</div>,
+          <button
+            disabled={true}
+            style={
+                        Object {
+                                    "background": "0",
+                                    "border": "1px solid #6879BB",
+                                    "borderRadius": "5px",
+                                    "color": "#6879BB",
+                                    "height": "36px",
+                                    "width": "100%",
+                                  }
+            }
+>
+            Добавить фильтр
+</button>,
+        ],
+        "style": Object {
+          "boxSizing": "border-box",
+          "height": "100vh",
+          "marginTop": "6%",
+          "maxHeight": "100vh",
+          "paddingTop": "1%",
+          "position": "fixed",
+          "width": "10%",
+        },
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <strong
+              style={
+                            Object {
+                                          "color": "#535374",
+                                        }
+              }
+>
+              Фильтры
+</strong>,
+            "style": Object {
+              "marginBottom": "20%",
+            },
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Фильтры",
+              "style": Object {
+                "color": "#535374",
+              },
+            },
+            "ref": null,
+            "rendered": "Фильтры",
+            "type": "strong",
+          },
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Добавить фильтр",
+            "disabled": true,
+            "style": Object {
+              "background": "0",
+              "border": "1px solid #6879BB",
+              "borderRadius": "5px",
+              "color": "#6879BB",
+              "height": "36px",
+              "width": "100%",
+            },
+          },
+          "ref": null,
+          "rendered": "Добавить фильтр",
+          "type": "button",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+    "attachTo": undefined,
+    "hydrateIn": undefined,
+  },
+}
+`;
+
+exports[`Left bar component testing on user component component will be render 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Filters />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": <strong
+        style={
+                Object {
+                        "color": "#535374",
+                        "fontSize": "12px",
+                      }
+        }
+>
+           Общие данные
+</strong>,
+      "style": Object {
+        "background": "rgba(104, 121, 187, 0.1)",
+        "borderLeft": "4px solid rgb(104, 121, 187)",
+        "boxSizing": "border-box",
+        "height": "54px",
+        "marginLeft": "-15px",
+        "marginTop": "10.2%",
+        "maxHeight": "54px",
+        "paddingTop": "1%",
+        "position": "fixed",
+        "width": "10%",
+      },
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": "   Общие данные",
+        "style": Object {
+          "color": "#535374",
+          "fontSize": "12px",
+        },
+      },
+      "ref": null,
+      "rendered": "   Общие данные",
+      "type": "strong",
+    },
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <strong
+          style={
+                    Object {
+                              "color": "#535374",
+                              "fontSize": "12px",
+                            }
+          }
+>
+             Общие данные
+</strong>,
+        "style": Object {
+          "background": "rgba(104, 121, 187, 0.1)",
+          "borderLeft": "4px solid rgb(104, 121, 187)",
+          "boxSizing": "border-box",
+          "height": "54px",
+          "marginLeft": "-15px",
+          "marginTop": "10.2%",
+          "maxHeight": "54px",
+          "paddingTop": "1%",
+          "position": "fixed",
+          "width": "10%",
+        },
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "   Общие данные",
+          "style": Object {
+            "color": "#535374",
+            "fontSize": "12px",
+          },
+        },
+        "ref": null,
+        "rendered": "   Общие данные",
+        "type": "strong",
+      },
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+    "attachTo": undefined,
+    "hydrateIn": undefined,
+  },
+}
+`;
+
 exports[`Search component tests component will be render 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
