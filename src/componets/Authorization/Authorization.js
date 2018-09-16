@@ -46,7 +46,7 @@ const queryOptions  = {
         return{ variables: {
                 email: props.email,
                 password: props.password
-            }
+            },
         }
     }
 };

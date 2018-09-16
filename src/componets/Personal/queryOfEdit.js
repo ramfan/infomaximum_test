@@ -23,7 +23,16 @@ class Edit extends Component {
                 firstName: this.props.firstName,
                 lastName: this.props.lastName
 
-            }, refetchQueries: [{query: personalData, variables:{id: this.props.id}}]
+            }, refetchQueries: [{query: personalData, variables:{id: this.props.id}}],
+            context: {
+                // example of setting the headers with context per operation
+                headers: {
+                    "Access-Control-Allow-Origin": "*",
+                    Authorization: sessionStorage.getItem('token') !== null? `Bearer ${sessionStorage.getItem('token')}`: ''
+
+                }
+            }
+
         }).then(res => {
             this.props.errorReport(null, false);
             this.props.Profile(res.data.updateUser, this.props)
