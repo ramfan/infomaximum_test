@@ -13,13 +13,16 @@ import {ThemeProvider} from 'react-fela'
 import {theme} from "../theme";
 import ProcessetPage from "./Processet/ProcessetPage";
 
+const token = localStorage.getItem('token') ===null ? '': `Bearer ${localStorage.getItem('token')}`
 
 const client = new ApolloClient({
     uri: 'https://fakerql.com/graphql',
     credentials: 'same-origin',
+    mode: 'no-cors',
     headers: {
-        Authorization: `Bearer ${localStorage.getItem('token')}`,
-        "Access-Control-Allow-Origin": "*"
+        "Access-Control-Allow-Origin": "*",
+        Authorization: token
+
     }
 });
 const renderer = createRenderer();
