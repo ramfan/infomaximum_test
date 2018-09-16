@@ -10,7 +10,8 @@ class LayoutComponent extends Component {
             width: this.props.theme.personalPage.width,
             height: this.props.theme.personalPage.height,
             backgroundColor: this.props.theme.personalPage.background,
-            minHeight: this.props.theme.personalPage.minHeight
+            minHeight: this.props.theme.personalPage.minHeight,
+            minWidth: '1030px !important'
         };
         return (
            <Container fluid={true} style={style}>

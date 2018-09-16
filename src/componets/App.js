@@ -40,16 +40,5 @@ class App extends Component {
     }
 
 }
-App.defaultProps = {
-    formData: {
-        values: {
-            email: '',
-            password: ''
-        }
-    }
-};
 
-export default connect(state => {
-    return{
-   // formData: state.form.AuthForm
-}})(App)
+export default App

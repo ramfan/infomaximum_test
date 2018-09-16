@@ -10,10 +10,12 @@ const actionTypes = {
 };
 
 export const actionCreators = {
-    auth: (token) => ({
+    auth: (token) => {
+        sessionStorage.setItem('token', token);
+        return{
         type: actionTypes.FORM_SUBMITED,
-        payload: {token}
-    }),
+        payload: {token},
+    }},
     Profile: (data, params) => ({
         type: actionTypes.GET_PROFILE_DATA,
         payload: {data , params}
@@ -22,9 +24,9 @@ export const actionCreators = {
         type: actionTypes.SHOW_MENU,
         payload: state
     }),
-    errorReport: (error) => ({
+    errorReport: (error, flag) => ({
         type: actionTypes.ERROR_REPORT,
-        payload: {error}
+        payload: {error, flag}
     }),
     processet: () => {
         type: actionTypes.LOAD_PROCESSET
@@ -41,22 +43,25 @@ export const actionCreators = {
      token: null,
      isReadyProfile: false,
      processet: initialProcessetState,
+     isReadyError: false
  }
  export const getReducer = (state = initialState, action) =>  {
      const {type, payload} = action;
-
      switch (type){
          case actionTypes.FORM_SUBMITED:
-             localStorage.setItem('token', payload.token)
+
              return {
                  ...state,
                  tokenHash: jwt_decode(payload.token).userId,
-                 isReady: true
+                 isReady: true,
+                 errorReport: null,
+                 isReadyError: false
              };
          case actionTypes.ERROR_REPORT: {
              return {
                  ...state,
-                 reportError: payload
+                 reportError: payload.error,
+                 isReadyError: payload.flag
              }
          }
          case actionTypes.SHOW_MENU: {

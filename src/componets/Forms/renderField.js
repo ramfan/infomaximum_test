@@ -11,10 +11,13 @@ export const renderField = ({ input, label, type, meta: { touched, error, warnin
     )
 };
 
+const divStyle = {position: 'absolute'};
+const labelStyle = {fontSize: '14px',color: '#999999', display: 'inline', marginTop: '1%'};
+
 export const renderEditField = ({ input, label, type, meta: { touched, error, warning }}) => (
     <div>
-        <div style={{position: 'absolute'}}>
-            <label style={{fontSize: '14px',color: '#999999', display: 'inline', marginTop: '1%'}}>&nbsp;&nbsp;&nbsp;{label}</label>
+        <div style={divStyle}>
+            <label style={labelStyle}>&nbsp;&nbsp;&nbsp;{label}</label>
 
         </div>
         <InCenter  width={70} height={34+'px'} marginTop={'-10px'} display={'inline'}>

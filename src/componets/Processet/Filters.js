@@ -17,15 +17,16 @@ const buttonStyle = {
     color: '#6879BB',
     height: '36px',
     width: '100%'
-}
+};
+const labelStyle = {marginBottom: '20%'};
 
-class LeftBar extends Component {
+class Filters extends Component {
 
 
     render() {
         return (
             <div style={style}>
-                <div style={{marginBottom: '20%'}}>
+                <div style={labelStyle}>
                     <strong style={{color: '#535374'}}>Фильтры</strong>
                 </div>
 
@@ -35,4 +36,4 @@ class LeftBar extends Component {
     }
 }
 
-export default LeftBar;
+export default Filters;

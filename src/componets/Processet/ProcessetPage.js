@@ -5,7 +5,7 @@ import {withTheme} from "react-fela";
 import ProcessCard from "./ProcessCard";
 import TopBar from "./TopBar";
 import LayoutComponent from "../LayoutComponent";
-import LeftBar from "./LeftBar";
+import Filters from "./Filters";
 import MenuBar from "../Personal/MenuBar";
 
 class ProcessetPage extends Component {
@@ -24,7 +24,7 @@ class ProcessetPage extends Component {
             <div>
                 <LayoutComponent
                     top={<TopBar visible={true} search={true}/>}
-                    left={!this.props.toggle ?  <LeftBar/> :<MenuBar />}
+                    left={!this.props.toggle ?  <Filters/> :<MenuBar />}
                     content={ elements}/>
 
             </div>

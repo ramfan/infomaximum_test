@@ -6,7 +6,7 @@ import {connect} from "react-redux";
 import {register as query} from "../../queries";
 
 class Registration extends Component {
-componentWillMount(){
+componentDidMount(){
     this.props.mutate({
         variables: {
             email: this.props.email,
@@ -14,18 +14,18 @@ componentWillMount(){
         }
     }).then(res =>{
         const {auth} = this.props;
+
         auth(res.data.register.token);
     }).catch(e => {
-            this.props.errorReport('Ошибка сервера')
 
-            return 'Network Error'}
-        );
+        this.props.errorReport('Ошибка сервера', true)
+        return 'Network Error'});
 
 }
 
     render() {
     if(this.props.isReady){
-        return (<div>{this.props.token.token !== null ? <Redirect to={`/`} />: "Loading"}</div>)
+        return (<div>{this.props.token.token !== null && this.props.token.token !== 'undefined' ? <Redirect to={`/`} />: "Loading"}</div>)
     }
 
     return(<div>Loading</div>)
@@ -47,8 +47,12 @@ const queryOption = {
 
 Registration = graphql(query, queryOption)(Registration);
 const {auth, errorReport} = actionCreators;
-export default connect(state => ({
-    token: state.getReducer.tokenHash,
-    isReady: state.getReducer.isReady
-}), {auth, errorReport})(Registration);
+
+export default connect(state => {
+    console.log('STTTATE', state);
+    return{
+        token: state.getReducer.tokenHash,
+        isReady:  state.getReducer.isReady
+}}, {auth, errorReport})(Registration);
+>>>>>>> tests
 

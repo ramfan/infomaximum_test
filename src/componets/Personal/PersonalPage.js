@@ -14,6 +14,7 @@ import LeftBar from "./LeftBar";
 import Edit from "./queryOfEdit";
 import LayoutComponent from "../LayoutComponent";
 import TopBar from "../Processet/TopBar";
+import Error from "../Forms/Error";
 
 
 
@@ -26,11 +27,14 @@ class PersonalPage extends PureComponent {
             lastName: null,
             firstName: null,
             email: null,
-            isSubmit: false
+            isSubmit: false,
+            flag: true
         };
         this.handleSubmit = this.handleSubmit.bind(this);
+
     }
     handleSubmit(ev){
+        console.log('SEND')
         this.setState({
             firstName: ev.firstName,
             lastName: ev.lastName,
@@ -47,8 +51,15 @@ class PersonalPage extends PureComponent {
         Profile(this.props.data.User, this.props);
         const sideBar = {paddingLeft: 0,paddingTop: '3%', marginTop: '7.4%'};
         const menuBar = {paddingLeft: 0, height: '100%'};
+        console.log('PROOOPS', this.props)
         return (
             <div>
+                {/*{*/}
+                    {/*this.props.errorReport.error ? */}
+                        {/*<div style={{zIndex: 9999}}>*/}
+                            {/*<Error textVal={this.props.errorReport.error}/>*/}
+                        {/*</div>: null*/}
+                {/*}*/}
                 <LayoutComponent
                     top={<TopBar visible={false} search={false}/>}
                     left={!this.props.toggle ?  <LeftBar/> :<SideBar/>}
@@ -67,6 +78,7 @@ class PersonalPage extends PureComponent {
                                 flag={true}
                             />:null
                     }
+
             </div>
 
 
@@ -84,9 +96,11 @@ const queryOptions  = {
         }
     }
 };
-const {Profile, show} = actionCreators
+const {Profile, show, errorReport} = actionCreators
 PersonalPage = withTheme(PersonalPage);
 PersonalPage = graphql(personalData, queryOptions)(PersonalPage);
 export default connect(state => ({
-    toggle: state.getReducer.flag
-}), {Profile, show})(PersonalPage);
+    toggle: state.getReducer.flag,
+    error: state.getReducer.reportError,
+    errorIsReady: state.getReducer.isReadyError
+}), {Profile, show, errorReport})(PersonalPage);

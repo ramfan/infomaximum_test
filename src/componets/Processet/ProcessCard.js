@@ -2,32 +2,46 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {Col, Container, Row} from "react-grid-system";
 
+const containerStyle = {width: '100%', marginTop: '10%',marginBottom: '5%',marginRight: '0px',height:'auto', background: '#ffffff'}
+const nameProcessStyle = {borderBottom: ' 1px solid #D6DCE9', padding: '1% 3% 1% 3%'};
+const nameProcessColorStyle = {color: '#6879BB'};
+const contentStyle = {padding: '1% 3% 1% 3%',};
+const firstColumn_SvgStyle = {paddingBottom: '14%',marginRight: '6%'};
+const textColor = {color: '#535374'};
+const subscribeStyle = {color: '#999999', fontSize: '11px'};
+const secondColumn = {marginRight: '0%', paddingLeft: '10%' ,marginTop: '1%'};
+const marginColumn = {marginBottom: '15%'};
+const thirdColumnsStyle = {marginRight: '1.5%', marginLeft: '1.5%', paddingLeft: '10%' ,marginTop: '1%'};
+const fourthColumn = {marginTop: '1.5%'};
+const fourthColumn_lineStyle = {marginBottom: '10%'};
+const fourthColumn_textStyle = {fontSize: '12px'}
+
 class ProcessCard extends Component {
 
     render() {
        // console.log("CARD", this.props.data);
         const{data} = this.props
         return (
-            <Container fluid style={{width: '100%', marginTop: '10%',marginBottom: '5%',marginRight: '0px',height:'252px', background: '#ffffff'}}>
-                    <Row style={{borderBottom: ' 1px solid #D6DCE9', padding: '1% 3% 1% 3%', marginBottom: '2%'}}>
-                        <h1 style={{color: '#6879BB'}}>{data.title}</h1>
+            <Container fluid style={containerStyle}>
+                    <Row style={nameProcessStyle}>
+                        <h1 style={nameProcessColorStyle}>{data.title}</h1>
                     </Row>
-                    <Row align="center" justify="between" style={{padding: '1% 3% 1% 3%',}}>
+                    <Row align="center" justify="between" style={contentStyle}>
                         <Row align="center">
-                            <Col md={1} style={{paddingBottom: '14%',marginRight: '6%'}}>
+                            <Col md={1} style={firstColumn_SvgStyle}>
                                 <svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M11 2.99994L6.5 5.59802V4.18896C3.91211 4.85504 2 7.20416 2 9.99994C2 12.2527 3.24146 14.2154 5.07751 15.2413L3.13513 16.3513C1.229 14.8891 0 12.588 0 9.99994C0 6.09436 2.79858 2.84241 6.5 2.14032V0.401855L11 2.99994ZM10.9225 4.75854C12.7585 5.78448 14 7.74719 14 9.99994C14 12.7957 12.0879 15.1448 9.5 15.8109V14.4019L5 16.9999L9.5 19.598V17.8596C13.2014 17.1575 16 13.9055 16 9.99994C16 7.41187 14.771 5.11078 12.8649 3.64856L10.9225 4.75854Z" fill="#535374"/>
                                 </svg>
 
                             </Col>
                             <Col md={3}>
-                                <h1 style={{color: '#535374'}}>{data.repeats}</h1>
-                                <p style={{color: '#999999', fontSize: '11px'}}> выполнено раз</p>
+                                <h1 style={textColor}>{data.repeats}</h1>
+                                <p style={subscribeStyle}> выполнено раз</p>
                             </Col>
                         </Row>
-                        <Col md={3} style={{marginRight: '0%', paddingLeft: '10%'}}>
+                        <Col md={3} style={secondColumn}>
                             <Row  justify="between" align="center">
-                                <Row align="center" style={{marginBottom: '15%'}}>
+                                <Row align="center" style={marginColumn}>
                                      <Col md={1} >
                                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                              <g opacity="0.5">
@@ -38,13 +52,13 @@ class ProcessCard extends Component {
 
                                      </Col>
                                      <Col >
-                                        <h4 style={{color: '#535374'}}>{data.mid_execute_time}</h4>
-                                        <p style={{color: '#999999', fontSize: '12px'}}>  среднее время выполнения</p>
+                                        <h4 style={textColor}>{data.mid_execute_time}</h4>
+                                        <p style={subscribeStyle}>  среднее время выполнения</p>
                                      </Col>
 
                                 </Row>
 
-                                <Row align="center" style={{marginBottom: '15%'}}>
+                                <Row align="center" style={marginColumn}>
                                     <Col md={1} >
                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <g opacity="0.5">
@@ -56,16 +70,16 @@ class ProcessCard extends Component {
 
                                     </Col>
                                     <Col >
-                                        <h4 style={{color: '#535374'}}>{data.active_time} ({data.completed})</h4>
-                                        <p style={{color: '#999999', fontSize: '12px'}}>  активное время </p>
+                                        <h4 style={textColor}>{data.active_time} ({data.completed})</h4>
+                                        <p style={subscribeStyle}>  активное время </p>
                                     </Col>
                                 </Row>
 
                             </Row>
                         </Col>
-                        <Col md={3} style={{marginRight: '1.5%', marginLeft: '1.5%', paddingLeft: '10%'}}>
+                        <Col md={3} style={thirdColumnsStyle}>
                             <Row align="center">
-                                <Row align="center" style={{marginBottom: '15%'}}>
+                                <Row align="center" style={marginColumn}>
                                     <Col md={1}>
                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <g opacity="0.5">
@@ -76,11 +90,11 @@ class ProcessCard extends Component {
 
                                     </Col>
                                     <Col>
-                                        <h4 style={{color: '#535374'}}>{data.associate} сотрудников</h4>
-                                        <p style={{color: '#999999', fontSize: '12px'}}> учавствует в процессе</p>
+                                        <h4 style={textColor}>{data.associate} сотрудников</h4>
+                                        <p style={subscribeStyle}> учавствует в процессе</p>
                                     </Col>
                                 </Row>
-                                <Row align="center" style={{marginBottom: '15%'}}>
+                                <Row align="center" style={marginColumn}>
                                     <Col md={1}>
                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <g opacity="0.5">
@@ -91,24 +105,24 @@ class ProcessCard extends Component {
 
                                     </Col>
                                     <Col>
-                                        <h4 style={{color: '#535374'}}>{data.scenario} сценариев</h4>
-                                        <p style={{color: '#999999', fontSize: '12px'}}>в процессе </p>
+                                        <h4 style={textColor}>{data.scenario} сценариев</h4>
+                                        <p style={subscribeStyle}>в процессе </p>
                                     </Col>
                                 </Row>
                             </Row>
                         </Col>
-                        <Col md={3}>
-                            <Row align="center" style={{marginBottom: '15%'}} >
-                                <Col md={4}><p style={{color: '#999999', fontSize: '12px'}}>Начало </p></Col>
-                                <Col md={8}><p style={{fontSize: '12px'}}>{data.begin}</p></Col>
+                        <Col md={3} style={fourthColumn}>
+                            <Row align="center" style={fourthColumn_lineStyle} >
+                                <Col md={4}><p style={subscribeStyle}>Начало </p></Col>
+                                <Col md={8}><p style={fourthColumn_textStyle}>{data.begin}</p></Col>
                             </Row>
-                            <Row align="center" style={{marginBottom: '15%'}}>
-                                <Col md={4}><p style={{color: '#999999', fontSize: '12px'}}>Окончание </p></Col>
-                                <Col md={8}><p style={{fontSize: '12px'}}>{data.end}</p></Col>
+                            <Row align="center" style={fourthColumn_lineStyle}>
+                                <Col md={4}><p style={subscribeStyle}>Окончание </p></Col>
+                                <Col md={8}><p style={fourthColumn_textStyle}>{data.end}</p></Col>
                             </Row>
-                            <Row align="center">
-                                <Col md={4}><p style={{color: '#999999', fontSize: '12px'}}>Загружено </p></Col>
-                                <Col md={8}><p style={{fontSize: '12px'}}>{data.data_of_load}</p></Col>
+                            <Row align="center" style={fourthColumn_lineStyle}>
+                                <Col md={4}><p style={subscribeStyle}>Загружено </p></Col>
+                                <Col md={8}><p style={fourthColumn_textStyle}>{data.data_of_load}</p></Col>
                             </Row>
                        </Col>
                 </Row>
