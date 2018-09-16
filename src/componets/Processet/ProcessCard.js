@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {Col, Container, Row} from "react-grid-system";
 
-const containerStyle = {width: '100%', marginTop: '10%',marginBottom: '5%',marginRight: '0px',height:'252px', background: '#ffffff'}
+const containerStyle = {width: '100%', marginTop: '10%',marginBottom: '5%',marginRight: '0px',height:'auto', background: '#ffffff'}
 const nameProcessStyle = {borderBottom: ' 1px solid #D6DCE9', padding: '1% 3% 1% 3%'};
 const nameProcessColorStyle = {color: '#6879BB'};
 const contentStyle = {padding: '1% 3% 1% 3%',};
