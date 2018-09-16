@@ -23,12 +23,7 @@ class Authorization extends Component {
             const {auth} = this.props;
              auth(res.data.login.token);
         }).catch(e => {
-<<<<<<< HEAD
-
-            this.props.errorReport('Ошибка сервера');
-=======
-            this.props.errorReport('Ошибка сервера', true);
->>>>>>> tests
+ this.props.errorReport('Ошибка сервера', true);
             return 'Network error';
            // console.log('ERROR', e)
         });
