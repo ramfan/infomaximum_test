@@ -19,14 +19,8 @@ import {Provider} from "react-redux";
 const client = new ApolloClient({
     uri: 'https://fakerql.com/graphql',
     credentials: 'same-origin',
-    mode: 'block',
     headers: {
-        "Access-Control-Allow-Origin": "*",
-        'Access-Control-Allow-Credentials': true,
-        'Connection': 'keep-alive',
-        'Content-Length': 53,
-        'Keep-Alive': 60,
-        'X-Xss-Protection': 1,
+        "Access-Control-Allow-Origin": "*",    
         Authorization: localStorage.getItem('token') !== null && localStorage.getItem('token') !== 'undefined'? `Bearer ${localStorage.getItem('token')}`: ''
 
     }
