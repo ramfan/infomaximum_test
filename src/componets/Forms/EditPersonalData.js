@@ -94,7 +94,7 @@ class EditPersonalData extends Component{
 
                             </form>
                             {
-                                this.props.errorIsReady ?
+                                this.props.errorReportText ?
                                     <div style={lastField} onClick={this.abort}>
                                         <Error textVal={this.props.errorReportText}/>
                                     </div>

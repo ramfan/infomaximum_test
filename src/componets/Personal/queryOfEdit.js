@@ -25,7 +25,6 @@ class Edit extends Component {
 
             }, refetchQueries: [{query: personalData, variables:{id: this.props.id}}],
             context: {
-                // example of setting the headers with context per operation
                 headers: {
                     "Access-Control-Allow-Origin": "*",
                     Authorization: sessionStorage.getItem('token') !== null? `Bearer ${sessionStorage.getItem('token')}`: ''
@@ -37,7 +36,8 @@ class Edit extends Component {
             this.props.errorReport(null, false);
             this.props.Profile(res.data.updateUser, this.props)
         }).catch(e => {
-            this.props.errorReport('Ошибка сервера. Обновите страницу и повторите еще раз', true)
+            setTimeout(() => this.props.errorReport('Ошибка сервера. Обновите страницу и повторите еще раз', false), 1000)
+
         })
     }
     render() {
