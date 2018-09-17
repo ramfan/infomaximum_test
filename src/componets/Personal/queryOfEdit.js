@@ -36,8 +36,7 @@ class Edit extends Component {
             this.props.errorReport(null, false);
             this.props.Profile(res.data.updateUser, this.props)
         }).catch(e => {
-            setTimeout(() => this.props.errorReport('Ошибка сервера. Обновите страницу и повторите еще раз', false), 1000)
-
+            this.props.errorReport('Ошибка сервера. Обновите страницу и повторите еще раз', true)
         })
     }
     render() {

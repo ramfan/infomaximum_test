@@ -17,7 +17,7 @@ const polygonStyle = {background: '#ffffff', paddingTop: '2%', marginTop: '1%'};
 const fieldStyle = {width:'50%', margin: '2%'};
 const border = {borderBottom: '1px solid #D6DCE9'};
 const lastField = {width:'50%', margin: '2%', paddingBottom: '4%'};
-const errorStyele = {width:'50%', margin: '2%', paddingBottom: '4%', cursor: 'pointer'};
+const errorStyele = {width:'96%', margin: '2%', cursor: 'pointer'};
 
 class EditPersonalData extends Component{
     constructor(props){
@@ -94,9 +94,9 @@ class EditPersonalData extends Component{
 
                             </form>
                             {
-                                this.props.errorReportText ?
-                                    <div style={lastField} onClick={this.abort}>
-                                        <Error textVal={this.props.errorReportText}/>
+                                this.props.errorIsReady ?
+                                    <div style={errorStyele} onClick={this.abort}>
+                                        <Error textVal={this.props.errorReportText} edit={true}/>
                                     </div>
                                     : null
                             }
